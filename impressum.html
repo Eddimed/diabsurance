@@ -25,9 +25,16 @@
     </script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --diab-light-blue: #e8f0fe;  /* see tailwind.config above */
+            --diab-light-green: #e6f4ea;  
+        }
+
+        /*
         .gradient-bg {
             background: linear-gradient(135deg, #4285f4 0%, #34a853 100%);
         }
+        */
         .glass-effect {
             backdrop-filter: blur(10px);
             background: rgba(255, 255, 255, 0.1);
@@ -40,21 +47,74 @@
             transform: translateY(-8px);
             box-shadow: 0 20px 40px rgba(0,0,0,0.1);
         }
+
+        section.gradient-bg {
+            padding: 1.25rem;
+            background: linear-gradient(to bottom right, 
+                        var(--diab-light-blue), 
+                        white, 
+                        var(--diab-light-green));
+        }
+
+        a {
+            color: #2563eb; /* Tailwind's blue-600 */
+        }
+
+        /* visited link */
+        a:visited {
+            color: #7c3aed;  /* Tailwind violet-600 */
+            
+        }
+
+        /* mouse over link */
+        a:hover {
+            color: #1e40af; /* Tailwind's blue-800 */
+            text-decoration: underline;
+        }
+
+        a:active {
+            color: #1d4ed8;  /* Slightly lighter blue for pressed */
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 1280px;    /* max-w-7xl */
+            margin-left: auto;    /* mx-auto */
+            margin-right: auto;
+            padding-left: 1rem;   /* px-4 */
+            padding-right: 1rem;
+        }
+
+        @media (min-width: 640px) { /* sm breakpoint */
+            .container {
+                padding-left: 1.5rem;  /* sm:px-6 */
+                padding-right: 1.5rem;
+            }
+        }
+
+        @media (min-width: 1024px) { /* lg breakpoint */
+            .container {
+                padding-left: 2rem;    /* lg:px-8 */
+                padding-right: 2rem;
+            }
+        }
+
+ 
     </style>
 </head>
 <body class="bg-white font-sans">
     <!-- Navigation -->
     <nav class="bg-white/95 backdrop-blur-sm shadow-sm fixed w-full z-50 top-0 border-b border-gray-100">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="container">
             <div class="flex justify-between items-center py-4">
                 <div class="flex items-center">
                     <img src="img/diabsurance_logo_green.png" alt="diabsurance Logo" class="h-12 w-auto">
                 </div>
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="#Versicherungen" class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">Versicherungen</a>
-                    <a href="#About" class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">Über mich</a>
-                    <a href="#Kontakt" class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">Kontakt</a>
-                    <a href="#Partner" class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">Partner</a>
+                    <a href="index.html#Versicherungen" class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">Versicherungen</a>
+                    <a href="index.html#About" class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">Über mich</a>
+                    <a href="index.html#Kontakt" class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">Kontakt</a>
+                    <a href="index.html#Partner" class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">Partner</a>
                     <!-- MS BOOKING LINK: Ersetze "#contact" durch deinen Microsoft Booking Link -->
                     <a href="https://outlook.office.com/book/Diabsurance@eddimed.eu/" class="bg-diab-blue text-white px-6 py-2.5 rounded-full hover:bg-blue-600 transition-all duration-300 font-medium">
                         Beratung anfragen
@@ -73,7 +133,7 @@
     <div id="top"></div>
 
     <section class="pt-24 pb-5 bg-gradient-to-br from-diab-light-blue via-white to-diab-light-green">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="container">
             <h2 class="text-2xl lg:text-3xl font-bold">
                         Impressum
                     </h2>
@@ -82,8 +142,8 @@
     </section>
 
     <!-- §5 DDG and Kontakt Section -->
-    <section id="Par5_DDG" class="p-5 bg-gradient-to-br from-diab-light-blue via-white to-diab-light-green">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="Par5_DDG" class="gradient-bg">
+        <div class="container">
         <h3 class="font-bold mt-3 mb-1">Angaben gemäß § 5 DDG</h3>
 
         <p><em>Eddimed</em><br>Dr. Bernd Reinhold<br>Erdbeerweg 24<br>70619 Stuttgart</p>
@@ -94,8 +154,8 @@
         </div>
     </section>
 
-    <section id="Makler" class="p-5 bg-gradient-to-br from-diab-light-blue via-white to-diab-light-green">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="Makler" class="gradient-bg">
+    <div class="container">
         <h3 class="font-bold mt-3 mb-1">Versicherungsmakler mit Erlaubnis nach Abs. 1 Satz 2 §34d GewO</h3>
         <p>Eingetragen im Vermittlerregister (<a href="www.vermittlerregister.info">www.vermittlerregister.info</a>) unter der Nummer <b><a href="https://www.vermittlerregister.info/recherche?a=suche&registernummer=D-FVH2-1U1WI-68">D-FVH2-1U1WI-68</a></b>.
         </p>
@@ -110,7 +170,7 @@
         </div>
     </div>
 
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="container">
         <h3 class="font-bold mt-3 mb-1">Schlichtungsstellen</h3>
     <h4 class="italic mt-2 mb-1"> Versicherungsombudsmann e.V.</h4>
     Postfach 08 06 32, 10006 Berlin<br>
@@ -125,8 +185,8 @@
     </div>
     </section>
 
-    <section id="Haftung" class="p-5 bg-gradient-to-br from-diab-light-blue via-white to-diab-light-green">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="Haftung" class="gradient-bg">
+        <div class="container">
         <h3 class="font-bold mt-3 mb-1">Verbraucherstreitbeilegung/ Universalschlichtungsstelle</h2>
 
         <p>Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
@@ -139,8 +199,8 @@
             </div>
     </section>
 
-    <section id="Haftung" class="p-5 bg-gradient-to-br from-diab-light-blue via-white to-diab-light-green">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="Haftung" class="gradient-bg">
+        <div class="container">
             <h2 class="font-bold mt-3 mb-1">Haftung für Inhalte</h2>
 
             <p>Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.</p>
@@ -148,7 +208,7 @@
             <p>Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt. Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden von entsprechenden Rechtsverletzungen werden wir diese Inhalte umgehend entfernen.</p>
 
         </div>
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="container">
             <h2 class="font-bold mt-3 mb-1">Haftung für Links</h2>
             
             
@@ -159,10 +219,10 @@
     </section>  
 
 
-    <section id="Urheberrecht" class="p-5 bg-gradient-to-br from-diab-light-blue via-white to-diab-light-green">
+    <section id="Urheberrecht" class="gradient-bg">
         <div id="Datenschutz"></div>
         
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="container">
         <h2 class="font-bold mt-3 mb-1">Urheberrecht</h2>
 
             <p>Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers. Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet.</p>
@@ -178,7 +238,7 @@
 
     <!-- Footer -->
     <footer class="bg-gray-900 text-white py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="container">
             <div class="grid md:grid-cols-3 gap-8">
                 <div class="text-center">
                     <a href="#top"><img src="img/diabsurance_logo_green_darkbg.png" alt="diabsurance Logo" class="w-auto mb-4"></a>
