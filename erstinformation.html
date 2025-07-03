@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Erstinformation - diabsurance</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'diab-blue': '#4285f4',
+                        'diab-green': '#34a853',
+                        'diab-light-blue': '#e8f0fe',
+                        'diab-light-green': '#e6f4ea'
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'system-ui', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --diab-light-blue: #e8f0fe;  /* see tailwind.config above */
+            --diab-light-green: #e6f4ea;  
+        }
+
+        /*
+        .gradient-bg {
+            background: linear-gradient(135deg, #4285f4 0%, #34a853 100%);
+        }
+        */
+        .glass-effect {
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .hover-lift {
+            transition: all 0.3s ease;
+        }
+        .hover-lift:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        section.gradient-bg {
+            padding: 1.25rem;
+            background: linear-gradient(to bottom right, 
+                        var(--diab-light-blue), 
+                        white, 
+                        var(--diab-light-green));
+        }
+
+        a {
+            color: #2563eb; /* Tailwind's blue-600 */
+        }
+
+        /* visited link */
+        a:visited {
+            color: #7c3aed;  /* Tailwind violet-600 */
+            
+        }
+
+        /* mouse over link */
+        a:hover {
+            color: #1e40af; /* Tailwind's blue-800 */
+            text-decoration: underline;
+        }
+
+        a:active {
+            color: #1d4ed8;  /* Slightly lighter blue for pressed */
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 1280px;    /* max-w-7xl */
+            margin-left: auto;    /* mx-auto */
+            margin-right: auto;
+            padding-left: 1rem;   /* px-4 */
+            padding-right: 1rem;
+        }
+
+        @media (min-width: 640px) { /* sm breakpoint */
+            .container {
+                padding-left: 1.5rem;  /* sm:px-6 */
+                padding-right: 1.5rem;
+            }
+        }
+
+        @media (min-width: 1024px) { /* lg breakpoint */
+            .container {
+                padding-left: 2rem;    /* lg:px-8 */
+                padding-right: 2rem;
+            }
+        }
+
+ 
+    </style>
+</head>
+<body class="bg-white font-sans">
+    <!-- Navigation -->
+    <nav class="bg-white/95 backdrop-blur-sm shadow-sm fixed w-full z-50 top-0 border-b border-gray-100">
+        <div class="container">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <img src="img/diabsurance_logo_green.png" alt="diabsurance Logo" class="h-12 w-auto">
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html#Versicherungen" class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">Versicherungen</a>
+                    <a href="index.html#About" class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">Über mich</a>
+                    <a href="index.html#Kontakt" class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">Kontakt</a>
+                    <a href="index.html#Partner" class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">Partner</a>
+                    <!-- MS BOOKING LINK: Ersetze "#contact" durch deinen Microsoft Booking Link -->
+                    <a href="https://outlook.office.com/book/Diabsurance@eddimed.eu/" class="bg-diab-blue text-white px-6 py-2.5 rounded-full hover:bg-blue-600 transition-all duration-300 font-medium">
+                        Beratung anfragen
+                    </a>
+                </div>
+                <div class="md:hidden">
+                    <button class="text-gray-700 hover:text-diab-blue">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Top -->
+    <div id="top"></div>
+
+    <section class="pt-24 pb-5 bg-gradient-to-br from-diab-light-blue via-white to-diab-light-green">
+        <div class="container">
+            <h2 class="text-2xl lg:text-3xl font-bold">
+                        Erstinformation
+                    </h2>
+            <p>Kundeninformation zur Erfüllung der gesetzlichen Informationspflicht nach <a href="https://www.gesetze-im-internet.de/versvermv_2018/__15.html">§15 VersVermG</a></p>
+
+        </div>
+    </section>
+
+    <!-- §5 DDG and Kontakt Section -->
+    <section id="Par5_DDG" class="gradient-bg">
+        <div class="container">
+        <h3 class="font-bold mt-2 mb-1">Versicherungsmakler Dr. Bernd Reinhold</h3>
+
+        <p>Erdbeerweg 24<br>70619 Stuttgart</p>
+        <p>Telefon: +49 (0) 711 9933 5605<br>E-Mail: info [at] diabsurance.de</p>
+        </div>
+    </section>
+
+    <section id="Makler" class="gradient-bg">
+    <div class="container">
+        <h3 class="font-bold mt-2 mb-1">Vermittlerstatus nach Gewerbeordnung</h3>
+        <p>Versicherungsmakler mit Erlaubnis nach <a href="https://www.gesetze-im-internet.de/gewo/__34d.html">Abs. 1 Satz 2 §34d GewO</a></p>
+        <p>Eingetragen im Vermittlerregister (<a href="www.vermittlerregister.info">www.vermittlerregister.info</a>) unter der Nummer <b><a href="https://www.vermittlerregister.info/recherche?a=suche&registernummer=D-FVH2-1U1WI-68">D-FVH2-1U1WI-68</a></b>.
+        </p>
+
+        <div class="mt-5 mb-5">
+            <p>Erlaubnis erteilt durch:<br>
+            <b>Industrie- und Handelskammer Region Stuttgart</b><br>
+            Jägerstr. 30<br>
+            70174 Stuttgart<br>
+            <a href="/www.ihk.de/stuttgart/">/www.ihk.de/stuttgart/</a>
+            </p>
+        </div>
+    
+        <div class="mt-5 mb-5">
+            <p>
+                Diese rechtliche Information ist überprüfbar unter: DIHK | Deutsche Industrie- und Handelskammer, Breite Straße 29, 10178 Berlin, Telefon 0180-600-585-0 (20 Cent / Anruf aus dem deutschen Festnetz, 60 Cent / Anruf aus Mobilfunknetzen). 
+                Im Internet finden Sie unter <a href="http://www.vermittlerregister.info">http://www.vermittlerregister.info</a> weitere Informationen zum Register sowie eine kostenfreie Online-Auskunft.
+            </p>
+        </div>
+
+    </div>
+
+    <div class="container">
+        <h3 class="font-bold mt-2 mb-1">Kontaktinformationen der Ombudsmänner/-frauen</h3>
+        <h4 class="italic mt-2 mb-1"> Versicherungsombudsmann e.V.</h4>
+        Postfach 08 06 32, 10006 Berlin<br>
+        <a href="www.versicherungsombudsmann.de">www.versicherungsombudsmann.de</a>
+        <h4 class="italic mt-2 mb-1">Ombudsmann Private Kranken- und Pflegeversicherung</h4>
+        
+        Kronenstrasse 13, 10117 Berlin<br>
+        <a href="www.pkv-ombudsmann.de">www.pkv-ombudsmann.de</a><br><br>
+    </div>
+    </section>
+
+    <section id="ErbrachteLeistungen" class="gradient-bg">
+        <div class="container">
+        <h3 class="font-bold mt-2 mb-1">Art der erbrachten Beratungsleistungen</h3>
+
+
+            <p>Als Versicherungsmakler erbringe ich meine Beratungsleistung im Rahmen der Vermittlung der Berufsunfähigkeitsversicherung (im Einzelfall weiteren Versicherungen) als Onlineberatung. Eine Abschlussmöglichkeit ohne vorhergehende Beratung biete ich nicht an.</p>
+
+            <p>Ich bin ausschließlich im Rahmen der unter „Vermittlerstatus gemäß Gewerbeordnung“ beschriebenen behördlichen Zulassung tätig. Das heißt, ich biete keine Rechts- oder Steuerberatung im Einzelfall an.</p>
+
+            <h3 class="font-bold mt-2 mb-1">Art der erbrachten Beratungsleistungen</h3>
+            <p>Für die erfolgreiche Vermittlung einer (Berufsunfähigkeits-)Versicherung erhalte ich vom Versicherungsunternehmen eine Courtage, umgangssprachlich Provision genannt. Die Courtage besteht aus einer Abschlussprovision, einer Bestandsprovision und Folgeprovisionen im Zuge von Beitragsdynamiken.</p>
+
+            <p>Die Vergütung ist in der vom Kunden zu zahlenden Versicherungsprämie enthalten. Eine darüber hinaus gehende Vergütung durch den Kunden (Entgelte oder Honorare) findet nicht statt. Insbesondere ist auch eine gleichzeitige Vergütung durch Versicherungsunternehmen und Versicherungsnehmer ausgeschlossen. Ich erhalte keine über die beschriebenen Sachverhalte hinaus gehenden Zuwendungen von Produktgebern / Versicherungsunternehmen.</p>
+
+            <p>Bei Abweichungen, z.B. weil Sie ausdrücklich die Vermittlung eines Courtagefreien Tarifes (sog. Netto-Tarif) wünschen, wird das <i>vorher</i> klar besprochen und bedarf Ihrer schriftlichen Zustimmung.</p>
+
+            <p>Wir treffen dann <i>vorher</i> eine entsprechende Honorarvereinbarung.</p>
+        </div>
+    </section>
+
+    <section id="Offenlegung" class="gradient-bg"></section>
+    <div class="container">
+        <h3 class="font-bold mt-2 mb-1">Offenlegung von Interessenskonflikten aufgrund direkter oder indirekter Beteiligungen</h3>
+        <p>Der Versicherungsvermittler hält keine unmittelbare oder mittelbare Beteiligung von mehr als 10 % der Stimmrechte oder des Kapitals an einem Versicherungsunternehmen.</p>
+
+        <p>Ein Versicherungsunternehmen hält keine mittelbare oder unmittelbare Beteiligung von mehr als  10 % der Stimmrechte oder des Kapitals am Versicherungsvermittler.</p>
+        <br>
+    </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <a href="#top"><img src="img/diabsurance_logo_green_darkbg.png" alt="diabsurance Logo" class="w-auto mb-4"></a>
+                    <p class="text-gray-400">
+                        Ihr Vermittler Nr. 1 für Personenversicherungen bei Diabetes.
+                    </p>
+                </div>
+                
+
+                <div class="text-center">
+                    <a href="#Versicherungen"><h4 class="text-lg font-semibold mb-4">Versicherungen</h4></a>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition-colors duration-300">Berufsunfähigkeitsversicherung</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors duration-300">(Risiko)Lebensversicherung</a></li>
+                    </ul>
+                </div>
+                
+                
+                <div class="text-center">
+                    <h4 class="text-lg font-semibold mb-4">Kontakt & Impressum</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>
+                            <i class="fas fa-phone mr-2"></i>
+                            +49 (0) 711 9933 5605
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope mr-2"></i>
+                            info [at] diabsurance.de
+                        </li>
+                        <li>
+                            <a href="impressum.html" class="hover:text-white transition-colors duration-300">Impressum</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 diabsurance. Alle Rechte vorbehalten.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Smooth Scrolling & Interactions -->
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                navbar.classList.add('shadow-lg');
+            } else {
+                navbar.classList.remove('shadow-lg');
+            }
+        });
+
+        // Form submission
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Vielen Dank für Ihre Nachricht! Ich melde mich schnellstmöglich bei Ihnen.');
+        });
+    </script>
+</body>
+</html>
