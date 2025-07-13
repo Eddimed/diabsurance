@@ -41,7 +41,6 @@
             box-shadow: 0 20px 40px rgba(0,0,0,0.1);
         }
     </style>
-    <script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
 </head>
 <body class="bg-white font-sans">
     <!-- Navigation New -->
@@ -60,10 +59,19 @@
                         Beratung&nbsp;anfragen
                     </a>
                 </div>
-                <div class="md:hidden">
+                <div id="dropdown-toggle" class="md:hidden">
                     <button class="text-gray-700 hover:text-diab-blue">
                         <i class="fas fa-bars text-xl"></i>
                     </button>
+                </div>
+
+                <!-- Freischwebendes Menü -->
+                <div id="dropdown-menu" class="absolute right-0 mt-5 w-50 bg-white border border-gray-200 rounded shadow-lg hidden z-100">
+                    <div class="flex flex-col space-y-2 p-4">
+                        <a href="#About" class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">Über mich</a>
+                        <a href="#BU" class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">BU-Vers.</a>
+                        <a href="#Partner" class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">Partner</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -112,95 +120,6 @@
         </div>
     </section>
 
-    <!-- Versicherungen Section 
-    <section id="Versicherungen" class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-gray-900 mb-4">Versicherungen</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Personenversicherungen bei Diabetes.
-                </p>
-            </div>
-
-            <div class="grid grid-cols-2 gap-8">
-                --><!-- Berufsunfähigkeitsversicherung --><!--
-                <div class="bg-white p-8 rounded-2xl shadow-lg hover-lift border border-gray-100">
-                    <div class="text-4xl text-diab-blue mb-6">
-                        <i class="fas fa-briefcase"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Berufsunfähigkeits-versicherung</h3>
-                    <p class="text-gray-600 mb-6">
-                        Schutz vor Einkommensverlust bei Berufsunfähigkeit.
-                    </p>
-                    <div class="text-diab-green text-sm font-semibold mb-4">
-                        ✓ Auch bei Typ-1 oder Typ-2 Diabetes
-                    </div>
-                </div>
-
-            --><!-- Lebensversicherung --><!--
-                <div class="bg-white p-8 rounded-2xl shadow-lg hover-lift border border-gray-100">
-                    <div class="text-4xl text-diab-green mb-6">
-                        <i class="fas fa-heart"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4">(Risiko-)Lebensversicherung</h3>
-                    <p class="text-gray-600 mb-6">
-                        Finanzielle Absicherung für Ihre Angehörigen mit individuell angepassten Konditionen.
-                    </p>
-                    <div class="text-diab-green text-sm font-semibold mb-4">
-                        ✓ Faire Risikoprüfung
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-    -->
-
-
-    <!-- Why Choose Section 
-    <section class="py-20 bg-gradient-to-r from-diab-light-blue to-diab-light-green">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-gray-900 mb-4">Warum diabsurance?</h2>
-                <p class="text-xl text-gray-600">
-                    Expertise, die den Unterschied macht
-                </p>
-            </div>
-
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="text-center">
-                    <div class="bg-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
-                        <i class="fas fa-user-graduate text-3xl text-diab-blue"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-4">Diabetes-Expertise</h3>
-                    <p class="text-gray-600">
-                        Spezialisierte Kenntnisse über Diabetes-Erkrankungen und deren Auswirkungen auf Versicherungen.
-                    </p>
-                </div>
-
-                <div class="text-center">
-                    <div class="bg-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
-                        <i class="fas fa-handshake text-3xl text-diab-green"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-4">Persönliche Betreuung</h3>
-                    <p class="text-gray-600">
-                        Individuelle Beratung mit Verständnis für die besonderen Herausforderungen von Diabetikern.
-                    </p>
-                </div>
-
-                <div class="text-center">
-                    <div class="bg-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
-                        <i class="fas fa-chart-line text-3xl text-diab-blue"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-4">Vermittlungsgarantie</h3>
-                    <p class="text-gray-600">
-                        Durch mein Netzwerk und meine Erfahrung finde ich auch in schwierigen Fällen Lösungen.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-    -->
 
     <!-- About Section -->
     <section id="About" class="py-20 py-20 bg-gradient-to-r from-diab-light-blue to-diab-light-green">
@@ -290,7 +209,7 @@
 
             <div style="text-align: center;" class="bg-white rounded-2xl p-8 shadow-2xl items-center">
                 <!-- <iframe src="https://tally.so/embed/3x7kp5?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" width="100%" height="600" frameborder="0"></iframe> -->
-                <iframe data-tally-src="https://tally.so/embed/3x7kp5?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="771" frameborder="0" marginheight="0" marginwidth="0" title="BU-Versicherung"></iframe>
+                <iframe src="https://tally.so/embed/3x7kp5?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="771" frameborder="0" marginheight="0" marginwidth="0" title="BU-Versicherung"></iframe>
             </div>
             <!-- https://outlook.office.com/book/Diabsurance@eddimed.eu/ -->
                 
@@ -417,11 +336,26 @@ Berechnung des Eddimed Risiko Score durch unseren Partner <a href="https://eddim
             }
         });
 
-        // Form submission
-        document.querySelector('form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Vielen Dank für Ihre Nachricht! Ich melde mich schnellstmöglich bei Ihnen.');
+        // tally Form
+        var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}
+
+        // Navigation bar, Hamburger menu, drop-down list
+        document.addEventListener('DOMContentLoaded', function () {
+            const toggle = document.getElementById('dropdown-toggle');
+            const menu = document.getElementById('dropdown-menu');
+
+            toggle.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+            });
+
+            // Optional: Klick außerhalb schließt Menü
+            document.addEventListener('click', (event) => {
+            if (!toggle.contains(event.target) && !menu.contains(event.target)) {
+                menu.classList.add('hidden');
+            }
+            });
         });
     </script>
+
 </body>
 </html>
