@@ -103,7 +103,7 @@
                     <a href="#Versicherungen" class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">Vers.</a>
                     <a href="#Partner" class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">Partner</a>
                     <!-- MS BOOKING LINK: Ersetze "#contact" durch deinen Microsoft Booking Link -->
-                    <a href="https://outlook.office.com/book/Diabsurance@eddimed.eu/" target="_blank" class="inline-block bg-diab-blue text-white px-6 py-2.5 rounded-full hover:bg-blue-600 transition-all duration-300 font-medium">
+                    <a href="https://outlook.office.com/book/Diabsurance@eddimed.eu/" target="_blank" rel="noopener noreferrer" class="inline-block bg-diab-blue text-white px-6 py-2.5 rounded-full hover:bg-blue-600 transition-all duration-300 font-medium">
                         Beratung&nbsp;anfragen
                     </a>
                 </div>
@@ -129,7 +129,7 @@
 
     <!-- BU Section -->
     <section id="BU" class="py-20 gradient-bg">
-        <div class="mx-auto pt-20 px-15 sm:px-6 lg:px-8">
+        <div class="mx-auto pt-20 px-4 sm:px-6 lg:px-8">
             <div class="text-center text-white mb-16">
                 <h1 class="text-5xl font-bold mb-2">Berufs&shy;un&shy;fähig&shy;keits&shy;ver&shy;sicher&shy;ung für Menschen mit <span class="text-blue-300">Diabetes</span></h1>
                 <p class="text-xl opacity-90 mb-5 text-center">
@@ -143,9 +143,8 @@
 
 
 
-            <div id="Formular" style="text-align: center;" class="bg-white rounded-2xl p-8 shadow-2xl items-center">
-                <!-- <iframe src="https://tally.so/embed/3x7kp5?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" width="100%" height="600" frameborder="0"></iframe> -->
-                <iframe src="https://tally.so/embed/3x7kp5?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" style="width: 100%; border: 0px; margin-top: 0; margin-bottom: 0;" title="BU-Versicherung"></iframe>
+            <div id="Formular" class="w-full md:w-3/4 lg:w-1/2 max-w-3xl mx-auto bg-white rounded-2xl p-6 sm:p-8 shadow-2xl scroll-mt-28">
+                <iframe data-tally-src="https://tally.so/embed/3x7kp5?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" title="BU-Versicherung" loading="lazy" style="width: 100%; min-height: 600px; border: 0;"></iframe>
             </div>
             <!-- https://outlook.office.com/book/Diabsurance@eddimed.eu/ -->
                 
@@ -215,7 +214,7 @@
                 </div>
                 <div class="flex items-center space-x-4">
                     <div>
-                            <a href="https://outlook.office.com/book/Diabsurance@eddimed.eu/" target="_blank" class="inline-block bg-diab-blue mt-6 sm:mt-10 sm:mb-4 text-white px-6 py-2.5 rounded-full hover:bg-blue-600 transition-all duration-300 font-medium">Beratung&nbsp;anfragen</a>
+                            <a href="https://outlook.office.com/book/Diabsurance@eddimed.eu/" target="_blank" rel="noopener noreferrer" class="inline-block bg-diab-blue mt-6 sm:mt-10 sm:mb-4 text-white px-6 py-2.5 rounded-full hover:bg-blue-600 transition-all duration-300 font-medium">Beratung&nbsp;anfragen</a>
                             
                     </div>
                 </div>
@@ -223,62 +222,87 @@
         </div>
     </section>
 
-    <!-- Versicherungen Section, fomerly: Hero Section -->
-    <section id="Versicherungen" class="py-12 bg-gradient-to-br from-diab-light-blue via-white to-diab-light-green">
-        <div class="max-w-7xl mx-auto px-15 sm:px-6 lg:px-8">
-            <div class="flex flex-col lg:flex-row items-center">
-                <div class="mb-12 lg:mb-0">
-                    <h2 class="text-4xl pt-15 font-bold text-gray-900 mb-6 text-center leading-tight">
-                        Versicherungs&shy;schutz für Menschen mit <span class="text-diab-blue">Diabetes</span>
-                    </h2>
-                    <p class="text-xl text-gray-600 mb-8 text-center">
-                        Faire Konditionen, persönliche Beratung, individuelle Lösungen.
-                    </p>
-                    
-                    <div class="grid grid-cols-3 gap-8">
-                        <!-- Berufsunfähigkeitsversicherung -->
-                        <a href="bu.html">
-                        <div class="bg-white p-8 rounded-2xl shadow-lg hover-lift border border-gray-100">
-                            <div class="text-center"><i class="text-4xl text-diab-blue mb-6 fas fa-briefcase"></i></div>
-                            <h3 class="text-2xl font-bold text-gray-900 mb-4"> Berufs&shy;un&shy;fähig&shy;keits&shy;ver&shy;sicher&shy;ung</h3>
-                            <p class="text-gray-600 mb-6">
-                                Schutz vor Einkommens&shy;verlust bei Berufs&shy;unfähig&shy;keit.
-                            </p>
-                        </div></a>
+<!-- Versicherungen Section, formerly: Hero Section -->
+<section id="Versicherungen" class="scroll-mt-24 py-10 sm:py-12 bg-gradient-to-br from-diab-light-blue via-white to-diab-light-green">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Heading -->
+    <div class="max-w-3xl mx-auto text-center">
+      <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 leading-tight break-words">
+        Versicherungs&shy;schutz für Menschen mit <span class="text-diab-blue">Diabetes</span>
+      </h2>
+      <p class="mt-3 text-base sm:text-lg md:text-xl text-gray-600">
+        Faire Konditionen, persönliche Beratung, individuelle Lösungen.
+      </p>
+    </div>
 
-                        <!-- Lebensversicherung -->
-                        <!-- a href="rlv.html" -->
-                        <div class="bg-white p-8 rounded-2xl shadow-lg hover-lift border border-gray-100">
-                            <div class="text-center"><i class="text-4xl text-diab-green mb-6 fas fa-heart"></i> </div>
-                            <h3 class="text-2xl font-bold text-gray-900 mb-4 text-center"> 
-                                (Risiko-)<wbr>Lebens&shy;ver&shy;sicher&shy;ung</h3>
-                            <p class="text-gray-600 mb-6 text-center">
-                                Finanzielle Absicherung für Ihre Angehörigen im Todesfall. <br>
-                                Mit individuell angepassten Konditionen.
-                            </p>
-                        </div><!-- /a -->
-
-                        <!-- Unfallversicherung  -->
-                        <!-- a href="uv.html" -->
-                        <div class="bg-white p-8 rounded-2xl shadow-lg hover-lift border border-gray-100">
-                            <div class="text-center"><i class="text-4xl text-diab-green mb-6 fas fa-user-injured"></i></div>
-                            <h3 class="text-2xl font-bold text-gray-900 mb-4 text-right"> <wbr>Un&shy;fall&shy;ver&shy;sicher&shy;ung</h3>
-                            <p class="text-gray-600 mb-6 text-right">
-                                Absicherung gegen dauerhafte Schädigung durch einen Unfall in Arbeit oder Freizeit.
-                            </p>
-                        </div><!-- /a -->
-                    </div>
-                    <div class="text-xl text-gray-600 mt-6 mb-2 text-center"><br>
-                        Neben der BU vermittle ich auch weitere Personenversicherungen bei Diabetes und berate Dich gerne: <a href="https://outlook.office.com/book/Diabsurance@eddimed.eu/" target="_blank" class="inline-block bg-diab-blue text-white mt-6 sm:mt-10 mb-4 px-6 py-2.5 rounded-full hover:bg-blue-600 transition-all duration-300 font-medium">
-                        Beratung&nbsp;anfragen
-                    </a></div>
-                    
-                    <div class="text-xl text-gray-600 mt-6 mb-2 text-center">Für andere Versicherungsanfragen kann ich Dich gerne an kompetente ExpertInnen aus meinem Netzwerk verweisen.</div>
-                    
-                </div>
-            </div>
+    <!-- Cards -->
+    <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
+      <!-- BU -->
+      <a href="bu.html" class="group block h-full focus:outline-none focus-visible:ring-2 focus-visible:ring-diab-blue rounded-2xl">
+        <div class="h-full bg-white p-6 sm:p-7 rounded-2xl shadow-lg border border-gray-100 transition transform motion-safe:hover:-translate-y-1 motion-safe:hover:shadow-xl">
+          <div class="text-center">
+            <i class="text-4xl text-diab-blue mb-4 fas fa-briefcase" aria-hidden="true"></i>
+          </div>
+          <h3 class="text-xl sm:text-2xl font-bold text-gray-900 text-center">
+            Berufs&shy;un&shy;fähig&shy;keits&shy;ver&shy;sicher&shy;ung
+          </h3>
+          <p class="mt-3 text-gray-600 text-center">
+            Schutz vor Einkommens&shy;verlust bei Berufs&shy;unfähig&shy;keit.
+          </p>
         </div>
-    </section>
+      </a>
+
+      <!-- Lebensversicherung -->
+      <!-- a href="rlv.html" -->
+      <div class="block h-full rounded-2xl focus-within:ring-2 focus-within:ring-diab-blue">
+        <div class="h-full bg-white p-6 sm:p-7 rounded-2xl shadow-lg border border-gray-100 transition transform motion-safe:hover:-translate-y-1 motion-safe:hover:shadow-xl">
+          <div class="text-center">
+            <i class="text-4xl text-diab-green mb-4 fas fa-heart" aria-hidden="true"></i>
+          </div>
+          <h3 class="text-xl sm:text-2xl font-bold text-gray-900 text-center">
+            (Risiko-)<wbr>Lebens&shy;ver&shy;sicher&shy;ung
+          </h3>
+          <p class="mt-3 text-gray-600 text-center">
+            Finanzielle Absicherung für Ihre Angehörigen im Todesfall.<br class="hidden sm:block">
+            Mit individuell angepassten Konditionen.
+          </p>
+        </div>
+      </div>
+
+      <!-- Unfallversicherung -->
+      <!-- a href="uv.html" -->
+      <div class="block h-full rounded-2xl focus-within:ring-2 focus-within:ring-diab-blue">
+        <div class="h-full bg-white p-6 sm:p-7 rounded-2xl shadow-lg border border-gray-100 transition transform motion-safe:hover:-translate-y-1 motion-safe:hover:shadow-xl">
+          <div class="text-center">
+            <i class="text-4xl text-diab-green mb-4 fas fa-user-injured" aria-hidden="true"></i>
+          </div>
+          <h3 class="text-xl sm:text-2xl font-bold text-gray-900 text-center">
+            <wbr>Un&shy;fall&shy;ver&shy;sicher&shy;ung
+          </h3>
+          <p class="mt-3 text-gray-600 text-center">
+            Absicherung gegen dauerhafte Schädigung durch einen Unfall in Arbeit oder Freizeit.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="mt-10 text-center">
+      <p class="text-base sm:text-lg md:text-xl text-gray-600">
+        Neben der BU vermittle ich auch weitere Personenversicherungen bei Diabetes und berate Dich gerne:
+      </p>
+      <a href="https://outlook.office.com/book/Diabsurance@eddimed.eu/" target="_blank"
+         class="mt-4 inline-flex items-center justify-center rounded-full bg-diab-blue px-6 py-2.5 text-white font-medium transition hover:bg-blue-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-diab-blue">
+        Beratung&nbsp;anfragen
+      </a>
+    </div>
+
+    <p class="mt-6 text-center text-base sm:text-lg text-gray-600">
+      Für andere Versicherungsanfragen kann ich Dich gerne an kompetente ExpertInnen aus meinem Netzwerk verweisen.
+    </p>
+  </div>
+</section>
+
 
     <!-- Risiko Score Section -->
     <section id="Risiko_Score" class="py-12 bg-gradient-to-r from-diab-light-blue to-diab-light-green">
@@ -376,7 +400,7 @@ Berechnung des Eddimed CGM Risiko Score durch unseren Partner <a href="https://e
             </div>
             
             <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-                <p>&copy; <a href="https://www.openstreetmap.org/relation/2793104" target="_blank">Stuttgart</a>, Aug 2025 - diabsurance - Alle Rechte vorbehalten - <a href="impressum.html" class="hover:text-white transition-colors duration-300">Impressum</a>, <a href="erstinformation.html" class="hover:text-white transition-colors duration-300">Erstinformation</a></p>
+                <p>&copy; <a href="https://www.openstreetmap.org/relation/2793104" target="_blank" rel="noopener noreferrer">Stuttgart</a>, Aug 2025 - diabsurance - Alle Rechte vorbehalten - <a href="impressum.html" class="hover:text-white transition-colors duration-300">Impressum</a>, <a href="erstinformation.html" class="hover:text-white transition-colors duration-300">Erstinformation</a></p>
             </div>
         </div>
     </footer>

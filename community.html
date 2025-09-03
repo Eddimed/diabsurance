@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Berufsunfähigkeitsversicherung - diabsurance</title>
+  <link rel="icon" href="img/diabsurance_shorty_300x300.png" type="image/png">
+  <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'diab-blue': '#4285f4',
+                        'diab-green': '#34a853',
+                        'diab-light-blue': '#e8f0fe',
+                        'diab-light-green': '#e6f4ea'
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'system-ui', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #4285f4 0%, #34a853 100%);
+        }
+        .glass-effect {
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .hover-lift {
+            transition: all 0.3s ease;
+        }
+        .hover-lift:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+    <!-- Navigation New -->
+    <div id="top"></div>
+    <nav class="bg-white/95 backdrop-blur-sm shadow-sm fixed w-full z-50 top-0 border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <a href="index.html"><img src="img/diabsurance_logo_green.png" alt="diabsurance Logo" class="h-12 w-auto"></a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#BU" class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">BU-Vers.</a>
+                    <a href="#Ursachen" class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">Ursachen</a>
+                    <a href="#gute_BU" class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">gute BU</a>
+                    <a href="#FAQ" class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">FAQ</a>
+                    <a href="#Formular" class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">Formular</a>
+                    <!-- MS BOOKING LINK: Ersetze "#contact" durch deinen Microsoft Booking Link -->
+                    <a href="https://outlook.office.com/book/Diabsurance@eddimed.eu/" target="_blank" class="inline-block bg-diab-blue text-white px-6 py-2.5 rounded-full hover:bg-blue-600 transition-all duration-300 font-medium">
+                        Beratung&nbsp;anfragen
+                    </a>
+                </div>
+                <div id="dropdown-toggle" class="md:hidden">
+                    <button class="text-gray-700 hover:text-diab-blue">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+
+                <!-- Freischwebendes Menü -->
+                <div id="dropdown-menu" class="absolute top-0 right-0 mt-5 w-50 bg-white border border-gray-200 rounded shadow-lg hidden z-100">
+                    <div class="flex flex-col space-y-2 p-4">
+                        <a href="#BU" class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">BU-Vers.</a>
+                        <a href="#Formular" class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">Formular</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+<section aria-labelledby="Partnerliste" class="mt-30 bg-gradient-to-br from-blue-200 via-white to-green-100">
+    <div class="mt-24 text-center pb-10 px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl sm:text-4xl font-bold text-gray-900">Partnerunternehmen aus dem Diabetesbereich</h2>
+        <p class="mt-2 text-gray-600 max-w-xl mx-auto">Hier findest Du eine Auswahl an Unternehmen, die wir empfehlen können (in alphabetischer Reihenfolge).</p>
+    </div>
+    <!-- Cards Container -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
+      <!-- Card 1 -->
+      <a href="https://diasticker.de/" target="_blank" rel="noopener noreferrer"
+         class="group block h-full focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 rounded-2xl">
+        <article class="h-full bg-white p-6 sm:p-7 rounded-2xl shadow-sm border border-gray-200 transition transform motion-safe:group-hover:-translate-y-1 motion-safe:group-hover:shadow-lg">
+          <figure class="flex items-center justify-center">
+            <!-- Replace src with your logo path; SVG/PNG recommended. -->
+            <img src="img/partner/Diasticker+Logo.webp" alt="Diasticker" class="h-26 md:h-32 w-auto object-contain" loading="lazy" />
+          </figure>
+        </article>
+      </a>
+
+      <!-- Card 2 -->
+      <a href="https://hyporest.com" target="_blank" rel="noopener noreferrer"
+         class="group block h-full focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 rounded-2xl">
+        <article class="h-full bg-white p-6 sm:p-7 rounded-2xl shadow-sm border border-gray-200 transition transform motion-safe:group-hover:-translate-y-1 motion-safe:group-hover:shadow-lg">
+          <figure class="flex items-center justify-center">
+            <img src="img/partner/hyporest-logo_12010.webp" alt="Hyporest" class="h-16 md:h-20 w-auto object-contain" loading="lazy" />
+          </figure>
+          <p class="mt-2 text-sm sm:text-base text-gray-600 text-center">Das erste Dextroseprodukt ohne direkten Zuckerkontakt mit den Zähnen.</p>
+        </article>
+      </a>
+
+      <!-- Card 3 -->
+      <a href="https://rubylimes.com/" target="_blank" rel="noopener noreferrer"
+         class="group block h-full focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 rounded-2xl">
+        <article class="h-full bg-white p-6 sm:p-7 rounded-2xl shadow-sm border border-gray-200 transition transform motion-safe:group-hover:-translate-y-1 motion-safe:group-hover:shadow-lg">
+          <figure class="flex items-center justify-center">
+            <img src="img/partner/Ruby-Limes-Logo.webp" alt="Ruby Limes" class="h-24 md:h-28 w-auto object-contain" loading="lazy" />
+          </figure>
+          <p class="mt-2 text-sm sm:text-base text-gray-600 text-center">Diabetes trifft Mode.</p>
+        </article>
+      </a>
+
+      <!-- Card 4 
+      <a href="https://unternehmen-4.example" target="_blank" rel="noopener noreferrer"
+         class="group block h-full focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 rounded-2xl">
+        <article class="h-full bg-white p-6 sm:p-7 rounded-2xl shadow-sm border border-gray-200 transition transform motion-safe:group-hover:-translate-y-1 motion-safe:group-hover:shadow-lg">
+          <figure class="flex items-center justify-center">
+            <img src="/img/unternehmen-4-logo.png" alt="Logo von Unternehmen 4" class="h-12 md:h-16 w-auto object-contain" loading="lazy" />
+          </figure>
+          <h2 class="mt-4 text-lg sm:text-xl font-semibold text-center">Unternehmen 4</h2>
+          <p class="mt-2 text-sm sm:text-base text-gray-600 text-center">Knackige, konkrete Beschreibung (Produkte, Service, Spezialisierung).</p>
+          <div class="mt-4 text-center">
+            <span class="inline-flex items-center font-medium text-blue-700 group-hover:underline">Zur Website
+              <span aria-hidden="true" class="ml-1">→</span>
+            </span>
+          </div>
+        </article>
+      </a> -->
+    </div>
+  </section>
+
+    <div class="mt-24 text-center px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl sm:text-4xl font-bold text-gray-900">Partnerunternehmen aus dem Gesundheitsbereich</h2>
+    </div>
+    <!-- Cards Container -->
+    <div class="grid grid-cols-1 gap-4 sm:gap-6 lg:gap-8 items-center max-w-sm mx-auto">
+      <!-- Card 1 -->
+      <a href="https://straightup-karlsruhe.de/" target="_blank" rel="noopener noreferrer"
+         class="group block h-full focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 rounded-2xl">
+        <article class="h-full bg-white p-6 sm:p-7 rounded-2xl shadow-sm border border-gray-200 transition transform motion-safe:group-hover:-translate-y-1 motion-safe:group-hover:shadow-lg">
+          <figure class="flex items-center justify-center">
+            <!-- Replace src with your logo path; SVG/PNG recommended. -->
+            <img src="img/partner/straightup_logo_black_notext.svg" alt="StraightUp" class="h-26 md:h-32 w-auto object-contain" loading="lazy" />
+          </figure>
+          <p class="mt-2 text-sm sm:text-base text-gray-600 text-center">Das Hilfsmittel für eine langfristig bessere Körperhaltung.</p>
+        </article>
+      </a>
+    </div>
+
+    <!-- Optional: small legal hint about external links -->
+    <p class="mt-8 mb-4 text-center text-sm text-gray-500">Hinweis: Externe Links führen zu Websites Dritter. Für deren Inhalte sind die jeweiligen Betreiber verantwortlich.</p>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white justify-between py-12">
+        <div class="container mx-auto">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <a href="index.html"><img src="img/diabsurance_logo_green_darkbg.png" alt="diabsurance Logo" class="w-auto mb-4"></a>
+                    <p class="text-gray-400">
+                        Euer Vermittler Nr. 1 für Personenversicherungen bei Diabetes.
+                    </p>
+                </div>
+                
+
+                <div class="text-center">
+                    <a href="index.html#Versicherungen"><h4 class="text-lg font-semibold mb-4">Sitemap</h4></a>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="bu.html" class="hover:text-white transition-colors duration-300">Berufsunfähigkeitsversicherung</a></li>
+                        <li><a href="erstinformation.html" class="hover:text-white transition-colors duration-300">Erstinformation</a></li>
+                        <li><a href="impressum.html" class="hover:text-white transition-colors duration-300">Impressum</a></li>
+                    </ul>
+                </div>
+                
+                <div class="text-center">
+                    <h4 class="text-lg font-semibold mb-4">Kontakt</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>
+                            <i class="fas fa-phone mr-2"></i>
+                            +49 (0) 711 9933 5605
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope mr-2"></i>
+                            info [at] diabsurance.de
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; <a href="https://www.openstreetmap.org/relation/2793104" target="_blank">Stuttgart</a>, Aug 2025 - diabsurance - Alle Rechte vorbehalten - <a href="impressum.html" class="hover:text-white transition-colors duration-300">Impressum</a>, <a href="erstinformation.html" class="hover:text-white transition-colors duration-300">Erstinformation</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Smooth Scrolling & Interactions -->
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                navbar.classList.add('shadow-lg');
+            } else {
+                navbar.classList.remove('shadow-lg');
+            }
+        });
+
+        // tally Form
+        var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}
+
+        // Navigation bar, Hamburger menu, drop-down list
+        document.addEventListener('DOMContentLoaded', function () {
+            const toggle = document.getElementById('dropdown-toggle');
+            const menu = document.getElementById('dropdown-menu');
+
+            toggle.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+            });
+
+            // Optional: Klick außerhalb schließt Menü
+            document.addEventListener('click', (event) => {
+            if (!toggle.contains(event.target) && !menu.contains(event.target)) {
+                menu.classList.add('hidden');
+            }
+            });
+        });
+    </script>
+
+</body>
+</html>
