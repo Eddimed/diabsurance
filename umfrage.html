@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO meta description: usually up to ~155–160 characters -->
+    <meta name="description" content="Umfrage zur Berufsunfähigkeitsversicherungen für Menschen mit Diabetes.">
+
+    <!-- Open Graph tags for rich link previews -->
+    <meta property="og:title" content="diabsurance - Versicherungsschutz für Menschen mit Diabetes">
+    <meta property="og:description" content="Umfrage zur Berufsunfähigkeitsversicherungen für Menschen mit Diabetes.">
+    <meta property="og:image" content="https://diabsurance.de/img/diabsurance_logo_green.png">
+    <meta property="og:url" content="https://diabsurance.de/Umfrage.html">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card metadata -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="diabsurance - Versicherungsschutz für Menschen mit Diabetes">
+    <meta name="twitter:description" content="Umfrage zur Berufsunfähigkeitsversicherungen für Menschen mit Diabetes">
+    <meta name="twitter:image" content="https://diabsurance.de/img/diabsurance_logo_green.png">
+
+    <meta name="robots" content="index, follow">
+
+    <title>diabsurance - Umfrage zur Berufsunfähigkeitsversicherung für Menschen mit Diabetes</title>
+    <link rel="icon" href="img/diabsurance_shorty_300x300.png" type="image/png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'diab-blue': '#4285f4',
+                        'diab-green': '#34a853',
+                        'diab-light-blue': '#e8f0fe',
+                        'diab-light-green': '#e6f4ea'
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'system-ui', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <script type="application/ld+json">
+    {
+    "@context": "https://schema.org",
+    "@type": "InsuranceAgency",
+    "name": "diabsurance",
+    "url": "https://diabsurance.de",
+    "logo": "https://diabsurance.de/img/diabsurance_logo_green.png",
+    "description": "Versicherungsschutz für Menschen mit Diabetes - Berufsunfähigkeits-, Lebens- und Unfallversicherung mit fairen Konditionen.",
+    "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Erdbeerweg 24",
+        "addressLocality": "Stuttgart",
+        "postalCode": "70619",
+        "addressCountry": "DE"
+    },
+    "telephone": "+49 711 9933 5605",
+    "email": "info@diabsurance.de",
+    "sameAs": [
+        "https://www.facebook.com/diabsurance",
+        "https://www.linkedin.com/company/diabsurance"
+    ]
+    }
+    </script>
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #4285f4 0%, #34a853 100%);
+        }
+        .glass-effect {
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .hover-lift {
+            transition: all 0.3s ease;
+        }
+        .hover-lift:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body class="bg-white font-sans">
+    <!-- Navigation New -->
+    <div id="top"></div>
+    <nav class="bg-white/95 backdrop-blur-sm shadow-sm fixed w-full z-50 top-0 border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <a href="index.html"><img src="img/diabsurance_logo_green.png" alt="diabsurance Logo" class="h-12 w-auto"></a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#Formular" class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">Formular</a>
+                    <a href="#About" class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">Über mich</a>
+                    <a href="#Versicherungen" class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">Versicherungen</a>
+                    <a href="#Partner" class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">Partner</a>
+                    <!-- MS BOOKING LINK: Ersetze "#contact" durch deinen Microsoft Booking Link -->
+                    <a href="https://outlook.office.com/book/Diabsurance@eddimed.eu/" target="_blank" rel="noopener noreferrer" class="inline-block bg-diab-blue text-white px-6 py-2.5 rounded-full hover:bg-blue-600 transition-all duration-300 font-medium">
+                        Beratung&nbsp;anfragen
+                    </a>
+                </div>
+                <div id="dropdown-toggle" class="md:hidden">
+                    <button class="text-gray-700 hover:text-diab-blue">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+
+                <!-- Freischwebendes Menü -->
+                <div id="dropdown-menu" class="absolute top-0 right-0 mt-5 w-50 bg-white border border-gray-200 rounded shadow-lg hidden z-100">
+                    <div class="flex flex-col space-y-2 p-4">
+                        <a href="#Formular" class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">Formular</a>
+                        <a href="#About" class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">Über mich</a>
+                        <a href="#Versicherungen" class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">Versicherungen</a>
+                        <a href="#Partner" class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">Partner</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Form Section -->
+    <section id="Form" class="py-20 gradient-bg">
+        <div class="text-right pt-4 px-4 sm:px-6 lg:px-8 text-white"><a href="https://www.openstreetmap.org/relation/2793104" target="_blank" rel="noopener noreferrer">Stuttgart</a>, Sep 2025</div>
+        <div class="mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center text-white mb-16">
+                <h1 class="text-5xl font-bold mb-2">Umfrage: Berufs&shy;un&shy;fähig&shy;keits&shy;ver&shy;sicher&shy;ung und <span class="text-blue-300">Diabetes</span></h1>
+                <div class="text-x1 opacity-90 max-w-3xl mx-auto">
+                    Wir von Diabsurance möchten besser verstehen, 
+                    <ul>
+                        <li>welche Erwartungen Menschen mit Diabetes in Bezug auf Berufsunfähigkeitsversicherungen haben und</li> 
+                        <li>welche Erfahrungen sie bereits gemacht haben.</li>
+                    </ul> 
+                    Deine Antworten werden anonym verarbeitet und helfen uns, Versicherungsangebote auf Deine Bedürfnisse zuzuschneiden, sie fairer und transparenter zu gestalten.
+                </div>
+            </div>
+
+
+
+            <div id="Formular" class="w-full md:w-3/4 lg:w-3/4 mx-auto bg-white rounded-2xl p-6 sm:p-8 shadow-2xl scroll-mt-28">
+                <iframe 
+                    src="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=VdwVd12wBUq-EFY-58B-enP1Mq2VFrlCtQA-U28oRHxUQ0QwNFAxRFlXNlU1VVNBWVNCSFNMTVNZVy4u&embed=true"
+                    title="BU-Umfrage und Diabetes (Microsoft Forms)"
+                    loading="lazy"
+                    allow="fullscreen"
+                    style="border:0; width:100%; height:80vh; max-height:100vh"
+                >
+                </iframe>
+            </div>
+            <!-- https://outlook.office.com/book/Diabsurance@eddimed.eu/ -->
+                
+        </div>
+    </section>
+
+
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white justify-between py-12">
+        <div class="container mx-auto">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <a href="index.html"><img src="img/diabsurance_logo_green_darkbg.png" alt="diabsurance Logo" class="w-auto mb-4"></a>
+                    <p class="text-gray-400">
+                        Euer Vermittler Nr. 1 für Personenversicherungen bei Diabetes.
+                    </p>
+                </div>
+                
+
+                <div class="text-center">
+                    <a href="index.html#Versicherungen"><h4 class="text-lg font-semibold mb-4">Sitemap</h4></a>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="bu.html" class="hover:text-white transition-colors duration-300">Berufsunfähigkeitsversicherung</a></li>
+                        <li><a href="erstinformation.html" class="hover:text-white transition-colors duration-300">Erstinformation</a></li>
+                        <li><a href="community.html" class="hover:text-white transition-colors duration-300">Unternehmen aus der Community</a></li>
+                        <li><a href="impressum.html" class="hover:text-white transition-colors duration-300">Impressum</a></li>
+                    </ul>
+                </div>
+                
+                <div class="text-center">
+                    <h4 class="text-lg font-semibold mb-4">Kontakt</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>
+                            <i class="fas fa-phone mr-2"></i>
+                            +49 (0) 711 9933 5605
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope mr-2"></i>
+                            info [at] diabsurance.de
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; <a href="https://www.openstreetmap.org/relation/2793104" target="_blank" rel="noopener noreferrer">Stuttgart</a>, Sep 2025 - diabsurance - Alle Rechte vorbehalten - <a href="impressum.html" class="hover:text-white transition-colors duration-300">Impressum</a>, <a href="erstinformation.html" class="hover:text-white transition-colors duration-300">Erstinformation</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Smooth Scrolling & Interactions -->
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                navbar.classList.add('shadow-lg');
+            } else {
+                navbar.classList.remove('shadow-lg');
+            }
+        });
+
+        // tally Form
+        var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}
+
+        // Navigation bar, Hamburger menu, drop-down list
+        document.addEventListener('DOMContentLoaded', function () {
+            const toggle = document.getElementById('dropdown-toggle');
+            const menu = document.getElementById('dropdown-menu');
+
+            toggle.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+            });
+
+            // Optional: Klick außerhalb schließt Menü
+            document.addEventListener('click', (event) => {
+            if (!toggle.contains(event.target) && !menu.contains(event.target)) {
+                menu.classList.add('hidden');
+            }
+            });
+        });
+    </script>
+
+</body>
+</html>
