@@ -85,6 +85,17 @@
             transform: translateY(-8px);
             box-shadow: 0 20px 40px rgba(0,0,0,0.1);
         }
+
+        /* sharing buttons and links */
+        .share { display:flex; gap:.5rem; align-items:center; flex-wrap:wrap }
+        .share-btn {
+        display:inline-flex; align-items:center; justify-content:center;
+        gap:.4rem; padding:.5rem .6rem; border:1px solid #ddd; border-radius:999px;
+        background:#fff; cursor:pointer; text-decoration:none; font:inherit;
+        }
+        .share-btn:hover { background:#f7f7f7 }
+        .share-btn svg { display:block }
+
     </style>
 </head>
 <body class="bg-white font-sans">
@@ -156,8 +167,51 @@
             <!-- https://outlook.office.com/book/Diabsurance@eddimed.eu/ -->
                 
         </div>
-    </section>
 
+
+    <div class="share pt-4 justify-center" aria-label="Share this page">
+        <div class="text-white"><h2>sharing is caring:</h2></div>
+        <div>
+            <!-- button id="share-native" class="share-btn" hidden>Share</button -->
+            <a id="share-fb" href="https://JS_overwrites_href.de" class="share-btn" target="_blank" rel="noopener" aria-label="Share on Facebook">
+                <!-- Facebook icon -->
+                <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.6V12h2.8V9.8c0-2.8 1.7-4.3 4.2-4.3 1.2 0 2.5.2 2.5.2v2.7h-1.4c-1.4 0-1.8.9-1.8 1.8V12h3.1l-.5 2.9h-2.6v7A10 10 0 0 0 22 12z"/></svg>
+            </a>
+
+            <a id="share-x" href="https://JS_overwrites_href.de" class="share-btn" target="_blank" rel="noopener" aria-label="Share on X">
+                <!-- X/Twitter icon -->
+                <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M4 3l7.2 9.3L4.5 21H7l6-6.6L18.7 21H22l-7.7-9.9L20.9 3H18l-5.6 6.2L7.8 3H4z"/></svg>
+            </a>
+
+            <a id="share-li" href="https://JS_overwrites_href.de" class="share-btn" target="_blank" rel="noopener" aria-label="Share on LinkedIn">
+                <!-- LinkedIn icon -->
+                <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M4.98 3.5C4.98 4.9 3.9 6 2.5 6S0 4.9 0 3.5 1.12 1 2.5 1s2.48 1.1 2.48 2.5zM0 8h5v15H0V8zm7.5 0h4.8v2h.1c.7-1.2 2.4-2.5 4.9-2.5 5.2 0 6.2 3.4 6.2 7.8V23h-5v-6.7c0-1.6 0-3.7-2.3-3.7s-2.7 1.8-2.7 3.6V23h-5V8z"/></svg>
+            </a>
+
+            <a id="share-wa" href="https://JS_overwrites_href.de" class="share-btn" target="_blank" rel="noopener" aria-label="Share on WhatsApp">
+                <!-- WhatsApp icon -->
+                <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M12.04 2a9.9 9.9 0 0 0-8.5 15.1L2 22l4.98-1.3A9.97 9.97 0 1 0 12.04 2zm5.8 14.5c-.25.7-1.26 1.2-1.98 1.4-.53.1-1.2.2-3.5-.73-2.9-1.2-4.8-4.1-4.9-4.3-.14-.2-1.2-1.6-1.2-3s.76-2.1 1.06-2.4c.25-.3.66-.4 1.06-.4h.76c.23 0 .56.1.85.7.25.5.83 2 .9 2.2.07.2.12.4 0 .6-.1.2-.14.3-.3.5-.15.2-.32.4-.46.5-.15.1-.3.3-.13.6.2.3.86 1.4 1.86 2.3 1.28 1.1 2.36 1.4 2.7 1.6.33.2.52.2.72 0 .22-.26.83-.96 1.05-1.3.22-.33.46-.27.76-.16.3.1 1.9.9 2.2 1.1.3.16.5.26.57.4.06.13.06.74-.18 1.44z"/></svg>
+            </a>
+
+            <a id="share-tg" href="https://JS_overwrites_href.de" class="share-btn" target="_blank" rel="noopener" aria-label="Share on Telegram">
+                <!-- Telegram icon -->
+                <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M9.6 15.6l-.4 5.6 3.5-3 5.3 3.7 4-18.1-21.3 8.3 5.3 2 12.3-7.6-8.7 9.1z"/></svg>
+            </a>
+
+            <a id="share-mail" href="https://JS_overwrites_href.de" class="share-btn" aria-label="Share via email">
+                <!-- Mail icon -->
+                <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M2 4h20v16H2z M4 6l8 6 8-6"/></svg>
+            </a>
+
+            <button id="share-copy" class="share-btn" aria-label="Copy link">
+                <!-- Link icon -->
+                <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M10 13a5 5 0 0 1 0-7l2-2a5 5 0 0 1 7 7l-1 1M14 11a5 5 0 0 1 0 7l-2 2a5 5 0 0 1-7-7l1-1"/></svg>
+            </button>
+            
+
+            </div>
+        </div>
+    </section>
 
 
     <!-- Footer -->
@@ -176,6 +230,7 @@
                     <a href="index.html#Versicherungen"><h4 class="text-lg font-semibold mb-4">Sitemap</h4></a>
                     <ul class="space-y-2 text-gray-400">
                         <li><a href="bu.html" class="hover:text-white transition-colors duration-300">Berufsunfähigkeitsversicherung</a></li>
+                        <li><a href="umfrage.html" class="hover:text-white transition-colors duration-300">Umfrage (Sep 2025)</a></li>
                         <li><a href="erstinformation.html" class="hover:text-white transition-colors duration-300">Erstinformation</a></li>
                         <li><a href="community.html" class="hover:text-white transition-colors duration-300">Unternehmen aus der Community</a></li>
                         <li><a href="impressum.html" class="hover:text-white transition-colors duration-300">Impressum</a></li>
@@ -249,6 +304,55 @@
             });
         });
     </script>
+
+<script>
+(() => {
+  const canonical = document.querySelector('link[rel="canonical"]')?.href;
+  const urlRaw = canonical || location.href;
+  const titleRaw = document.querySelector('meta[property="og:title"]')?.content
+                   || document.title;
+  const descRaw  = document.querySelector('meta[name="description"]')?.content || "";
+
+  const url   = encodeURIComponent(urlRaw);
+  const title = encodeURIComponent(titleRaw);
+  const text  = encodeURIComponent(descRaw || titleRaw);
+
+  // Buttons present?
+  const setHref = (id, href) => { const el = document.getElementById(id); if (el) el.href = href; };
+
+  setHref("share-fb", `https://www.facebook.com/sharer/sharer.php?u=${url}`);
+  setHref("share-x",  `https://twitter.com/intent/tweet?url=${url}&text=${title}`);
+  setHref("share-li", `https://www.linkedin.com/sharing/share-offsite/?url=${url}`);
+  setHref("share-wa", `https://api.whatsapp.com/send?text=${title}%20${url}`);
+  setHref("share-tg", `https://t.me/share/url?url=${url}&text=${title}`);
+  setHref("share-mail", `mailto:?subject=${title}&body=${text}%0A%0A${url}`);
+
+  // Native share (mobile etc.)
+  const nativeBtn = document.getElementById("share-native");
+  if (navigator.share && nativeBtn) {
+    nativeBtn.hidden = false;
+    nativeBtn.addEventListener("click", () => {
+      navigator.share({ title: titleRaw, text: descRaw || titleRaw, url: urlRaw });
+    });
+  }
+
+  // Copy-to-clipboard
+  const copyBtn = document.getElementById("share-copy");
+  if (copyBtn) {
+    copyBtn.addEventListener("click", async () => {
+      try {
+        await navigator.clipboard.writeText(urlRaw);
+        copyBtn.textContent = "Copied!";
+        setTimeout(() => (copyBtn.textContent = "Copy link"), 1200);
+      } catch {
+        // Fallback
+        prompt("Copy this link:", urlRaw);
+      }
+    });
+  }
+})();
+</script>
+
 
 </body>
 </html>
