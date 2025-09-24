@@ -97,6 +97,16 @@
         .share-btn:hover { background:#f7f7f7 }
         .share-btn svg { display:block }
 
+    /* no tailwind CSS used here */
+    a{ color:#2563eb; text-decoration:underline; text-underline-offset:2px; text-decoration-thickness:1px; }
+    a:hover{ color:#1d4ed8; text-decoration-thickness:2px; }
+    a:visited{ color:#7e22ce; }
+    a:focus-visible{ outline:none; box-shadow:0 0 0 2px rgba(59,130,246,.5); border-radius:2px; }
+    @media (prefers-color-scheme: dark){
+        a{ color:#60a5fa; }
+        a:hover{ color:#93c5fd; }
+        a:visited{ color:#c4b5fd; }
+    }
     </style>
 </head>
 <body class="bg-white font-sans">
@@ -376,12 +386,12 @@
     <section id="Risiko_Score" class="py-12 bg-gradient-to-r from-diab-light-blue to-diab-light-green">
         <div id="CRS"></div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-center text-4xl font-bold text-gray-900 mb-6">Eddimed CGM Risiko Score (CRS)</h2>
+            <h2 class="text-center text-4xl font-bold text-gray-900 mb-6">CGM-basierter Risiko Score (CRS)</h2>
             <div class="text-center">
-            <img src="img/income_protection_insurer_blue_background-1024x298.png" alt="Risiko Score" style="margin:auto">
+            <img src="img/CGM-basierter_Risiko_Score_Eddimed_202509.png" alt="Risiko Score" style="margin:auto">
             </div>
             <p class="text-lg text-gray-600 mb-6 leading-relaxed text-center">
-Berechnung des Eddimed CGM Risiko Score durch unseren Partner <a href="https://eddimed.eu">Eddimed</a></p>
+Berechnung des CGM-basierten Risiko Score durch unseren Partner <a href="https://eddimed.eu">Eddimed</a></p>
 
             <h3 class="text-2xl font-bold mb-3 text-center">Häufige Fragen zu Daten und CRS</h3>
             <dl class="py-2 grid grid-cols-4 gap-4">
