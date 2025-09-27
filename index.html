@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- SEO meta description: usually up to ~155–160 characters -->
-    <meta name="description" content="Berufsunfähigkeits-, Lebens- und Unfallversicherungen für Menschen mit Diabetes - faire Konditionen, persönliche Beratung und individuelle Lösungen.">
+    <meta name="description"
+        content="Berufsunfähigkeits-, Lebens- und Unfallversicherungen für Menschen mit Diabetes - faire Konditionen, persönliche Beratung und individuelle Lösungen.">
 
     <!-- Open Graph tags for rich link previews -->
     <meta property="og:title" content="diabsurance - Versicherungsschutz für Menschen mit Diabetes">
-    <meta property="og:description" content="Faire Konditionen, persönliche Beratung und individuelle Versicherungen für Diabetiker:innen.">
+    <meta property="og:description"
+        content="Faire Konditionen, persönliche Beratung und individuelle Versicherungen für Diabetiker:innen.">
     <meta property="og:image" content="https://diabsurance.de/img/diabsurance_logo_green.png">
     <meta property="og:url" content="https://diabsurance.de/">
     <meta property="og:type" content="website">
@@ -16,7 +19,8 @@
     <!-- Twitter Card metadata -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="diabsurance - Versicherungsschutz für Menschen mit Diabetes">
-    <meta name="twitter:description" content="Faire Konditionen, persönliche Beratung und individuelle Versicherungen für Diabetiker:innen.">
+    <meta name="twitter:description"
+        content="Faire Konditionen, persönliche Beratung und individuelle Versicherungen für Diabetiker:innen.">
     <meta name="twitter:image" content="https://diabsurance.de/img/diabsurance_logo_green.png">
 
     <meta name="robots" content="index, follow">
@@ -74,41 +78,109 @@
         .gradient-bg {
             background: linear-gradient(135deg, #4285f4 0%, #34a853 100%);
         }
+
         .glass-effect {
             backdrop-filter: blur(10px);
             background: rgba(255, 255, 255, 0.1);
             border: 1px solid rgba(255, 255, 255, 0.2);
         }
+
         .hover-lift {
             transition: all 0.3s ease;
         }
+
         .hover-lift:hover {
             transform: translateY(-8px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
         }
 
         /* sharing buttons and links */
-        .share { display:flex; gap:.5rem; align-items:center; flex-wrap:wrap }
-        .share-btn {
-        display:inline-flex; align-items:center; justify-content:center;
-        gap:.4rem; padding:.5rem .6rem; border:1px solid #ddd; border-radius:999px;
-        background:#fff; cursor:pointer; text-decoration:none; font:inherit;
+        .share {
+            display: flex;
+            gap: 0.5rem;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: center;
         }
-        .share-btn:hover { background:#f7f7f7 }
-        .share-btn svg { display:block }
 
-    /* no tailwind CSS used here */
-    a{ color:#2563eb; text-decoration:underline; text-underline-offset:2px; text-decoration-thickness:1px; }
-    a:hover{ color:#1d4ed8; text-decoration-thickness:2px; }
-    a:visited{ color:#7e22ce; }
-    a:focus-visible{ outline:none; box-shadow:0 0 0 2px rgba(59,130,246,.5); border-radius:2px; }
-    @media (prefers-color-scheme: dark){
-        a{ color:#60a5fa; }
-        a:hover{ color:#93c5fd; }
-        a:visited{ color:#c4b5fd; }
-    }
+        .share-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.4rem;
+            padding: 0.5rem 0.6rem;
+            border: 1px solid #ddd;
+            border-radius: 999px;
+            background: #fff;
+            cursor: pointer;
+            text-decoration: none;
+            font: inherit;
+            transition: all 0.2s ease;
+            min-width: 44px;
+            min-height: 44px;
+            user-select: none;
+        }
+
+        .share-btn:hover {
+            background: #f7f7f7;
+            transform: translateY(-1px);
+        }
+
+        .share-btn svg {
+            display: block;
+            width: 20px !important;
+            height: 20px !important;
+            flex-shrink: 0;
+            fill: currentColor;
+        }
+
+        /* Copied state for share-copy button */
+        .share-btn.copied {
+            min-width: 90px;
+            background: #e6f4ea;
+            color: #34a853;
+            transition: all 0.2s;
+        }
+
+        /* no tailwind CSS used here */
+        a {
+            color: #2563eb;
+            text-decoration: underline;
+            text-underline-offset: 2px;
+            text-decoration-thickness: 1px;
+        }
+
+        a:hover {
+            color: #1d4ed8;
+            text-decoration-thickness: 2px;
+        }
+
+        a:visited {
+            color: #7e22ce;
+        }
+
+        a:focus-visible {
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(59, 130, 246, .5);
+            border-radius: 2px;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            a {
+                color: #60a5fa;
+            }
+
+            a:hover {
+                color: #93c5fd;
+            }
+
+            a:visited {
+                color: #c4b5fd;
+            }
+        }
     </style>
 </head>
+
 <body class="bg-white font-sans">
     <!-- Navigation New -->
     <div id="top"></div>
@@ -116,15 +188,23 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center py-4">
                 <div class="flex items-center">
-                    <a href="index.html"><img src="img/diabsurance_logo_green.png" alt="diabsurance Logo" class="h-12 w-auto"></a>
+                    <a href="index.html"><img src="img/diabsurance_logo_green.png" alt="diabsurance Logo"
+                            class="h-12 w-auto"></a>
                 </div>
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="#Formular" class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">Formular</a>
-                    <a href="#About" class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">Über mich</a>
-                    <a href="#Versicherungen" class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">Versicherungen</a>
-                    <a href="#Partner" class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">Partner</a>
+                    <a href="#Formular"
+                        class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">Formular</a>
+                    <a href="#About"
+                        class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">Über
+                        mich</a>
+                    <a href="#Versicherungen"
+                        class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">Versicherungen</a>
+                    <a href="#Partner"
+                        class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">Partner</a>
                     <!-- MS BOOKING LINK: Ersetze "#contact" durch deinen Microsoft Booking Link -->
-                    <a href="https://outlook.office.com/book/Diabsurance@eddimed.eu/" target="_blank" rel="noopener noreferrer" class="inline-block bg-diab-blue text-white px-6 py-2.5 rounded-full hover:bg-blue-600 transition-all duration-300 font-medium">
+                    <a href="https://outlook.office.com/book/Diabsurance@eddimed.eu/" target="_blank"
+                        rel="noopener noreferrer"
+                        class="inline-block bg-diab-blue text-white px-6 py-2.5 rounded-full hover:bg-blue-600 transition-all duration-300 font-medium">
                         Beratung&nbsp;anfragen
                     </a>
                 </div>
@@ -135,12 +215,18 @@
                 </div>
 
                 <!-- Freischwebendes Menü -->
-                <div id="dropdown-menu" class="absolute top-0 right-0 mt-5 w-50 bg-white border border-gray-200 rounded shadow-lg hidden z-100">
+                <div id="dropdown-menu"
+                    class="absolute top-0 right-0 mt-5 w-50 bg-white border border-gray-200 rounded shadow-lg hidden z-100">
                     <div class="flex flex-col space-y-2 p-4">
-                        <a href="#Formular" class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">Formular</a>
-                        <a href="#About" class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">Über mich</a>
-                        <a href="#Versicherungen" class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">Versicherungen</a>
-                        <a href="#Partner" class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">Partner</a>
+                        <a href="#Formular"
+                            class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">Formular</a>
+                        <a href="#About"
+                            class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">Über
+                            mich</a>
+                        <a href="#Versicherungen"
+                            class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">Versicherungen</a>
+                        <a href="#Partner"
+                            class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">Partner</a>
                     </div>
                 </div>
             </div>
@@ -149,17 +235,25 @@
 
     <!-- BU Section -->
     <section id="BU" class="py-10 bg-gradient-to-r from-diab-light-blue to-diab-light-green">
-        
+
         <div class="max-w-7xl mx-auto px-4 pt-20">
-            <h1 class="text-center text-5xl font-bold text-gray-900 mb-6">Berufs&shy;un&shy;fähig&shy;keits&shy;ver&shy;sicher&shy;ung für Menschen mit <span class="text-blue-300">Diabetes</span></h1>
-                <div class="text-2xl">
-                    <ul class="list-disc pl-20 space-y-2 text-gray-800 text-center">
-                        <li> Eine Berufsunfähigkeitsversicherung gehört zu den Top-3-Versicherungen, die von den <a href="https://www.verbraucherzentrale.de/laura-zieht-aus/versicherungen">Verbraucherzentralen</a> empfohlen werden.</li>
-                        <li> Für Menschen mit Diabetes ist der Abschluss einer BU-Versicherung nur mit sehr hohen Risikozuschlägen (> 150-200 %) möglich,
-                            wenn ihnen überhaupt ein Angebot gemacht wird.</li>
-                        <li> <div style="font-style: italic;">Wir wollen das deutlich verbessern - mit einem Daten-basierten Ansatz.</div></li>
-                    </ul>
-                </div>                    
+            <h1 class="text-center text-5xl font-bold text-gray-900 mb-6">
+                Berufs&shy;un&shy;fähig&shy;keits&shy;ver&shy;sicher&shy;ung für Menschen mit <span
+                    class="text-blue-300">Diabetes</span></h1>
+            <div class="text-2xl">
+                <ul class="list-disc pl-20 space-y-2 text-gray-800 text-center">
+                    <li> Eine Berufsunfähigkeitsversicherung gehört zu den Top-3-Versicherungen, die von den <a
+                            href="https://www.verbraucherzentrale.de/laura-zieht-aus/versicherungen">Verbraucherzentralen</a>
+                        empfohlen werden.</li>
+                    <li> Für Menschen mit Diabetes ist der Abschluss einer BU-Versicherung nur mit sehr hohen
+                        Risikozuschlägen (> 150-200 %) möglich,
+                        wenn ihnen überhaupt ein Angebot gemacht wird.</li>
+                    <li>
+                        <div style="font-style: italic;">Wir wollen das deutlich verbessern - mit einem Daten-basierten
+                            Ansatz.</div>
+                    </li>
+                </ul>
+            </div>
         </div>
     </section>
 
@@ -168,63 +262,81 @@
     <section id="Formular" class="py-4 gradient-bg">
         <div class="mx-auto pt-4 px-4 sm:px-6 lg:px-8">
             <div class="text-center text-white mb-4">
-                <h2 class="text-3xl font-bold mb-2">kostenloses Erstgespräch buchen</h2> 
+                <h2 class="text-3xl font-bold mb-2">kostenloses Erstgespräch buchen</h2>
                 <p class="text-x1 opacity-90 max-w-3xl mx-auto">
-                    Bei Interesse an einer BU-Versicherung fülle bitte folgendes Formular aus. 
+                    Bei Interesse an einer BU-Versicherung fülle bitte folgendes Formular aus.
                     <a href="#About">Ich</a> komme dann zeitnah mit einem Terminvorschlag für ein Gespräch auf Dich zu.
                 </p>
             </div>
 
 
 
-            <div class="w-full md:w-3/4 lg:w-1/2 max-w-3xl mx-auto bg-white rounded-2xl p-6 sm:p-8 shadow-2xl scroll-mt-28">
-                <iframe data-tally-src="https://tally.so/embed/3x7kp5?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" title="BU-Versicherung" loading="lazy" style="width: 100%; min-height: 600px; border: 0;"></iframe>
+            <div
+                class="w-full md:w-3/4 lg:w-1/2 max-w-3xl mx-auto bg-white rounded-2xl p-6 sm:p-8 shadow-2xl scroll-mt-28">
+                <iframe
+                    data-tally-src="https://tally.so/embed/3x7kp5?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+                    title="BU-Versicherung" loading="lazy" style="width: 100%; min-height: 600px; border: 0;"></iframe>
             </div>
             <!-- https://outlook.office.com/book/Diabsurance@eddimed.eu/ -->
-                
+
         </div>
 
         <!-- sharing part -->
-    <div class="share pt-4 justify-center" aria-label="Share this page">
-        <div class="text-white"><h2>sharing is caring:</h2></div>
-        <div>
-            <!-- button id="share-native" class="share-btn" hidden>Share</button -->
-            <a id="share-fb" href="https://JS_overwrites_href.de" class="share-btn" target="_blank" rel="noopener" aria-label="Share on Facebook">
-                <!-- Facebook icon -->
-                <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.6V12h2.8V9.8c0-2.8 1.7-4.3 4.2-4.3 1.2 0 2.5.2 2.5.2v2.7h-1.4c-1.4 0-1.8.9-1.8 1.8V12h3.1l-.5 2.9h-2.6v7A10 10 0 0 0 22 12z"/></svg>
-            </a>
+        <div class="share pt-4 justify-center" aria-label="Share this page">
+            <div class="text-white">
+                <h2>Sharing is Caring:</h2>
+            </div>
+            <div>
+                <a id="share-fb" href="https://JS_overwrites_href.de" class="share-btn" target="_blank" rel="noopener"
+                    aria-label="Share on Facebook">
+                    <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+                        <path
+                            d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.6V12h2.8V9.8c0-2.8 1.7-4.3 4.2-4.3 1.2 0 2.5.2 2.5.2v2.7h-1.4c-1.4 0-1.8.9-1.8 1.8V12h3.1l-.5 2.9h-2.6v7A10 10 0 0 0 22 12z" />
+                    </svg>
+                </a>
 
-            <a id="share-x" href="https://JS_overwrites_href.de" class="share-btn" target="_blank" rel="noopener" aria-label="Share on X">
-                <!-- X/Twitter icon -->
-                <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M4 3l7.2 9.3L4.5 21H7l6-6.6L18.7 21H22l-7.7-9.9L20.9 3H18l-5.6 6.2L7.8 3H4z"/></svg>
-            </a>
+                <a id="share-x" href="https://JS_overwrites_href.de" class="share-btn" target="_blank" rel="noopener"
+                    aria-label="Share on X">
+                    <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+                        <path d="M4 3l7.2 9.3L4.5 21H7l6-6.6L18.7 21H22l-7.7-9.9L20.9 3H18l-5.6 6.2L7.8 3H4z" />
+                    </svg>
+                </a>
 
-            <a id="share-li" href="https://JS_overwrites_href.de" class="share-btn" target="_blank" rel="noopener" aria-label="Share on LinkedIn">
-                <!-- LinkedIn icon -->
-                <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M4.98 3.5C4.98 4.9 3.9 6 2.5 6S0 4.9 0 3.5 1.12 1 2.5 1s2.48 1.1 2.48 2.5zM0 8h5v15H0V8zm7.5 0h4.8v2h.1c.7-1.2 2.4-2.5 4.9-2.5 5.2 0 6.2 3.4 6.2 7.8V23h-5v-6.7c0-1.6 0-3.7-2.3-3.7s-2.7 1.8-2.7 3.6V23h-5V8z"/></svg>
-            </a>
+                <a id="share-li" href="https://JS_overwrites_href.de" class="share-btn" target="_blank" rel="noopener"
+                    aria-label="Share on LinkedIn">
+                    <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+                        <path
+                            d="M4.98 3.5C4.98 4.9 3.9 6 2.5 6S0 4.9 0 3.5 1.12 1 2.5 1s2.48 1.1 2.48 2.5zM0 8h5v15H0V8zm7.5 0h4.8v2h.1c.7-1.2 2.4-2.5 4.9-2.5 5.2 0 6.2 3.4 6.2 7.8V23h-5v-6.7c0-1.6 0-3.7-2.3-3.7s-2.7 1.8-2.7 3.6V23h-5V8z" />
+                    </svg>
+                </a>
 
-            <a id="share-wa" href="https://JS_overwrites_href.de" class="share-btn" target="_blank" rel="noopener" aria-label="Share on WhatsApp">
-                <!-- WhatsApp icon -->
-                <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M12.04 2a9.9 9.9 0 0 0-8.5 15.1L2 22l4.98-1.3A9.97 9.97 0 1 0 12.04 2zm5.8 14.5c-.25.7-1.26 1.2-1.98 1.4-.53.1-1.2.2-3.5-.73-2.9-1.2-4.8-4.1-4.9-4.3-.14-.2-1.2-1.6-1.2-3s.76-2.1 1.06-2.4c.25-.3.66-.4 1.06-.4h.76c.23 0 .56.1.85.7.25.5.83 2 .9 2.2.07.2.12.4 0 .6-.1.2-.14.3-.3.5-.15.2-.32.4-.46.5-.15.1-.3.3-.13.6.2.3.86 1.4 1.86 2.3 1.28 1.1 2.36 1.4 2.7 1.6.33.2.52.2.72 0 .22-.26.83-.96 1.05-1.3.22-.33.46-.27.76-.16.3.1 1.9.9 2.2 1.1.3.16.5.26.57.4.06.13.06.74-.18 1.44z"/></svg>
-            </a>
+                <a id="share-wa" href="#" class="share-btn" target="_blank" rel="noopener"
+                    aria-label="Share on WhatsApp">
+                    <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+                        <path
+                            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.465 3.488" />
+                    </svg>
+                </a>
 
-            <a id="share-tg" href="https://JS_overwrites_href.de" class="share-btn" target="_blank" rel="noopener" aria-label="Share on Telegram">
-                <!-- Telegram icon -->
-                <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M9.6 15.6l-.4 5.6 3.5-3 5.3 3.7 4-18.1-21.3 8.3 5.3 2 12.3-7.6-8.7 9.1z"/></svg>
-            </a>
+                <a id="share-tg" href="https://JS_overwrites_href.de" class="share-btn" target="_blank" rel="noopener"
+                    aria-label="Share on Telegram">
+                    <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+                        <path d="M9.6 15.6l-.4 5.6 3.5-3 5.3 3.7 4-18.1-21.3 8.3 5.3 2 12.3-7.6-8.7 9.1z" />
+                    </svg>
+                </a>
 
-            <a id="share-mail" href="https://JS_overwrites_href.de" class="share-btn" aria-label="Share via email">
-                <!-- Mail icon -->
-                <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M2 4h20v16H2z M4 6l8 6 8-6"/></svg>
-            </a>
+                <a id="share-mail" href="https://JS_overwrites_href.de" class="share-btn" aria-label="Share via email">
+                    <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+                        <path d="M2 4h20v16H2z M4 6l8 6 8-6" />
+                    </svg>
+                </a>
 
-            <button id="share-copy" class="share-btn" aria-label="Copy link">
-                <!-- Link icon -->
-                <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M10 13a5 5 0 0 1 0-7l2-2a5 5 0 0 1 7 7l-1 1M14 11a5 5 0 0 1 0 7l-2 2a5 5 0 0 1-7-7l1-1"/></svg>
-            </button>
-            
-
+                <button id="share-copy" class="share-btn" aria-label="Copy link">
+                    <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+                        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
+                        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
+                    </svg>
+                </button>
             </div>
         </div>
     </section>
@@ -233,7 +345,7 @@
     <section id="About" class="py-20 bg-gradient-to-r from-diab-light-blue to-diab-light-green">
         <div class="max-w-7xl mx-auto px-4">
             <h2 class="text-center text-4xl font-bold text-gray-900 mb-6">Über mich</h2>
-    
+
             <div class="flex flex-col lg:flex-row items-center">
                 <div class="lg:w-1/2 mb-2 lg:mb-0">
                     <div class="w-1/2 rounded-2xl mx-auto overflow-hidden shadow-2xl">
@@ -241,22 +353,25 @@
                         <img src="img/portrait.jpg" alt="Ihr Versicherungsmakler" class="w-full h-full object-cover">
                     </div>
                 </div>
-                
+
                 <div class="lg:w-1/2 lg:pl-2">
                     <p class="text-lg text-gray-600 mb-6 leading-relaxed">
-                        Menschen mit Diabetes liegen mir am Herzen. Als selbst Betroffener weiß ich um die  
-                        besonderen Herausforderungen beim Versicherungsschutz. Meine Mission ist es, 
-                        durch meine Expertise und sorgfältige Analyse auch für DiabetikerInnen den bestmöglichen Versicherungsschutz zu fairen Konditionen zu finden.
+                        Menschen mit Diabetes liegen mir am Herzen. Als selbst Betroffener weiß ich um die
+                        besonderen Herausforderungen beim Versicherungsschutz. Meine Mission ist es,
+                        durch meine Expertise und sorgfältige Analyse auch für DiabetikerInnen den bestmöglichen
+                        Versicherungsschutz zu fairen Konditionen zu finden.
                     </p>
                     <p class="text-lg text-gray-600 mb-8 leading-relaxed">
-                        Ich erkläre in klarer Sprache die Unterschiede zwischen Versicherer A, B und C und schaffe Transparenz bei den Vor- und Nachteilen der verschiedenen Optionen.
-                        Ich sehe mich als langfristiger und verlässlicher Partner in Zeiten rasanten technologischen Wandels.
+                        Ich erkläre in klarer Sprache die Unterschiede zwischen Versicherer A, B und C und schaffe
+                        Transparenz bei den Vor- und Nachteilen der verschiedenen Optionen.
+                        Ich sehe mich als langfristiger und verlässlicher Partner in Zeiten rasanten technologischen
+                        Wandels.
                     </p>
                     <p class="text-lg text-gray-600 mb-8 leading-relaxed">
                         Mein Netzwerk aus ExpertInnen unterstützt mich bei umfassenderen Versicherungsanforderungen.
                     </p>
                 </div>
-                
+
             </div>
 
             <div class="flex flex-wrap justify-center space-x-8">
@@ -285,101 +400,109 @@
                     <div>
                         <div class="font-semibold">Sprechzeiten</div>
                         <div class="opacity-90">Mo-Fr: 9:00-18:00 Uhr</div>
-                        <div class="opacity-90">oder nach Absprache</div>                                    
+                        <div class="opacity-90">oder nach Absprache</div>
                     </div>
                 </div>
                 <div class="flex items-center space-x-4">
                     <div>
-                            <a href="https://outlook.office.com/book/Diabsurance@eddimed.eu/" target="_blank" rel="noopener noreferrer" class="inline-block bg-diab-blue mt-6 sm:mt-10 sm:mb-4 text-white px-6 py-2.5 rounded-full hover:bg-blue-600 transition-all duration-300 font-medium">Beratung&nbsp;anfragen</a>
-                            
+                        <a href="https://outlook.office.com/book/Diabsurance@eddimed.eu/" target="_blank"
+                            rel="noopener noreferrer"
+                            class="inline-block bg-diab-blue mt-6 sm:mt-10 sm:mb-4 text-white px-6 py-2.5 rounded-full hover:bg-blue-600 transition-all duration-300 font-medium">Beratung&nbsp;anfragen</a>
+
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-<!-- Versicherungen Section, formerly: Hero Section -->
-<section id="Versicherungen" class="scroll-mt-24 py-10 sm:py-12 bg-gradient-to-br from-diab-light-blue via-white to-diab-light-green">
-  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-    <!-- Heading -->
-    <div class="max-w-3xl mx-auto text-center">
-      <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 leading-tight break-words">
-        Versicherungs&shy;schutz für Menschen mit <span class="text-diab-blue">Diabetes</span>
-      </h2>
-      <p class="mt-3 text-base sm:text-lg md:text-xl text-gray-600">
-        Faire Konditionen, persönliche Beratung, individuelle Lösungen.
-      </p>
-    </div>
+    <!-- Versicherungen Section, formerly: Hero Section -->
+    <section id="Versicherungen"
+        class="scroll-mt-24 py-10 sm:py-12 bg-gradient-to-br from-diab-light-blue via-white to-diab-light-green">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Heading -->
+            <div class="max-w-3xl mx-auto text-center">
+                <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 leading-tight break-words">
+                    Versicherungs&shy;schutz für Menschen mit <span class="text-diab-blue">Diabetes</span>
+                </h2>
+                <p class="mt-3 text-base sm:text-lg md:text-xl text-gray-600">
+                    Faire Konditionen, persönliche Beratung, individuelle Lösungen.
+                </p>
+            </div>
 
-    <!-- Cards -->
-    <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
-      <!-- BU -->
-      <a href="bu.html" class="group block h-full focus:outline-none focus-visible:ring-2 focus-visible:ring-diab-blue rounded-2xl">
-        <div class="h-full bg-white p-6 sm:p-7 rounded-2xl shadow-lg border border-gray-100 transition transform motion-safe:hover:-translate-y-1 motion-safe:hover:shadow-xl">
-          <div class="text-center">
-            <i class="text-4xl text-diab-blue mb-4 fas fa-briefcase" aria-hidden="true"></i>
-          </div>
-          <h3 class="text-xl sm:text-2xl font-bold text-gray-900 text-center">
-            Berufs&shy;un&shy;fähig&shy;keits&shy;ver&shy;sicher&shy;ung
-          </h3>
-          <p class="mt-3 text-gray-600 text-center">
-            Schutz vor Einkommens&shy;verlust bei Berufs&shy;unfähig&shy;keit.
-          </p>
+            <!-- Cards -->
+            <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
+                <!-- BU -->
+                <a href="bu.html"
+                    class="group block h-full focus:outline-none focus-visible:ring-2 focus-visible:ring-diab-blue rounded-2xl">
+                    <div
+                        class="h-full bg-white p-6 sm:p-7 rounded-2xl shadow-lg border border-gray-100 transition transform motion-safe:hover:-translate-y-1 motion-safe:hover:shadow-xl">
+                        <div class="text-center">
+                            <i class="text-4xl text-diab-blue mb-4 fas fa-briefcase" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="text-xl sm:text-2xl font-bold text-gray-900 text-center">
+                            Berufs&shy;un&shy;fähig&shy;keits&shy;ver&shy;sicher&shy;ung
+                        </h3>
+                        <p class="mt-3 text-gray-600 text-center">
+                            Schutz vor Einkommens&shy;verlust bei Berufs&shy;unfähig&shy;keit.
+                        </p>
+                    </div>
+                </a>
+
+                <!-- Lebensversicherung -->
+                <!-- a href="rlv.html" -->
+                <div class="block h-full rounded-2xl focus-within:ring-2 focus-within:ring-diab-blue">
+                    <div
+                        class="h-full bg-white p-6 sm:p-7 rounded-2xl shadow-lg border border-gray-100 transition transform motion-safe:hover:-translate-y-1 motion-safe:hover:shadow-xl">
+                        <div class="text-center">
+                            <i class="text-4xl text-diab-green mb-4 fas fa-heart" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="text-xl sm:text-2xl font-bold text-gray-900 text-center">
+                            (Risiko-)<wbr>Lebens&shy;ver&shy;sicher&shy;ung
+                        </h3>
+                        <p class="mt-3 text-gray-600 text-center">
+                            Finanzielle Absicherung für Ihre Angehörigen im Todesfall.<br class="hidden sm:block">
+                            Mit individuell angepassten Konditionen.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Unfallversicherung -->
+                <!-- a href="uv.html" -->
+                <div class="block h-full rounded-2xl focus-within:ring-2 focus-within:ring-diab-blue">
+                    <div
+                        class="h-full bg-white p-6 sm:p-7 rounded-2xl shadow-lg border border-gray-100 transition transform motion-safe:hover:-translate-y-1 motion-safe:hover:shadow-xl">
+                        <div class="text-center">
+                            <i class="text-4xl text-diab-green mb-4 fas fa-user-injured" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="text-xl sm:text-2xl font-bold text-gray-900 text-center">
+                            <wbr>Un&shy;fall&shy;ver&shy;sicher&shy;ung
+                        </h3>
+                        <p class="mt-3 text-gray-600 text-center">
+                            Absicherung gegen dauerhafte Schädigung durch einen Unfall in Arbeit oder Freizeit.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA -->
+            <div class="mt-10 text-center text-base sm:text-lg md:text-xl sm:text-lg text-gray-600">
+                <p>
+                    Neben der BU vermittle ich auch weitere Personenversicherungen bei Diabetes und berate Dich gerne:
+
+                    <a href="https://outlook.office.com/book/Diabsurance@eddimed.eu/" target="_blank"
+                        class="mt-4 inline-flex items-center justify-center rounded-full bg-diab-blue px-6 py-2.5 text-white font-medium transition hover:bg-blue-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-diab-blue">
+                        Beratung&nbsp;anfragen
+                    </a>
+                </p>
+                <p>
+                    Für andere Versicherungsanfragen kann ich Dich gerne an kompetente ExpertInnen aus meinem Netzwerk
+                    verweisen.
+                </p>
+            </div>
+
+
         </div>
-      </a>
-
-      <!-- Lebensversicherung -->
-      <!-- a href="rlv.html" -->
-      <div class="block h-full rounded-2xl focus-within:ring-2 focus-within:ring-diab-blue">
-        <div class="h-full bg-white p-6 sm:p-7 rounded-2xl shadow-lg border border-gray-100 transition transform motion-safe:hover:-translate-y-1 motion-safe:hover:shadow-xl">
-          <div class="text-center">
-            <i class="text-4xl text-diab-green mb-4 fas fa-heart" aria-hidden="true"></i>
-          </div>
-          <h3 class="text-xl sm:text-2xl font-bold text-gray-900 text-center">
-            (Risiko-)<wbr>Lebens&shy;ver&shy;sicher&shy;ung
-          </h3>
-          <p class="mt-3 text-gray-600 text-center">
-            Finanzielle Absicherung für Ihre Angehörigen im Todesfall.<br class="hidden sm:block">
-            Mit individuell angepassten Konditionen.
-          </p>
-        </div>
-      </div>
-
-      <!-- Unfallversicherung -->
-      <!-- a href="uv.html" -->
-      <div class="block h-full rounded-2xl focus-within:ring-2 focus-within:ring-diab-blue">
-        <div class="h-full bg-white p-6 sm:p-7 rounded-2xl shadow-lg border border-gray-100 transition transform motion-safe:hover:-translate-y-1 motion-safe:hover:shadow-xl">
-          <div class="text-center">
-            <i class="text-4xl text-diab-green mb-4 fas fa-user-injured" aria-hidden="true"></i>
-          </div>
-          <h3 class="text-xl sm:text-2xl font-bold text-gray-900 text-center">
-            <wbr>Un&shy;fall&shy;ver&shy;sicher&shy;ung
-          </h3>
-          <p class="mt-3 text-gray-600 text-center">
-            Absicherung gegen dauerhafte Schädigung durch einen Unfall in Arbeit oder Freizeit.
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <!-- CTA -->
-    <div class="mt-10 text-center text-base sm:text-lg md:text-xl sm:text-lg text-gray-600">
-      <p>
-        Neben der BU vermittle ich auch weitere Personenversicherungen bei Diabetes und berate Dich gerne:
-      
-      <a href="https://outlook.office.com/book/Diabsurance@eddimed.eu/" target="_blank"
-         class="mt-4 inline-flex items-center justify-center rounded-full bg-diab-blue px-6 py-2.5 text-white font-medium transition hover:bg-blue-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-diab-blue">
-        Beratung&nbsp;anfragen
-      </a>
-      </p>
-      <p>
-      Für andere Versicherungsanfragen kann ich Dich gerne an kompetente ExpertInnen aus meinem Netzwerk verweisen.
-    </p>
-    </div>
-
-    
-  </div>
-</section>
+    </section>
 
 
     <!-- Risiko Score Section -->
@@ -388,17 +511,22 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-center text-4xl font-bold text-gray-900 mb-6">CGM-basierter Risiko Score (CRS)</h2>
             <div class="text-center">
-            <img src="img/CGM-basierter_Risiko_Score_Eddimed_202509.png" alt="Risiko Score" style="margin:auto">
+                <img src="img/CGM-basierter_Risiko_Score_Eddimed_202509.png" alt="Risiko Score" style="margin:auto">
             </div>
             <p class="text-lg text-gray-600 mb-6 leading-relaxed text-center">
-Berechnung des CGM-basierten Risiko Score durch unseren Partner <a href="https://eddimed.eu">Eddimed</a></p>
+                Berechnung des CGM-basierten Risiko Score durch unseren Partner <a href="https://eddimed.eu">Eddimed</a>
+            </p>
 
             <h3 class="text-2xl font-bold mb-3 text-center">Häufige Fragen zu Daten und CRS</h3>
             <dl class="py-2 grid grid-cols-4 gap-4">
-            <dt class="font-semibold text-gray-700">Bekommt der Versicherer meine CGM-Daten?</dt> 
-            <dd class="col-span-3 text-gray-900">Nein, nur in stark zusammengefaßter Form als CRS (mögliche Werte: grün, gelb, rot). Die Berechnung des CRS und die Verarbeitung der CRM-Daten geschieht in DSGVO-konformer Weise durch <a href="https://eddimed.eu">Eddimed</a>.</dd>
-                <dt class="font-semibold text-gray-700">Was passiert, wenn sich meine Glucose-Einstellung dauerhaft verschlechtert?</dt> 
-                <dd class="col-span-3 text-gray-900">Bei einer dauerhaften Verschlechterung setzen wir uns (virtuell) zusammen und suchen nach möglichen Ursachen und Lösungen.</dd>
+                <dt class="font-semibold text-gray-700">Bekommt der Versicherer meine CGM-Daten?</dt>
+                <dd class="col-span-3 text-gray-900">Nein, nur in stark zusammengefaßter Form als CRS (mögliche Werte:
+                    grün, gelb, rot). Die Berechnung des CRS und die Verarbeitung der CRM-Daten geschieht in
+                    DSGVO-konformer Weise durch <a href="https://eddimed.eu">Eddimed</a>.</dd>
+                <dt class="font-semibold text-gray-700">Was passiert, wenn sich meine Glucose-Einstellung dauerhaft
+                    verschlechtert?</dt>
+                <dd class="col-span-3 text-gray-900">Bei einer dauerhaften Verschlechterung setzen wir uns (virtuell)
+                    zusammen und suchen nach möglichen Ursachen und Lösungen.</dd>
             </dl>
         </div>
     </section>
@@ -412,10 +540,13 @@ Berechnung des CGM-basierten Risiko Score durch unseren Partner <a href="https:/
                     <h2 class="text-4xl font-bold text-center text-gray-900 mb-6">Partner</h2>
                     <div class="flex items-stretch space-x-8">
                         <div class="text-center">
-                            <a href="https://casassecuranz.de/" ><img src="img/CASAssecuranz_logo-trademark-1024x194.webp" alt="CASAssecuranz" class="w-full h-full object-contain" ></a>
+                            <a href="https://casassecuranz.de/"><img
+                                    src="img/CASAssecuranz_logo-trademark-1024x194.webp" alt="CASAssecuranz"
+                                    class="w-full h-full object-contain"></a>
                         </div>
                         <div class="text-center">
-                            <a href="https://eddimed.eu/" ><img src="img/ed_logo.png" alt="Eddimed" style="width: 300px; height: auto;" class="w-full h-full object-contain" ></a>
+                            <a href="https://eddimed.eu/"><img src="img/ed_logo.png" alt="Eddimed"
+                                    style="width: 300px; height: auto;" class="w-full h-full object-contain"></a>
                         </div>
                     </div>
                 </div>
@@ -423,17 +554,22 @@ Berechnung des CGM-basierten Risiko Score durch unseren Partner <a href="https:/
                     <h2 class="text-4xl font-bold text-center text-gray-900 mb-6">Acceleratoren</h2>
                     <div class="flex items-center space-x-8">
                         <div class="text-center">
-                            <a href="https://www.lifescience-bw.de/" ><img src="img/Life-Science-Acceletator_150x131.png" alt="Life Science Accelerator" class="w-full h-full object-cover"></a>
+                            <a href="https://www.lifescience-bw.de/"><img src="img/Life-Science-Acceletator_150x131.png"
+                                    alt="Life Science Accelerator" class="w-full h-full object-cover"></a>
                         </div>
                         <div class="text-center">
-                            <a href="https://www.finance-accelerator.de/" ><img src="img/finance-accelerator_black_letters-300x57.png" alt="Finance Accelerator" class="w-full h-full object-cover"></a>
+                            <a href="https://www.finance-accelerator.de/"><img
+                                    src="img/finance-accelerator_black_letters-300x57.png" alt="Finance Accelerator"
+                                    class="w-full h-full object-cover"></a>
                         </div>
                         <div class="text-center">
-                            <a href="https://www.cyber-valley.de/" ><img src="img/thumb_md_20210319_CYV_LogoLockup_vorab-300x85.jpg" alt="Cyber Valley" class="w-full h-full object-cover"></a>
+                            <a href="https://www.cyber-valley.de/"><img
+                                    src="img/thumb_md_20210319_CYV_LogoLockup_vorab-300x85.jpg" alt="Cyber Valley"
+                                    class="w-full h-full object-cover"></a>
                         </div>
                     </div>
                 </div>
-                
+
             </div>
         </div>
     </section>
@@ -446,25 +582,34 @@ Berechnung des CGM-basierten Risiko Score durch unseren Partner <a href="https:/
         <div class="container mx-auto">
             <div class="grid md:grid-cols-3 gap-8">
                 <div class="text-center">
-                    <a href="index.html"><img src="img/diabsurance_logo_green.png" alt="diabsurance Logo" class="w-auto mb-4"></a>
+                    <a href="index.html"><img src="img/diabsurance_logo_green.png" alt="diabsurance Logo"
+                            class="w-auto mb-4"></a>
                     <p class="text-gray-400">
                         Euer Vermittler Nr. 1 für Personenversicherungen bei Diabetes.
                     </p>
                 </div>
-                
+
 
                 <div class="text-center">
-                    <a href="index.html#Versicherungen"><h4 class="text-lg font-semibold mb-4">Sitemap</h4></a>
+                    <a href="index.html#Versicherungen">
+                        <h4 class="text-lg font-semibold mb-4">Sitemap</h4>
+                    </a>
                     <ul class="space-y-2 text-gray-400">
-                        <li><a href="bu.html" class="hover:text-white transition-colors duration-300">Berufsunfähigkeitsversicherung</a></li>
-                        <li><a href="umfrage.html" class="hover:text-white transition-colors duration-300">Umfrage (Sep 2025)</a></li>
-                        <li><a href="erstinformation.html" class="hover:text-white transition-colors duration-300">Erstinformation</a></li>
-                        <li><a href="community.html" class="hover:text-white transition-colors duration-300">Unternehmen aus der Community</a></li>
-                        <li><a href="impressum.html" class="hover:text-white transition-colors duration-300">Impressum</a></li>
-                        
+                        <li><a href="bu.html"
+                                class="hover:text-white transition-colors duration-300">Berufsunfähigkeitsversicherung</a>
+                        </li>
+                        <li><a href="umfrage.html" class="hover:text-white transition-colors duration-300">Umfrage (Sep
+                                2025)</a></li>
+                        <li><a href="erstinformation.html"
+                                class="hover:text-white transition-colors duration-300">Erstinformation</a></li>
+                        <li><a href="community.html" class="hover:text-white transition-colors duration-300">Unternehmen
+                                aus der Community</a></li>
+                        <li><a href="impressum.html"
+                                class="hover:text-white transition-colors duration-300">Impressum</a></li>
+
                     </ul>
                 </div>
-                
+
                 <div class="text-center">
                     <h4 class="text-lg font-semibold mb-4">Kontakt</h4>
                     <ul class="space-y-2 text-gray-400">
@@ -479,9 +624,13 @@ Berechnung des CGM-basierten Risiko Score durch unseren Partner <a href="https:/
                     </ul>
                 </div>
             </div>
-            
+
             <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-                <p>&copy; <a href="https://www.openstreetmap.org/relation/2793104" target="_blank" rel="noopener noreferrer">Stuttgart</a>, Sep 2025 - diabsurance - Alle Rechte vorbehalten - <a href="impressum.html" class="hover:text-white transition-colors duration-300">Impressum</a>, <a href="erstinformation.html" class="hover:text-white transition-colors duration-300">Erstinformation</a></p>
+                <p>&copy; <a href="https://www.openstreetmap.org/relation/2793104" target="_blank"
+                        rel="noopener noreferrer">Stuttgart</a>, Sep 2025 - diabsurance - Alle Rechte vorbehalten - <a
+                        href="impressum.html" class="hover:text-white transition-colors duration-300">Impressum</a>, <a
+                        href="erstinformation.html"
+                        class="hover:text-white transition-colors duration-300">Erstinformation</a></p>
             </div>
         </div>
     </footer>
@@ -503,7 +652,7 @@ Berechnung des CGM-basierten Risiko Score durch unseren Partner <a href="https:/
         });
 
         // Navbar scroll effect
-        window.addEventListener('scroll', function() {
+        window.addEventListener('scroll', function () {
             const navbar = document.querySelector('nav');
             if (window.scrollY > 50) {
                 navbar.classList.add('shadow-lg');
@@ -513,7 +662,7 @@ Berechnung des CGM-basierten Risiko Score durch unseren Partner <a href="https:/
         });
 
         // tally Form
-        var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}
+        var d = document, w = "https://tally.so/widgets/embed.js", v = function () { "undefined" != typeof Tally ? Tally.loadEmbeds() : d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function (e) { e.src = e.dataset.tallySrc })) }; if ("undefined" != typeof Tally) v(); else if (d.querySelector('script[src="' + w + '"]') == null) { var s = d.createElement("script"); s.src = w, s.onload = v, s.onerror = v, d.body.appendChild(s); }
 
         // Navigation bar, Hamburger menu, drop-down list
         document.addEventListener('DOMContentLoaded', function () {
@@ -521,67 +670,82 @@ Berechnung des CGM-basierten Risiko Score durch unseren Partner <a href="https:/
             const menu = document.getElementById('dropdown-menu');
 
             toggle.addEventListener('click', () => {
-            menu.classList.toggle('hidden');
+                menu.classList.toggle('hidden');
             });
 
             // Optional: Klick außerhalb schließt Menü
             document.addEventListener('click', (event) => {
-            if (!toggle.contains(event.target) && !menu.contains(event.target)) {
-                menu.classList.add('hidden');
-            }
+                if (!toggle.contains(event.target) && !menu.contains(event.target)) {
+                    menu.classList.add('hidden');
+                }
             });
         });
     </script>
 
-<!-- script block for sharing buttons and links -->
-<script>
-(() => {
-  const canonical = document.querySelector('link[rel="canonical"]')?.href;
-  const urlRaw = canonical || location.href;
-  const titleRaw = document.querySelector('meta[property="og:title"]')?.content
-                   || document.title;
-  const descRaw  = document.querySelector('meta[name="description"]')?.content || "";
+    <!-- script block for sharing buttons and links -->
+    <script>
+        (() => {
+            const canonical = document.querySelector('link[rel="canonical"]')?.href;
+            const urlRaw = canonical || location.href;
+            const titleRaw = document.querySelector('meta[property="og:title"]')?.content
+                || document.title;
+            const descRaw = document.querySelector('meta[name="description"]')?.content || "";
 
-  const url   = encodeURIComponent(urlRaw);
-  const title = encodeURIComponent(titleRaw);
-  const text  = encodeURIComponent(descRaw || titleRaw);
+            const url = encodeURIComponent(urlRaw);
+            const title = encodeURIComponent(titleRaw);
+            const text = encodeURIComponent(descRaw || titleRaw);
 
-  // Buttons present?
-  const setHref = (id, href) => { const el = document.getElementById(id); if (el) el.href = href; };
+            // Buttons present?
+            const setHref = (id, href) => { const el = document.getElementById(id); if (el) el.href = href; };
 
-  setHref("share-fb", `https://www.facebook.com/sharer/sharer.php?u=${url}`);
-  setHref("share-x",  `https://twitter.com/intent/tweet?url=${url}&text=${title}`);
-  setHref("share-li", `https://www.linkedin.com/sharing/share-offsite/?url=${url}`);
-  setHref("share-wa", `https://api.whatsapp.com/send?text=${title}%20${url}`);
-  setHref("share-tg", `https://t.me/share/url?url=${url}&text=${title}`);
-  setHref("share-mail", `mailto:?subject=${title}&body=${text}%0A%0A${url}`);
+            setHref("share-fb", `https://www.facebook.com/sharer/sharer.php?u=${url}`);
+            setHref("share-x", `https://twitter.com/intent/tweet?url=${url}&text=${title}`);
+            setHref("share-li", `https://www.linkedin.com/sharing/share-offsite/?url=${url}`);
+            setHref("share-wa", `https://api.whatsapp.com/send?text=${title}%20${url}`);
+            setHref("share-tg", `https://t.me/share/url?url=${url}&text=${title}`);
+            setHref("share-mail", `mailto:?subject=${title}&body=${text}%0A%0A${url}`);
 
-  // Native share (mobile etc.)
-  const nativeBtn = document.getElementById("share-native");
-  if (navigator.share && nativeBtn) {
-    nativeBtn.hidden = false;
-    nativeBtn.addEventListener("click", () => {
-      navigator.share({ title: titleRaw, text: descRaw || titleRaw, url: urlRaw });
-    });
-  }
+            // Native share (mobile etc.)
+            const nativeBtn = document.getElementById("share-native");
+            if (navigator.share && nativeBtn) {
+                nativeBtn.hidden = false;
+                nativeBtn.addEventListener("click", () => {
+                    navigator.share({ title: titleRaw, text: descRaw || titleRaw, url: urlRaw });
+                });
+            }
 
-  // Copy-to-clipboard
-  const copyBtn = document.getElementById("share-copy");
-  if (copyBtn) {
-    copyBtn.addEventListener("click", async () => {
-      try {
-        await navigator.clipboard.writeText(urlRaw);
-        copyBtn.textContent = "Copied!";
-        setTimeout(() => (copyBtn.textContent = "Copy link"), 1200);
-      } catch {
-        // Fallback
-        prompt("Copy this link:", urlRaw);
-      }
-    });
-  }
-})();
-</script>
+            // Copy-to-clipboard
+            const copyBtn = document.getElementById("share-copy");
+            if (copyBtn) {
+                // Store original icon HTML
+                const originalIcon = copyBtn.innerHTML;
+                const copiedIcon = document.createElement('div');
+                copiedIcon.innerHTML = `
+                    <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" style="margin-right:6px;">
+                        <path d="M9 16.2l-3.5-3.5 1.4-1.4L9 13.4l7.1-7.1 1.4 1.4z"/>
+                    </svg>
+                    Copied!
+                `;
+                copyBtn.addEventListener("click", async () => {
+                    try {
+                        await navigator.clipboard.writeText(urlRaw);
+                        // Show 'Copied!' with check icon and add class
+                        copyBtn.innerHTML = copiedIcon.innerHTML;
+                        copyBtn.classList.add('copied');
+                        setTimeout(() => {
+                            copyBtn.innerHTML = originalIcon;
+                            copyBtn.classList.remove('copied');
+                        }, 1200);
+                    } catch {
+                        // Fallback
+                        prompt("Copy this link:", urlRaw);
+                    }
+                });
+            }
+        })();
+    </script>
 
 
 </body>
+
 </html>
