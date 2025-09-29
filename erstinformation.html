@@ -115,18 +115,38 @@
                     <a href="index.html"><img src="img/diabsurance_logo_green.png" alt="diabsurance Logo" class="h-12 w-auto"></a>
                 </div>
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="index.html#About" class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">Über mich</a>
-                    <a href="index.html#BU" class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">BU-Vers.</a>
-                    <a href="index.html#Partner" class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">Partner</a>
+                    <a href="#Makler" class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">Makler</a>
+                    <a href="#Vermittlerstatus" class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">Vermittlerstatus</a>
+                    <a href="#Ombudsmänner" class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">Ombudsmänner/-frauen</a>
+                    <a href="#ErbrachteLeistungen" class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">Beratungsleistungen</a>
                     <!-- MS BOOKING LINK: Ersetze "#contact" durch deinen Microsoft Booking Link -->
                     <a href="https://outlook.office.com/book/Diabsurance@eddimed.eu/" target="_blank" class="bg-diab-blue text-white px-6 py-2.5 rounded-full hover:bg-blue-600 transition-all duration-300 font-medium">
                         Beratung anfragen
                     </a>
                 </div>
-                <div class="md:hidden">
+                <div id="dropdown-toggle" class="md:hidden">
                     <button class="text-gray-700 hover:text-diab-blue">
                         <i class="fas fa-bars text-xl"></i>
                     </button>
+                </div>
+
+                <!-- Freischwebendes Menü -->
+                <div id="dropdown-menu"
+                    class="absolute top-0 right-0 mt-5 w-50 bg-white border border-gray-200 rounded shadow-lg hidden z-100">
+                    <div class="flex flex-col space-y-2 p-4">
+                        <a href="#Makler"
+                            class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">Makler</a>
+                        <a href="#Vermittlerstatus"
+                            class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">Vermittlerstatus</a>
+                        <a href="#Ombudsmänner"
+                            class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">Ombudsmänner/-frauen</a>
+                        <a href="#ErbrachteLeistungen"
+                            class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">Beratungsleistungen</a>
+                        <a href="https://outlook.office.com/book/Diabsurance@eddimed.eu/" target="_blank" rel="noopener noreferrer"
+                        class="text-diab-green hover:text-diab-blue transition-colors duration-300 font-medium">
+                            Beratung anfragen
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -147,7 +167,7 @@
 
     <!-- §5 DDG and Kontakt Section -->
     <section id="Par5_DDG" class="gradient-bg">
-        <div class="container">
+        <div id="Makler" class="container">
         <h3 class="font-bold mt-2 mb-1">Versicherungsmakler Dr. Bernd Reinhold</h3>
 
         <p>Erdbeerweg 24<br>70619 Stuttgart</p>
@@ -155,7 +175,7 @@
         </div>
     </section>
 
-    <section id="Makler" class="gradient-bg">
+    <section id="Vermittlerstatus" class="gradient-bg">
     <div class="container">
         <h3 class="font-bold mt-2 mb-1">Vermittlerstatus nach Gewerbeordnung</h3>
         <p>Versicherungsmakler mit Erlaubnis nach <a href="https://www.gesetze-im-internet.de/gewo/__34d.html">Abs. 1 Satz 2 §34d GewO</a></p>
@@ -180,7 +200,7 @@
 
     </div>
 
-    <div class="container">
+    <div id="Ombudsmänner" class="container"><div id="Ombudsfrauen"></div>
         <h3 class="font-bold mt-2 mb-1">Kontaktinformationen der Ombudsmänner/-frauen</h3>
         <h4 class="italic mt-2 mb-1"> Versicherungsombudsmann e.V.</h4>
         Postfach 08 06 32, 10006 Berlin<br>
@@ -282,6 +302,24 @@
                 }
             });
         });
+
+        // Navigation bar, Hamburger menu, drop-down list
+        document.addEventListener('DOMContentLoaded', function () {
+            const toggle = document.getElementById('dropdown-toggle');
+            const menu = document.getElementById('dropdown-menu');
+
+            toggle.addEventListener('click', () => {
+                menu.classList.toggle('hidden');
+            });
+
+            // Optional: Klick außerhalb schließt Menü
+            document.addEventListener('click', (event) => {
+                if (!toggle.contains(event.target) && !menu.contains(event.target)) {
+                    menu.classList.add('hidden');
+                }
+            });
+        });
+
 
         // Navbar scroll effect
         window.addEventListener('scroll', function() {
