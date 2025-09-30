@@ -55,12 +55,34 @@
                 <div class="flex items-center">
                     <a href="index.html"><img src="img/diabsurance_logo_green.png" alt="diabsurance Logo" class="h-12 w-auto"></a>
                 </div>
+                                <!-- common nav.bar with page-specific anchor links -->
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="#BU" class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">BU-Versicherung</a>
-                    <a href="#Ursachen" class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">Ursachen</a>
-                    <a href="#gute_BU" class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">gute BU</a>
-                    <a href="#FAQ" class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">FAQ</a>
-                    <a href="#Formular" class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">Formular</a>
+                    <a href="bu.html"
+                        class="hover:text-diab-blue transition-colors duration-300">Berufsunfähigkeitsversicherung</a>
+                    <a href="umfrage.html" class="hover:text-diab-blue transition-colors duration-300">Umfrage</a>
+                    <a href="community.html" class="hover:text-diab-blue transition-colors duration-300">Unternehmen aus
+                        der Community</a>
+
+                    <div class="relative inline-block text-center">
+                        <div id="dropdown-toggle-anchor">
+                            <button class="text-gray-700 hover:text-diab-blue">
+                                <i class="fas fa-chevron-down text-xl"></i>
+                            </button>
+                        </div>
+
+                        <!-- Freischwebendes Menü der Anchor-Links dieser Homepage -->
+                        <div id="dropdown-menu-anchor"
+                            class="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 w-50 bg-white border border-gray-200 rounded shadow-lg hidden z-100">
+                            <div class="flex flex-col space-y-2 p-4">
+                                <a href="#BU" class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">BU-Versicherung</a>
+                                <a href="#Ursachen" class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">Ursachen</a>
+                                <a href="#gute_BU" class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">gute BU</a>
+                                <a href="#FAQ" class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">FAQ</a>
+                                <a href="#Formular" class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">Formular</a>
+
+                            </div>
+                        </div>
+                    </div>
                     <!-- MS BOOKING LINK: Ersetze "#contact" durch deinen Microsoft Booking Link -->
                     <a href="https://outlook.office.com/book/Diabsurance@eddimed.eu/" target="_blank" class="inline-block bg-diab-blue text-white px-6 py-2.5 rounded-full hover:bg-blue-600 transition-all duration-300 font-medium">
                         Beratung&nbsp;anfragen
@@ -72,10 +94,50 @@
                     </button>
                 </div>
 
+                <!-- Freischwebendes Menü auf kleinen Bildschirmen -->
+                <div id="dropdown-menu"
+                    class="absolute top-0 right-0 mt-5 w-50 bg-white border border-gray-200 rounded shadow-lg hidden z-100">
+                    <div class="flex flex-col space-y-2 p-4 text-center">
+                        <a href="bu.html"
+                            class="hover:text-diab-blue transition-colors duration-300">Berufsunfähigkeitsversicherung</a>
+                        <a href="umfrage.html" class="hover:text-diab-blue transition-colors duration-300">Umfrage</a>
+                        <a href="community.html" class="hover:text-diab-blue transition-colors duration-300">Unternehmen
+                            aus der Community</a>
+
+                        <div class="relative inline-block">
+                            <div id="dropdown-toggle-anchor2">
+                                <button class="text-gray-700 hover:text-diab-blue">
+                                    <i class="fas fa-chevron-down text-xl"></i>
+                                </button>
+                            </div>
+
+                            <!-- Freischwebendes Menü der Anchor-Links dieser Homepage -->
+                            <div id="dropdown-menu-anchor2"
+                                class="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 w-50 bg-white border border-gray-200 rounded shadow-lg hidden z-100">
+                                <div class="flex flex-col space-y-2 p-4">
+                                    <a href="#BU" class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">BU-Versicherung</a>
+                                    <a href="#Ursachen" class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">Ursachen</a>
+                                    <a href="#gute_BU" class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">gute BU</a>
+                                    <a href="#FAQ" class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">FAQ</a>
+                                    <a href="#Formular" class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">Formular</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="https://outlook.office.com/book/Diabsurance@eddimed.eu/" target="_blank"
+                            rel="noopener noreferrer"
+                            class="text-diab-green hover:text-diab-blue transition-colors duration-300 font-medium">
+                            Beratung anfragen
+                        </a>
+                    </div>
+                </div>
+                <!-- END Freischwebendes Menü auf kleinen Bildschirmen -->
+
+
                 <!-- Freischwebendes Menü -->
                 <div id="dropdown-menu" class="absolute top-0 right-0 mt-5 w-50 bg-white border border-gray-200 rounded shadow-lg hidden z-100">
                     <div class="flex flex-col space-y-2 p-4">
-                        <a href="#BU" class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">BU-Vers.</a>
+                        <a href="#BU" class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">BU-Versicherung</a>
                         <a href="#Ursachen" class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">Ursachen</a>
                         <a href="#gute_BU" class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">gute BU</a>
                         <a href="#FAQ" class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">FAQ</a>
@@ -310,20 +372,26 @@
 
         // Navigation bar, Hamburger menu, drop-down list
         document.addEventListener('DOMContentLoaded', function () {
-            const toggle = document.getElementById('dropdown-toggle');
-            const menu = document.getElementById('dropdown-menu');
+            initDropdown('dropdown-toggle', 'dropdown-menu');
+            initDropdown('dropdown-toggle-anchor', 'dropdown-menu-anchor');
+            initDropdown('dropdown-toggle-anchor2', 'dropdown-menu-anchor2');
+        });
+
+        function initDropdown(toggleID, menuID) {
+            const toggle = document.getElementById(toggleID);
+            const menu = document.getElementById(menuID);
 
             toggle.addEventListener('click', () => {
-            menu.classList.toggle('hidden');
+                menu.classList.toggle('hidden');
             });
 
             // Optional: Klick außerhalb schließt Menü
             document.addEventListener('click', (event) => {
-            if (!toggle.contains(event.target) && !menu.contains(event.target)) {
-                menu.classList.add('hidden');
-            }
+                if (!toggle.contains(event.target) && !menu.contains(event.target)) {
+                    menu.classList.add('hidden');
+                }
             });
-        });
+        }
     </script>
 
 </body>
