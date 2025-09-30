@@ -706,8 +706,14 @@
 
         // Navigation bar, Hamburger menu, drop-down list
         document.addEventListener('DOMContentLoaded', function () {
-            const toggle = document.getElementById('dropdown-toggle');
-            const menu = document.getElementById('dropdown-menu');
+            initDropdown('dropdown-toggle', 'dropdown-menu');
+            initDropdown('dropdown-toggle-anchor', 'dropdown-menu-anchor');
+            initDropdown('dropdown-toggle-anchor2', 'dropdown-menu-anchor2');
+        });
+
+        function initDropdown(toggleID, menuID) {
+            const toggle = document.getElementById(toggleID);
+            const menu = document.getElementById(menuID);
 
             toggle.addEventListener('click', () => {
                 menu.classList.toggle('hidden');
@@ -719,7 +725,7 @@
                     menu.classList.add('hidden');
                 }
             });
-        });
+        }
 
         // Navigation bar, Sitemap, drop-down list
         document.addEventListener('DOMContentLoaded', function () {

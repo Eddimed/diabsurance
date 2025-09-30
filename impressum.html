@@ -34,11 +34,12 @@
             --diab-light-green: #e6f4ea;  
         }
 
-        /*
+        
         .gradient-bg {
+            padding: 1.1rem;
             background: linear-gradient(135deg, #4285f4 0%, #34a853 100%);
         }
-        */
+        
         .glass-effect {
             backdrop-filter: blur(10px);
             background: rgba(255, 255, 255, 0.1);
@@ -52,8 +53,8 @@
             box-shadow: 0 20px 40px rgba(0,0,0,0.1);
         }
 
-        section.gradient-bg {
-            padding: 1.25rem;
+        section.gradient-bg-weak {
+            padding: 1.1rem;
             background: linear-gradient(to bottom right, 
                         var(--diab-light-blue), 
                         white, 
@@ -167,7 +168,7 @@
     </section>
 
     <!-- §5 DDG and Kontakt Section -->
-    <section id="Par5_DDG" class="gradient-bg">
+    <section id="Par5_DDG" class="gradient-bg-weak">
         <div class="container">
         <h3 class="font-bold mt-2 mb-1">Angaben gemäß <a href="https://www.gesetze-im-internet.de/ddg/__5.html">§ 5 DDG</a></h3>
 
@@ -179,7 +180,7 @@
         </div>
     </section>
 
-    <section id="Makler" class="gradient-bg">
+    <section id="Makler" class="gradient-bg text-white">
     <div class="container">
         <h3 class="font-bold mt-2 mb-1">Versicherungsmakler mit Erlaubnis nach Abs. 1 Satz 2 <a href="https://www.gesetze-im-internet.de/gewo/__34d.html">§34d GewO</a></h3>
         <p>Eingetragen im Vermittlerregister (<a href="www.vermittlerregister.info">www.vermittlerregister.info</a>) unter der Nummer <b><a href="https://www.vermittlerregister.info/recherche?a=suche&registernummer=D-FVH2-1U1WI-68">D-FVH2-1U1WI-68</a></b>.
@@ -225,7 +226,7 @@
         </div>
     </section>
 
-    <section id="Haftung" class="gradient-bg">
+    <section id="Haftung" class="gradient-bg-weak">
         <div class="container">
             <h2 class="font-bold mt-2 mb-1">Haftung für Inhalte</h2>
 
@@ -247,7 +248,7 @@
 
     <section class="gradient-bg">
 
-        <div class="container" id="Urheberrecht" >
+        <div class="container text-white" id="Urheberrecht" >
             <h2 class="font-bold mt-2 mb-1">Urheberrecht</h2>
 
             <p>Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers. Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet.</p>
@@ -256,7 +257,7 @@
         </div>
         
         <!-- Datenschutz -->
-        <div class="container" id="Datenschutz">
+        <div class="container text-white" id="Datenschutz">
             
              <div id="datenschutz"></div>
             <h2 class="font-bold mt-2 mb-1">Datenschutz auf <a href="https://diabsurance.de">Diabsurance.de</a></h2>
@@ -284,7 +285,6 @@
             <h3 class="font-bold mt-2 mb-1">
                 Datenschutz bei der
                 <a href="umfrage.html">Umfrage "Berufsunfähigkeitsversicherung und Diabetes"</a>
-                (Sept 2025)
             </h3>
             <div id="Datenschutz_Umfrage"></div>
             <div id="datenschutz_umfrage"></div>
@@ -292,46 +292,46 @@
             <h4> Die Informationen nach <a href="https://dsgvo-gesetz.de/art-13-dsgvo/">Art. 13 DSGVO</a> (Informationspflicht
                 bei Erhebung von personenbezogenen Daten bei der betroffenen Person)</h4>
 
-            <dl class="py-2 grid grid-cols-4 gap-2">
-                <dt class="font-semibold text-gray-700">Verantwortlicher:</dt>
-                <dd class="col-span-3 text-gray-900">Eddimed, Dr. Bernd Reinhold</dd>
-                <dt class="font-semibold text-gray-700">Zwecke/Umfang:</dt>
-                <dd class="col-span-3 text-gray-900">freiwillige Teilnahme an einer Meinungsumfrage zur
+            <dl class="py-2 grid grid-cols-4 gap-2 text-white">
+                <dt class="font-semibold text-gray-400">Verantwortlicher:</dt>
+                <dd class="col-span-3">Eddimed, Dr. Bernd Reinhold</dd>
+                <dt class="font-semibold text-gray-400">Zwecke/Umfang:</dt>
+                <dd class="col-span-3">freiwillige Teilnahme an einer Meinungsumfrage zur
                 Berufsunfähigkeitsversicherung. Die
                 Antworten werden ausschließlich aggregiert ausgewertet; eine Identifizierung von Personen ist nicht
                 beabsichtigt. Wir bitten, keine personenbezogenen oder sensiblen Angaben (insb. persönliche
                 Gesundheitsdaten)
                 einzugeben. (Epidemiologische Daten können dagegen eingegeben werden).</dd>
-                <dt class="font-semibold text-gray-700">Rechtsgrundlage:</dt>
-                <dd class="col-span-3 text-gray-900">Für die Meinungsumfrage ist <a
+                <dt class="font-semibold text-gray-400">Rechtsgrundlage:</dt>
+                <dd class="col-span-3">Für die Meinungsumfrage ist <a
                     href="https://dsgvo-gesetz.de/art-6-dsgvo/">Art. 6 Abs.
                     1 lit. f DSGVO</a> die Rechtsgrundlage (berechtigtes Interesse an Meinungs-/Marktforschung). Für die
                 optionale
                 Kontaktaufnahme danach gilt zusätzlich <a href="https://dsgvo-gesetz.de/art-6-dsgvo/">Art. 6 Abs. 1 lit. a
                     DSGVO</a> (Einwilligung).</dd>
-                <dt class="font-semibold text-gray-700">Empfänger/Kategorien:</dt>
-                <dd class="col-span-3 text-gray-900">intern befugte Mitarbeitende von Eddimed.</dd>
-                <dt class="font-semibold text-gray-700">Auftragsverarbeiter:</dt>
-                <dd class="col-span-3 text-gray-900">Microsoft (Bereitstellung Microsoft Forms im Rahmen unseres M365-Vertrags
+                <dt class="font-semibold text-gray-400">Empfänger/Kategorien:</dt>
+                <dd class="col-span-3">intern befugte Mitarbeitende von Eddimed.</dd>
+                <dt class="font-semibold text-gray-400">Auftragsverarbeiter:</dt>
+                <dd class="col-span-3">Microsoft (Bereitstellung Microsoft Forms im Rahmen unseres M365-Vertrags
                 inkl.
                 Data Processing Agreement (DPA)).</dd>
-                <dt class="font-semibold text-gray-700">Übermittlungen in Drittländer:</dt>
-                <dd class="col-span-3 text-gray-900">erfolgen nur nach den vertraglich vorgesehenen Schutzmechanismen und
+                <dt class="font-semibold text-gray-400">Übermittlungen in Drittländer:</dt>
+                <dd class="col-span-3">erfolgen nur nach den vertraglich vorgesehenen Schutzmechanismen und
                 soweit für Support/Fehlerbehebung erforderlich (siehe auch DPA).</dd>
-                <dt class="font-semibold text-gray-700">Speicherdauer:</dt>
-                <dd class="col-span-3 text-gray-900">Rohdaten bis max. 3 Monate in Forms nach Ablauf der Umfrage; danach
+                <dt class="font-semibold text-gray-400">Speicherdauer:</dt>
+                <dd class="col-span-3">Rohdaten bis max. 3 Monate in Forms nach Ablauf der Umfrage; danach
                 Löschung.
                 Auswertungen speichern wir nur als Aggregat/Pseudonymisat. Kontaktdaten (bei Einwilligung) löschen wir
                 spätestens 9 Monate nach Abschluss der Umfrage bzw. direkt bei Widerruf.</dd>
-                <dt class="font-semibold text-gray-700">Rechte der Betroffenen:</dt>
-                <dd class="col-span-3 text-gray-900">Auskunft, Berichtigung, Löschung, Einschränkung, Datenübertragbarkeit;
+                <dt class="font-semibold text-gray-400">Rechte der Betroffenen:</dt>
+                <dd class="col-span-3">Auskunft, Berichtigung, Löschung, Einschränkung, Datenübertragbarkeit;
                 Widerspruch für die Meinungsumfrage (bei Abs. 1 lit. f); Widerruf erteilter Einwilligungen zur
                 Kontaktaufnahme
                 (bei Abs. 1 lit. a); Beschwerderecht bei der <a
                     href="https://www.bfdi.bund.de/DE/Service/Kontakt/Kontaktfinder/kontaktfinder_node.html">Aufsichtsbehörde</a>.
                 </dd>
-                <dt class="font-semibold text-gray-700">Bereitstellungspflicht:</dt>
-                <dd class="col-span-3 text-gray-900">Die Teilnahme ist freiwillig; ohne Einwilligung erfolgt
+                <dt class="font-semibold text-gray-400">Bereitstellungspflicht:</dt>
+                <dd class="col-span-3">Die Teilnahme ist freiwillig; ohne Einwilligung erfolgt
                 keine Kontaktaufnahme/kein Newsletterversand.</dd>
             </dl>
         </div>
@@ -411,8 +411,14 @@
 
         // Navigation bar, Hamburger menu, drop-down list
         document.addEventListener('DOMContentLoaded', function () {
-            const toggle = document.getElementById('dropdown-toggle');
-            const menu = document.getElementById('dropdown-menu');
+            initDropdown('dropdown-toggle', 'dropdown-menu');
+            initDropdown('dropdown-toggle-anchor', 'dropdown-menu-anchor');
+            initDropdown('dropdown-toggle-anchor2', 'dropdown-menu-anchor2');
+        });
+
+        function initDropdown(toggleID, menuID) {
+            const toggle = document.getElementById(toggleID);
+            const menu = document.getElementById(menuID);
 
             toggle.addEventListener('click', () => {
                 menu.classList.toggle('hidden');
@@ -424,7 +430,7 @@
                     menu.classList.add('hidden');
                 }
             });
-        });
+        }
 
         // Navbar scroll effect
         window.addEventListener('scroll', function() {
