@@ -169,19 +169,6 @@
             border-radius: 2px;
         }
 
-        @media (prefers-color-scheme: dark) {
-            a {
-                color: #60a5fa;
-            }
-
-            a:hover {
-                color: #93c5fd;
-            }
-
-            a:visited {
-                color: #c4b5fd;
-            }
-        }
     </style>
 </head>
 
@@ -195,16 +182,39 @@
                     <a href="index.html"><img src="img/diabsurance_logo_green.png" alt="diabsurance Logo"
                             class="h-12 w-auto"></a>
                 </div>
+
+                <!-- common nav.bar with page-specific anchor links -->
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="#Formular"
-                        class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">Formular</a>
-                    <a href="#About"
-                        class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">Über
-                        mich</a>
-                    <a href="#Versicherungen"
-                        class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">Versicherungen</a>
-                    <a href="#Partner"
-                        class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">Partner</a>
+                    <a href="bu.html"
+                        class="hover:text-diab-blue transition-colors duration-300">Berufsunfähigkeitsversicherung</a>
+                    <a href="umfrage.html" class="hover:text-diab-blue transition-colors duration-300">Umfrage</a>
+                    <a href="community.html" class="hover:text-diab-blue transition-colors duration-300">Unternehmen aus
+                        der Community</a>
+
+                    <div class="relative inline-block text-center">
+                        <div id="dropdown-toggle-anchor">
+                            <button class="text-gray-700 hover:text-diab-blue">
+                                <i class="fas fa-chevron-down text-xl"></i>
+                            </button>
+                        </div>
+
+                        <!-- Freischwebendes Menü der Anchor-Links dieser Homepage -->
+                        <div id="dropdown-menu-anchor"
+                            class="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 w-50 bg-white border border-gray-200 rounded shadow-lg hidden z-100">
+                            <div class="flex flex-col space-y-2 p-4">
+                                <a href="#Formular"
+                                    class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">Formular</a>
+                                <a href="#About"
+                                    class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">Über
+                                    mich</a>
+                                <a href="#Versicherungen"
+                                    class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">Versicherungen</a>
+                                <a href="#Partner"
+                                    class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">Partner</a>
+                            </div>
+                        </div>
+                    </div>
+
                     <!-- MS BOOKING LINK: Ersetze "#contact" durch deinen Microsoft Booking Link -->
                     <a href="https://outlook.office.com/book/Diabsurance@eddimed.eu/" target="_blank"
                         rel="noopener noreferrer"
@@ -226,25 +236,48 @@
                     </button>
                 </div>
 
-                <!-- Freischwebendes Menü -->
+                <!-- Freischwebendes Menü auf kleinen Bildschirmen -->
                 <div id="dropdown-menu"
                     class="absolute top-0 right-0 mt-5 w-50 bg-white border border-gray-200 rounded shadow-lg hidden z-100">
-                    <div class="flex flex-col space-y-2 p-4">
-                        <a href="#Formular"
-                            class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">Formular</a>
-                        <a href="#About"
-                            class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">Über
-                            mich</a>
-                        <a href="#Versicherungen"
-                            class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">Versicherungen</a>
-                        <a href="#Partner"
-                            class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">Partner</a>
-                        <a href="https://outlook.office.com/book/Diabsurance@eddimed.eu/" target="_blank" rel="noopener noreferrer"
-                        class="text-diab-green hover:text-diab-blue transition-colors duration-300 font-medium">
-                            Beratung&nbsp;anfragen
+                    <div class="flex flex-col space-y-2 p-4 text-center">
+                        <a href="bu.html"
+                            class="hover:text-diab-blue transition-colors duration-300">Berufsunfähigkeitsversicherung</a>
+                        <a href="umfrage.html" class="hover:text-diab-blue transition-colors duration-300">Umfrage</a>
+                        <a href="community.html" class="hover:text-diab-blue transition-colors duration-300">Unternehmen
+                            aus der Community</a>
+
+                        <div class="relative inline-block">
+                            <div id="dropdown-toggle-anchor2">
+                                <button class="text-gray-700 hover:text-diab-blue">
+                                    <i class="fas fa-chevron-down text-xl"></i>
+                                </button>
+                            </div>
+
+                            <!-- Freischwebendes Menü der Anchor-Links dieser Homepage -->
+                            <div id="dropdown-menu-anchor2"
+                                class="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 w-50 bg-white border border-gray-200 rounded shadow-lg hidden z-100">
+                                <div class="flex flex-col space-y-2 p-4">
+                                    <a href="#Formular"
+                                        class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">Formular</a>
+                                    <a href="#About"
+                                        class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">Über
+                                        mich</a>
+                                    <a href="#Versicherungen"
+                                        class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">Versicherungen</a>
+                                    <a href="#Partner"
+                                        class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">Partner</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="https://outlook.office.com/book/Diabsurance@eddimed.eu/" target="_blank"
+                            rel="noopener noreferrer"
+                            class="text-diab-green hover:text-diab-blue transition-colors duration-300 font-medium">
+                            Beratung anfragen
                         </a>
                     </div>
                 </div>
+                <!-- END Freischwebendes Menü auf kleinen Bildschirmen -->
 
                 <!-- Freischwebendes Menü (sitemap) -->
                 <!--
@@ -269,6 +302,7 @@
             </div>
         </div>
     </nav>
+    <!-- END common nav.bar with page-specific anchor links -->
 
     <!-- BU Section -->
     <section id="BU" class="py-10 bg-gradient-to-r from-diab-light-blue to-diab-light-green">
