@@ -141,7 +141,7 @@
             transition: all 0.2s;
         }
 
-        .iframe-cropped {
+        .iframe-div {
             position: relative;
             width: 100%;
             height: 80vh;
@@ -150,29 +150,6 @@
             border-radius: 16px;
         }
 
-
-        .iframe-cropped iframe {
-            width: 100%;
-            height: calc(100% + 55px);
-            border: 0;
-            margin-bottom: -100px;
-        }
-
-        /* media width for the larger screens */
-        @media (max-width: 768px) {
-            .iframe-cropped iframe {
-                height: calc(100% + 120px);
-                margin-bottom: -120px;
-            }
-        }
-
-        /* media width for the smaller screens */
-        @media (max-width: 480px) {
-            .iframe-cropped iframe {
-                height: calc(100% + 140px);
-                margin-bottom: -140px;
-            }
-        }
     </style>
 </head>
 
@@ -304,7 +281,7 @@
 
 
 
-            <div class="iframe-cropped">
+            <div class="iframe-div md:w-3/4">
                 <iframe src="https://forms.office.com/e/nWx9f4xegJ?embed=true"
                     title="Umfrage Diabetes und BU (Microsoft Forms)" loading="lazy" allow="fullscreen">
                 </iframe>
