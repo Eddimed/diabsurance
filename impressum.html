@@ -7,6 +7,9 @@
     <link rel="icon" href="img/diabsurance_shorty_300x300.png" type="image/png">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script defer data-domain="diabsurance.de"
+        src="https://plausible.io/js/script.file-downloads.hash.outbound-links.pageview-props.revenue.tagged-events.js"></script>
+    <script>window.plausible = window.plausible || function () { (window.plausible.q = window.plausible.q || []).push(arguments) }</script>
     <script>
         tailwind.config = {
             theme: {
@@ -31,11 +34,12 @@
             --diab-light-green: #e6f4ea;  
         }
 
-        /*
+        
         .gradient-bg {
+            padding: 1.1rem;
             background: linear-gradient(135deg, #4285f4 0%, #34a853 100%);
         }
-        */
+        
         .glass-effect {
             backdrop-filter: blur(10px);
             background: rgba(255, 255, 255, 0.1);
@@ -49,8 +53,8 @@
             box-shadow: 0 20px 40px rgba(0,0,0,0.1);
         }
 
-        section.gradient-bg {
-            padding: 1.25rem;
+        section.gradient-bg-weak {
+            padding: 1.1rem;
             background: linear-gradient(to bottom right, 
                         var(--diab-light-blue), 
                         white, 
@@ -111,20 +115,84 @@
                 <div class="flex items-center">
                     <a href="index.html"><img src="img/diabsurance_logo_green.png" alt="diabsurance Logo" class="h-12 w-auto"></a>
                 </div>
+                <!-- common nav.bar with page-specific anchor links -->
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="index.html#About" class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">Über mich</a>
-                    <a href="index.html#BU" class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">BU-Vers.</a>
-                    <a href="index.html#Partner" class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">Partner</a>
+                    <a href="bu.html"
+                        class="hover:text-diab-blue transition-colors duration-300">Berufsunfähigkeitsversicherung</a>
+                    <a href="umfrage.html" class="hover:text-diab-blue transition-colors duration-300">Umfrage</a>
+                    <a href="erstinformation.html" class="hover:text-diab-blue transition-colors duration-300">Erstinformation</a>
+
+                    <div class="relative inline-block text-center">
+                        <div id="dropdown-toggle-anchor">
+                            <button class="text-gray-700 hover:text-diab-blue">
+                                <i class="fas fa-chevron-down text-xl"></i>
+                            </button>
+                        </div>
+
+                        <!-- Freischwebendes Menü der Anchor-Links dieser Homepage -->
+                        <div id="dropdown-menu-anchor"
+                            class="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 w-50 bg-white border border-gray-200 rounded shadow-lg hidden z-100">
+                            <div class="flex flex-col space-y-2 p-4">
+                                <a href="#Makler" class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">Makler</a>
+                                <a href="#Haftung" class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">Haftung</a>
+                                <a href="#Urheberrecht" class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">Urheberrecht</a>
+                                <a href="#Datenschutz" class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">Datenschutz</a>
+                            </div>
+                        </div>
+                    </div>
                     <!-- MS BOOKING LINK: Ersetze "#contact" durch deinen Microsoft Booking Link -->
-                    <a href="https://outlook.office.com/book/Diabsurance@eddimed.eu/" target="_blank" class="bg-diab-blue text-white px-6 py-2.5 rounded-full hover:bg-blue-600 transition-all duration-300 font-medium">
+                    <a href="https://outlook.office.com/book/Diabsurance@eddimed.eu/" target="_blank" rel="noopener noreferrer" 
+                    class="bg-diab-blue text-white px-6 py-2.5 rounded-full hover:bg-blue-600 transition-all duration-300 font-medium">
                         Beratung anfragen
                     </a>
                 </div>
-                <div class="md:hidden">
+
+                <div id="dropdown-toggle" class="md:hidden">
                     <button class="text-gray-700 hover:text-diab-blue">
                         <i class="fas fa-bars text-xl"></i>
                     </button>
                 </div>
+
+                <!-- Freischwebendes Menü auf kleinen Bildschirmen -->
+                <div id="dropdown-menu"
+                    class="absolute top-0 right-0 mt-5 w-50 bg-white border border-gray-200 rounded shadow-lg hidden z-100">
+                    <div class="flex flex-col space-y-2 p-4 text-center">
+                        <a href="bu.html"
+                            class="hover:text-diab-blue transition-colors duration-300">Berufsunfähigkeitsversicherung</a>
+                        <a href="umfrage.html" class="hover:text-diab-blue transition-colors duration-300">Umfrage</a>
+                        <a href="erstinformation.html" class="hover:text-diab-blue transition-colors duration-300">Erstinformation</a>
+
+                        <div class="relative inline-block">
+                            <div id="dropdown-toggle-anchor2">
+                                <button class="text-gray-700 hover:text-diab-blue">
+                                    <i class="fas fa-chevron-down text-xl"></i>
+                                </button>
+                            </div>
+
+                            <!-- Freischwebendes Menü der Anchor-Links dieser Homepage -->
+                            <div id="dropdown-menu-anchor2"
+                                class="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 w-50 bg-white border border-gray-200 rounded shadow-lg hidden z-100">
+                                <div class="flex flex-col space-y-2 p-4">
+                                    <a href="#Makler"
+                                        class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">Makler</a>
+                                    <a href="#Haftung"
+                                        class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">Haftung</a>
+                                    <a href="#Urheberrecht"
+                                        class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">Urheberrecht</a>
+                                    <a href="#Datenschutz"
+                                        class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">Datenschutz</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="https://outlook.office.com/book/Diabsurance@eddimed.eu/" target="_blank"
+                            rel="noopener noreferrer"
+                            class="text-diab-green hover:text-diab-blue transition-colors duration-300 font-medium">
+                            Beratung anfragen
+                        </a>
+                    </div>
+                </div>
+                <!-- END Freischwebendes Menü auf kleinen Bildschirmen -->
             </div>
         </div>
     </nav>
@@ -142,11 +210,11 @@
     </section>
 
     <!-- §5 DDG and Kontakt Section -->
-    <section id="Par5_DDG" class="gradient-bg">
+    <section id="Par5_DDG" class="gradient-bg-weak">
         <div class="container">
-        <h3 class="font-bold mt-2 mb-1">Angaben gemäß § 5 DDG</h3>
+        <h3 class="font-bold mt-2 mb-1">Angaben gemäß <a href="https://www.gesetze-im-internet.de/ddg/__5.html">§ 5 DDG</a></h3>
 
-        <p>Dr. Bernd Reinhold<br>Erdbeerweg 24<br>70619 Stuttgart</p>
+        <p>Eddimed<br>Dr. Bernd Reinhold<br>Erdbeerweg 24<br>70619 Stuttgart</p>
         <h3 class="font-bold mt-2 mb-1">Kontakt</h3>
         <p>Telefon: +49 (0) 711 9933 5605<br>E-Mail: info [at] diabsurance.de</p>
         <h3 class="font-bold mt-2 mb-1">Umsatzsteuer-Identifikationsnummer (UStd-IdNr):</h3>
@@ -154,9 +222,9 @@
         </div>
     </section>
 
-    <section id="Makler" class="gradient-bg">
+    <section id="Makler" class="gradient-bg text-white">
     <div class="container">
-        <h3 class="font-bold mt-2 mb-1">Versicherungsmakler mit Erlaubnis nach Abs. 1 Satz 2 §34d GewO</h3>
+        <h3 class="font-bold mt-2 mb-1">Versicherungsmakler mit Erlaubnis nach Abs. 1 Satz 2 <a href="https://www.gesetze-im-internet.de/gewo/__34d.html">§34d GewO</a></h3>
         <p>Eingetragen im Vermittlerregister (<a href="www.vermittlerregister.info">www.vermittlerregister.info</a>) unter der Nummer <b><a href="https://www.vermittlerregister.info/recherche?a=suche&registernummer=D-FVH2-1U1WI-68">D-FVH2-1U1WI-68</a></b>.
         </p>
 
@@ -186,10 +254,8 @@
     <a href="www.pkv-ombudsmann.de">www.pkv-ombudsmann.de</a>
 
     </div>
-    </section>
 
-    <section id="Streitschlichtung" class="gradient-bg">
-        <div class="container">
+        <div class="container" id="Streitschlichtung">
         <h3 class="font-bold mt-2 mb-1">Verbraucherstreitbeilegung/ Universalschlichtungsstelle</h3>
 
         <p>Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
@@ -199,10 +265,10 @@
         Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit:
         <a href="https://ec.europa.eu/consumers/odr/">https://ec.europa.eu/consumers/odr/</a>.
 
-            </div>
+        </div>
     </section>
 
-    <section id="Haftung" class="gradient-bg">
+    <section id="Haftung" class="gradient-bg-weak">
         <div class="container">
             <h2 class="font-bold mt-2 mb-1">Haftung für Inhalte</h2>
 
@@ -218,23 +284,98 @@
             <p>Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich. Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft. Rechtswidrige Inhalte waren zum Zeitpunkt der Verlinkung nicht erkennbar.</p>
 
             <p>Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist jedoch ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht zumutbar. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Links umgehend entfernen. </p>
-        </div>
-    </section>  
+  
+    </section>
 
 
-    <section id="Urheberrecht" class="gradient-bg">
-        <div id="Datenschutz"></div>
-        
-        <div class="container">
-        <h2 class="font-bold mt-2 mb-1">Urheberrecht</h2>
+    <section class="gradient-bg">
+
+        <div class="container text-white" id="Urheberrecht" >
+            <h2 class="font-bold mt-2 mb-1">Urheberrecht</h2>
 
             <p>Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers. Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet.</p>
 
             <p>Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die Urheberrechte Dritter beachtet. Insbesondere werden Inhalte Dritter als solche gekennzeichnet. Sollten Sie trotzdem auf eine Urheberrechtsverletzung aufmerksam werden, bitten wir um einen entsprechenden Hinweis. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen.</p>
+        </div>
+        
+        <!-- Datenschutz -->
+        <div class="container text-white" id="Datenschutz">
+            
+             <div id="datenschutz"></div>
+            <h2 class="font-bold mt-2 mb-1">Datenschutz auf <a href="https://diabsurance.de">Diabsurance.de</a></h2>
+            
 
-        <h2 class="font-bold mt-2 mb-1">Datenschutz</h2>
+            <p>
+                Die Nutzung unserer Webseite ist in der Regel ohne Angabe
+                personenbezogener Daten möglich. Soweit auf unseren Seiten
+                personenbezogene Daten (beispielsweise Name, Anschrift oder
+                eMail-Adressen) erhoben werden, erfolgt dies, soweit möglich, stets
+                auf freiwilliger Basis. Diese Daten werden ohne Ihre ausdrückliche
+                Zustimmung nicht an Dritte weitergegeben.<br />
+                Wir weisen darauf hin, dass die Datenübertragung im Internet (z.B. bei
+                der Kommunikation per E-Mail) Sicherheitslücken aufweisen kann. Ein
+                lückenloser Schutz der Daten vor dem Zugriff durch Dritte ist nicht
+                möglich.<br />
+                Der Nutzung von im Rahmen der Impressumspflicht veröffentlichten
+                Kontaktdaten durch Dritte zur Übersendung von nicht ausdrücklich
+                angeforderter Werbung und Informationsmaterialien wird hiermit
+                ausdrücklich widersprochen. Die Betreiber der Seiten behalten sich
+                ausdrücklich rechtliche Schritte im Falle der unverlangten Zusendung
+                von Werbeinformationen, etwa durch Spam-Mails, vor.
+            </p>
 
-        <p>Die Nutzung unserer Webseite ist in der Regel ohne Angabe personenbezogener Daten möglich. Soweit auf unseren Seiten personenbezogene Daten (beispielsweise Name, Anschrift oder eMail-Adressen) erhoben werden, erfolgt dies, soweit möglich, stets auf freiwilliger Basis. Diese Daten werden ohne Ihre ausdrückliche Zustimmung nicht an Dritte weitergegeben.<br>Wir weisen darauf hin, dass die Datenübertragung im Internet (z.B. bei der Kommunikation per E-Mail) Sicherheitslücken aufweisen kann. Ein lückenloser Schutz der Daten vor dem Zugriff durch Dritte ist nicht möglich.<br>Der Nutzung von im Rahmen der Impressumspflicht veröffentlichten Kontaktdaten durch Dritte zur Übersendung von nicht ausdrücklich angeforderter Werbung und Informationsmaterialien wird hiermit ausdrücklich widersprochen. Die Betreiber der Seiten behalten sich ausdrücklich rechtliche Schritte im Falle der unverlangten Zusendung von Werbeinformationen, etwa durch Spam-Mails, vor.</p>
+            <h3 class="font-bold mt-2 mb-1">
+                Datenschutz bei der
+                <a href="umfrage.html">Umfrage "Berufsunfähigkeitsversicherung und Diabetes"</a>
+            </h3>
+            <div id="Datenschutz_Umfrage"></div>
+            <div id="datenschutz_umfrage"></div>
+
+            <h4> Die Informationen nach <a href="https://dsgvo-gesetz.de/art-13-dsgvo/">Art. 13 DSGVO</a> (Informationspflicht
+                bei Erhebung von personenbezogenen Daten bei der betroffenen Person)</h4>
+
+            <dl class="py-2 grid grid-cols-4 gap-2 text-white">
+                <dt class="font-semibold text-gray-400">Verantwortlicher:</dt>
+                <dd class="col-span-3">Eddimed, Dr. Bernd Reinhold</dd>
+                <dt class="font-semibold text-gray-400">Zwecke/Umfang:</dt>
+                <dd class="col-span-3">freiwillige Teilnahme an einer Meinungsumfrage zur
+                Berufsunfähigkeitsversicherung. Die
+                Antworten werden ausschließlich aggregiert ausgewertet; eine Identifizierung von Personen ist nicht
+                beabsichtigt. Wir bitten, keine personenbezogenen oder sensiblen Angaben (insb. persönliche
+                Gesundheitsdaten)
+                einzugeben. (Epidemiologische Daten können dagegen eingegeben werden).</dd>
+                <dt class="font-semibold text-gray-400">Rechtsgrundlage:</dt>
+                <dd class="col-span-3">Für die Meinungsumfrage ist <a
+                    href="https://dsgvo-gesetz.de/art-6-dsgvo/">Art. 6 Abs.
+                    1 lit. f DSGVO</a> die Rechtsgrundlage (berechtigtes Interesse an Meinungs-/Marktforschung). Für die
+                optionale
+                Kontaktaufnahme danach gilt zusätzlich <a href="https://dsgvo-gesetz.de/art-6-dsgvo/">Art. 6 Abs. 1 lit. a
+                    DSGVO</a> (Einwilligung).</dd>
+                <dt class="font-semibold text-gray-400">Empfänger/Kategorien:</dt>
+                <dd class="col-span-3">intern befugte Mitarbeitende von Eddimed.</dd>
+                <dt class="font-semibold text-gray-400">Auftragsverarbeiter:</dt>
+                <dd class="col-span-3">Microsoft (Bereitstellung Microsoft Forms im Rahmen unseres M365-Vertrags
+                inkl.
+                Data Processing Agreement (DPA)).</dd>
+                <dt class="font-semibold text-gray-400">Übermittlungen in Drittländer:</dt>
+                <dd class="col-span-3">erfolgen nur nach den vertraglich vorgesehenen Schutzmechanismen und
+                soweit für Support/Fehlerbehebung erforderlich (siehe auch DPA).</dd>
+                <dt class="font-semibold text-gray-400">Speicherdauer:</dt>
+                <dd class="col-span-3">Rohdaten bis max. 3 Monate in Forms nach Ablauf der Umfrage; danach
+                Löschung.
+                Auswertungen speichern wir nur als Aggregat/Pseudonymisat. Kontaktdaten (bei Einwilligung) löschen wir
+                spätestens 9 Monate nach Abschluss der Umfrage bzw. direkt bei Widerruf.</dd>
+                <dt class="font-semibold text-gray-400">Rechte der Betroffenen:</dt>
+                <dd class="col-span-3">Auskunft, Berichtigung, Löschung, Einschränkung, Datenübertragbarkeit;
+                Widerspruch für die Meinungsumfrage (bei Abs. 1 lit. f); Widerruf erteilter Einwilligungen zur
+                Kontaktaufnahme
+                (bei Abs. 1 lit. a); Beschwerderecht bei der <a
+                    href="https://www.bfdi.bund.de/DE/Service/Kontakt/Kontaktfinder/kontaktfinder_node.html">Aufsichtsbehörde</a>.
+                </dd>
+                <dt class="font-semibold text-gray-400">Bereitstellungspflicht:</dt>
+                <dd class="col-span-3">Die Teilnahme ist freiwillig; ohne Einwilligung erfolgt
+                keine Kontaktaufnahme/kein Newsletterversand.</dd>
+            </dl>
         </div>
     </section>
 
@@ -251,14 +392,25 @@
                 </div>
                 
 
-                <div class="text-center">
-                    <a href="index.html#Versicherungen"><h4 class="text-lg font-semibold mb-4">Sitemap</h4></a>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="bu.html" class="hover:text-white transition-colors duration-300">Berufsunfähigkeitsversicherung</a></li>
-                        <li><a href="umfrage.html" class="hover:text-white transition-colors duration-300">Umfrage (Sep 2025)</a></li>
-                        <li><a href="erstinformation.html" class="hover:text-white transition-colors duration-300">Erstinformation</a></li>
-                        <li><a href="community.html" class="hover:text-white transition-colors duration-300">Unternehmen aus der Community</a></li>
-                        <li><a href="impressum.html" class="hover:text-white transition-colors duration-300">Impressum</a></li>
+                <div class="text-center space-y-2 mb-4">
+                    <a href="index.html#Versicherungen">
+                        <h4 class="text-lg font-semibold mb-2">Sitemap</h4>
+                    </a>
+                    <ul class="space-y-2 text-gray-400 mb-6">
+                        <li><a href="bu.html"
+                                class="hover:text-white transition-colors duration-300">Berufsunfähigkeitsversicherung</a>
+                        </li>
+                        <li><a href="umfrage.html" class="hover:text-white transition-colors duration-300">Umfrage (Sep
+                                2025)</a></li>
+                        <li><a href="community.html" class="hover:text-white transition-colors duration-300">Unternehmen
+                                aus der Community</a></li>
+                    </ul>
+                    <ul class="space-y-2 text-diab-green">
+                        <li><a href="erstinformation.html"
+                                class="hover:text-white transition-colors duration-300">Erstinformation</a>,
+                            <a href="impressum.html"
+                                class="hover:text-white transition-colors duration-300">Impressum</a>
+                        </li>
                     </ul>
                 </div>
                 
@@ -278,7 +430,7 @@
             </div>
             
             <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-                <p>&copy; <a href="https://www.openstreetmap.org/relation/2793104" target="_blank">Stuttgart</a>, Aug 2025 - diabsurance - Alle Rechte vorbehalten - <a href="impressum.html" class="hover:text-white transition-colors duration-300">Impressum</a>, <a href="erstinformation.html" class="hover:text-white transition-colors duration-300">Erstinformation</a></p>
+                <p>&copy; <a href="https://www.openstreetmap.org/relation/2793104" target="_blank">Stuttgart</a>, Okt 2025 - diabsurance - Alle Rechte vorbehalten - <a href="impressum.html" class="hover:text-white transition-colors duration-300">Impressum</a>, <a href="erstinformation.html" class="hover:text-white transition-colors duration-300">Erstinformation</a></p>
             </div>
         </div>
     </footer>
@@ -298,6 +450,29 @@
                 }
             });
         });
+
+        // Navigation bar, Hamburger menu, drop-down list
+        document.addEventListener('DOMContentLoaded', function () {
+            initDropdown('dropdown-toggle', 'dropdown-menu');
+            initDropdown('dropdown-toggle-anchor', 'dropdown-menu-anchor');
+            initDropdown('dropdown-toggle-anchor2', 'dropdown-menu-anchor2');
+        });
+
+        function initDropdown(toggleID, menuID) {
+            const toggle = document.getElementById(toggleID);
+            const menu = document.getElementById(menuID);
+
+            toggle.addEventListener('click', () => {
+                menu.classList.toggle('hidden');
+            });
+
+            // Optional: Klick außerhalb schließt Menü
+            document.addEventListener('click', (event) => {
+                if (!toggle.contains(event.target) && !menu.contains(event.target)) {
+                    menu.classList.add('hidden');
+                }
+            });
+        }
 
         // Navbar scroll effect
         window.addEventListener('scroll', function() {
