@@ -834,10 +834,10 @@
                 const popup = document.createElement('div');
                 popup.style.cssText = `
                 background: white;
-                padding: 20px;
+                padding: 10px;
                 border-radius: 12px;
                 width: 100%;
-                max-width: 320px;
+                max-width: 260px;
                 position: relative;
                 box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
                 box-sizing: border-box;
@@ -861,20 +861,19 @@
                     border-radius: 50%;
                     transition: background 0.2s;
                 " onmouseover="this.style.background='#f0f0f0'" onmouseout="this.style.background='none'">&times;</button>
-                <h3 style="margin: 0 0 16px 0; font-size: 18px; color: #333;">Scan QR Code</h3>
-              
+                <h3 style="margin: 0 0 16px 0; font-size: 18px; color: #333; text-align:center;">Scan QR Code</h3>
                 <img src="/img/qr-code/QRcode_diabsurance.png" alt="QR Code" style="
                     width: 100%;
                     height: 100%;
                     object-fit: contain;
                     display: block;
                 ">
-                <p style="margin: 12px 0 0 0; font-size: 14px; color: #666; text-align: center;">Scan to share this page</p>
+                <p style="margin: 12px 0 0 0; font-size: 14px; color: #666; text-align: center; color:black; font-weight: bold">Scan To Share This Page</p>
             `;
                 overlay.appendChild(popup);
                 document.body.appendChild(overlay);
 
-                // Close handlers
+                // close button handlers to close the popup
                 const closePopup = () => overlay.remove();
                 document.getElementById('qr-close').addEventListener('click', closePopup);
                 overlay.addEventListener('click', (e) => {
