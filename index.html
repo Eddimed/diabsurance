@@ -668,14 +668,20 @@
                 <div class="lg:w-1/2 mb-12 lg:mb-0">
                     <h2 class="text-4xl font-bold text-center text-gray-900 mb-6">Partner</h2>
                     <div class="flex items-stretch space-x-8">
+                        <div id="VEMA_partner" class="text-center">
+                            <a href="https://vema-eg.de/" title="Wir sind Partner der VEMA Versicherungsmakler Genossenschaft eG (VEMA eG). Die VEMA eG ist eines der führenden Dienstleistungsunternehmen für Versicherungsmakler in Deutschland. Stand Okt 2025 sind rund 4.700 mittelständische Maklerbetriebe aus dem gesamten Bundesgebiet dort angebunden. Nur Versicherungsmakler, die strenge Qualitätskriterien erfüllen, werden in diesen Maklerverbund aufgenommen. Diese Voraussetzungen garantieren hohe Qualifikation und Beratungsqualität. Folgen Sie dem Link, um mehr über die VEMA zu erfahren.">
+                            <img src="img/vema_logo_RGB.png" alt="VEMA Partner"
+                                        class="w-full h-full object-contain" style="width: auto; height: 150px;">
+                                        </a>
+                        </div>
                         <div class="text-center">
                             <a href="https://casassecuranz.de/"><img
                                     src="img/CASAssecuranz_logo-trademark-1024x194.webp" alt="CASAssecuranz"
-                                    class="w-full h-full object-contain"></a>
+                                    style="width: auto; height: 150px;" class="w-full h-full object-contain"></a>
                         </div>
                         <div class="text-center">
                             <a href="https://eddimed.eu/"><img src="img/ed_logo.png" alt="Eddimed"
-                                    style="width: 300px; height: auto;" class="w-full h-full object-contain"></a>
+                                    style="width: auto; height: 150px;" class="w-full h-full object-contain"></a>
                         </div>
                     </div>
                 </div>
@@ -792,19 +798,22 @@
 
     <!-- Smooth Scrolling & Interactions -->
     <script>
-        // Smooth scrolling for anchor links
+        // Adjust scroll position to account for fixed header
+        let nav_bar = document.querySelector('nav');
+        let navbarHeight = nav_bar.offsetHeight;
+
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
+                let target = document.querySelector(this.getAttribute('href'));
+                let targetPosition = target.getBoundingClientRect().top - navbarHeight;
+                window.scrollTo({
+                    top: targetPosition + window.pageYOffset,
+                    behavior: 'smooth'
+                });
             });
         });
+
 
         // Navbar scroll effect
         window.addEventListener('scroll', function () {
@@ -856,24 +865,6 @@
                 if (!toggle.contains(event.target) && !menu.contains(event.target)) {
                     menu.classList.add('hidden');
                 }
-            });
-        });
-    </script>
-
-    <script>
-        // Adjust scroll position to account for fixed header
-        let nav_bar = document.querySelector('nav');
-        let navbarHeight = nav_bar.offsetHeight;
-
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                let target = document.querySelector(this.getAttribute('href'));
-                let targetPosition = target.getBoundingClientRect().top - navbarHeight;
-                window.scrollTo({
-                    top: targetPosition + window.pageYOffset,
-                    behavior: 'smooth'
-                });
             });
         });
     </script>
@@ -984,7 +975,6 @@
                 });
 
             }
-
 
             // Native share (mobile etc.)
             const nativeBtn = document.getElementById("share-native");
