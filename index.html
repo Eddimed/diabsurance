@@ -256,6 +256,8 @@
                                     mich</a>
                                 <a href="#Versicherungen"
                                     class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">Versicherungen</a>
+                                <a href="#CRS"
+                                    class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">CGM Risiko Score (CRS)</a>
                                 <a href="#Partner"
                                     class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">Partner</a>
                             </div>
@@ -311,6 +313,8 @@
                                         mich</a>
                                     <a href="#Versicherungen"
                                         class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">Versicherungen</a>
+                                    <a href="#CRS"
+                                        class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">CGM Risiko Score (CRS)</a>
                                     <a href="#Partner"
                                         class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">Partner</a>
                                 </div>
@@ -852,6 +856,24 @@
                 if (!toggle.contains(event.target) && !menu.contains(event.target)) {
                     menu.classList.add('hidden');
                 }
+            });
+        });
+    </script>
+
+    <script>
+        // Adjust scroll position to account for fixed header
+        let nav_bar = document.querySelector('nav');
+        let navbarHeight = nav_bar.offsetHeight;
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                let target = document.querySelector(this.getAttribute('href'));
+                let targetPosition = target.getBoundingClientRect().top - navbarHeight;
+                window.scrollTo({
+                    top: targetPosition + window.pageYOffset,
+                    behavior: 'smooth'
+                });
             });
         });
     </script>
