@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Seite nicht gefunden – diabsurance</title>
+  <meta name="description" content="404 – Seite nicht gefunden">
+  <link rel="icon" href="/favicon.ico">
+  <style>
+    :root{
+      --brand-blue:#1455d9;   /* matches site logo tone */
+      --brand-green:#2a6b11;  /* matches 'etes/in' in logo */
+      --text:#0f172a;
+      --muted:#475569;
+      --bg:#f7fafc;
+      --card:#ffffff;
+      --ring:rgba(20,85,217,.2);
+      --shadow: 0 10px 30px rgba(2,6,23,.08);
+      --radius: 18px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Inter, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+      color:var(--text);
+      background: radial-gradient(1200px 800px at 10% -20%, #e9f0ff 0%, transparent 60%),
+                  radial-gradient(1200px 800px at 110% 120%, #e9f7ea 0%, transparent 60%),
+                  var(--bg);
+      display:grid;
+      place-items:center;
+      padding:24px;
+    }
+    .wrap{
+      width:min(960px, 100%);
+      display:grid;
+      gap:28px;
+      grid-template-columns: 1fr;
+      align-items:center;
+    }
+    header{
+      display:flex;
+      align-items:center;
+      gap:16px;
+      justify-content:center;
+    }
+    header img{height:54px; width:auto}
+    main{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:clamp(22px, 3.5vw, 36px);
+      display:grid;
+      gap:18px;
+      border:1px solid #eef2ff;
+    }
+    .badge{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      font-weight:600;
+      letter-spacing:.02em;
+      padding:6px 10px;
+      border-radius:999px;
+      background:rgba(20,85,217,.06);
+      color:var(--brand-blue);
+      width:max-content;
+    }
+    .code{
+      font-variant-numeric:tabular-nums;
+      font-weight:800;
+      color:var(--brand-blue);
+    }
+    h1{
+      margin:0;
+      font-size:clamp(26px, 3.6vw, 36px);
+      line-height:1.15;
+      letter-spacing:.2px;
+    }
+    p{margin:0; color:var(--muted); font-size:clamp(15px, 1.6vw, 17px)}
+    .grid{
+      display:grid;
+      gap:14px;
+      grid-template-columns: 1fr;
+    }
+    @media (min-width:820px){
+      .wrap{grid-template-columns: 1.1fr .9fr}
+      main{padding:40px}
+    }
+    .actions{
+      display:flex; flex-wrap:wrap; gap:10px; margin-top:4px;
+    }
+    .btn{
+      --bg: var(--brand-blue);
+      --fg: #fff;
+      display:inline-flex; align-items:center; gap:10px;
+      padding:12px 16px; border-radius:12px;
+      background:var(--bg); color:var(--fg);
+      text-decoration:none; font-weight:700;
+      border:1px solid transparent; box-shadow:0 4px 14px var(--ring);
+      transition:transform .05s ease, box-shadow .2s ease, background .2s ease;
+    }
+    .btn:hover{transform:translateY(-1px); box-shadow:0 10px 22px var(--ring)}
+    .btn.secondary{
+      --bg:#ffffff; --fg:var(--brand-blue);
+      border-color:#e2e8f0; box-shadow:0 4px 12px rgba(2,6,23,.04);
+    }
+    .list{
+      margin:14px 0 0; padding:0; list-style:none; display:grid; gap:10px;
+    }
+    .list a{color:var(--brand-blue); text-decoration:none; font-weight:600}
+    .list a:hover{ text-decoration:underline }
+    footer{
+      text-align:center; color:#64748b; font-size:14px;
+    }
+    .tag{
+      display:inline-block; padding:.25rem .55rem; border-radius:999px;
+      background:#eaf6ec; color:var(--brand-green); font-weight:700; font-size:12px;
+      border:1px solid #d1fadf;
+    }
+    .illu{
+      display:grid; place-items:center;
+      background:linear-gradient(145deg, rgba(20,85,217,.06), rgba(42,107,17,.05));
+      border-radius:var(--radius);
+      padding:28px; border:1px dashed #cfe1ff;
+      min-height:220px;
+    }
+    .bubble{
+      border-radius:14px; background:#fff; padding:10px 14px; border:1px solid #e2e8f0;
+      box-shadow:0 8px 20px rgba(2,6,23,.06); max-width:420px; color:#0f172a;
+    }
+    .bubble strong{color:var(--brand-blue)}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <a href="/" aria-label="Startseite diabsurance">
+        <img src="https://diabsurance.de/img/diabsurance_logo_green.png" alt="diabsurance Logo">
+      </a>
+    </header>
+
+    <main>
+      <span class="badge"><span class="code">404</span> • Seite nicht gefunden</span>
+      <h1>Uups – diese Seite gibt es nicht (mehr).</h1>
+      <p>Vielleicht wurde sie verschoben oder der Link war fehlerhaft. Hier sind ein paar schnelle Wege zurück.</p>
+
+      <div class="actions">
+        <a class="btn" href="/">Zur Startseite</a>
+        <a class="btn secondary" href="/bu.html">BU-Versicherung</a>
+        <a class="btn secondary" href="/community.html">Community</a>
+        <a class="btn secondary" href="/impressum.html">Impressum</a>
+      </div>
+
+      <ul class="list">
+        <li>Direktkontakt: <a href="mailto:info@diabsurance.de">info@diabsurance.de</a> · Tel. +49 (0) 711 9933 5605</li>
+        <li><span class="tag">Tipp</span> Du wolltest einen Beratungstermin? Schreib uns kurz per Mail.</li>
+      </ul>
+    </main>
+
+    <section class="illu" aria-hidden="true">
+      <div class="bubble">„Euer Vermittler Nr. 1 für <strong>Personen­versicherungen</strong> bei Diabetes.“</div>
+    </section>
+
+    <footer>
+      © <span id="y"></span> diabsurance – Alle Rechte vorbehalten
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
