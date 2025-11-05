@@ -1,174 +1,487 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="de">
+
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Seite nicht gefunden – diabsurance</title>
-  <meta name="description" content="404 – Seite nicht gefunden">
-  <link rel="icon" href="/favicon.ico">
-  <style>
-    :root{
-      --brand-blue:#1455d9;   /* matches site logo tone */
-      --brand-green:#2a6b11;  /* matches 'etes/in' in logo */
-      --text:#0f172a;
-      --muted:#475569;
-      --bg:#f7fafc;
-      --card:#ffffff;
-      --ring:rgba(20,85,217,.2);
-      --shadow: 0 10px 30px rgba(2,6,23,.08);
-      --radius: 18px;
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO meta description: usually up to ~155–160 characters -->
+    <meta name="description" content="404 - Seite nicht gefunden. Diabsurance.">
+
+    <!-- Open Graph tags for rich link previews -->
+    <meta property="og:title" content="diabsurance - Versicherungsschutz für Menschen mit Diabetes">
+    <meta property="og:description" content="404 - Seite nicht gefunden. Diabsurance.">
+    <meta property="og:image" content="https://diabsurance.de/img/diabsurance_logo_green.png">
+    <meta property="og:url" content="https://diabsurance.de/404.html">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card metadata -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="diabsurance - Versicherungsschutz für Menschen mit Diabetes">
+    <meta name="twitter:description" content="404 - Seite nicht gefunden. Diabsurance.">
+    <meta name="twitter:image" content="https://diabsurance.de/img/diabsurance_logo_green.png">
+
+    <meta name="robots" content="noindex, follow">
+
+    <title>404 - Seite nicht gefunden - Diabsurance</title>
+    <link rel="icon" href="img/diabsurance_shorty_300x300.png" type="image/png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script defer data-domain="diabsurance.de"
+        src="https://plausible.io/js/script.file-downloads.hash.outbound-links.pageview-props.revenue.tagged-events.js"></script>
+    <script>window.plausible = window.plausible || function () { (window.plausible.q = window.plausible.q || []).push(arguments) }</script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'diab-blue': '#4285f4',
+                        'diab-green': '#34a853',
+                        'diab-light-blue': '#e8f0fe',
+                        'diab-light-green': '#e6f4ea'
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'system-ui', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <script type="application/ld+json">
+    {
+    "@context": "https://schema.org",
+    "@type": "InsuranceAgency",
+    "name": "diabsurance",
+    "url": "https://diabsurance.de",
+    "logo": "https://diabsurance.de/img/diabsurance_logo_green.png",
+    "description": "Versicherungsschutz für Menschen mit Diabetes - Berufsunfähigkeits-, Lebens- und Unfallversicherung mit fairen Konditionen.",
+    "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Erdbeerweg 24",
+        "addressLocality": "Stuttgart",
+        "postalCode": "70619",
+        "addressCountry": "DE"
+    },
+    "telephone": "+49 711 9933 5605",
+    "email": "info@diabsurance.de",
+    "sameAs": [
+        "https://www.facebook.com/diabsurance",
+        "https://www.linkedin.com/company/diabsurance"
+    ]
     }
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0;
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Inter, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
-      color:var(--text);
-      background: radial-gradient(1200px 800px at 10% -20%, #e9f0ff 0%, transparent 60%),
-                  radial-gradient(1200px 800px at 110% 120%, #e9f7ea 0%, transparent 60%),
-                  var(--bg);
-      display:grid;
-      place-items:center;
-      padding:24px;
-    }
-    .wrap{
-      width:min(960px, 100%);
-      display:grid;
-      gap:28px;
-      grid-template-columns: 1fr;
-      align-items:center;
-    }
-    header{
-      display:flex;
-      align-items:center;
-      gap:16px;
-      justify-content:center;
-    }
-    header img{height:54px; width:auto}
-    main{
-      background:var(--card);
-      border-radius:var(--radius);
-      box-shadow:var(--shadow);
-      padding:clamp(22px, 3.5vw, 36px);
-      display:grid;
-      gap:18px;
-      border:1px solid #eef2ff;
-    }
-    .badge{
-      display:inline-flex;
-      align-items:center;
-      gap:8px;
-      font-weight:600;
-      letter-spacing:.02em;
-      padding:6px 10px;
-      border-radius:999px;
-      background:rgba(20,85,217,.06);
-      color:var(--brand-blue);
-      width:max-content;
-    }
-    .code{
-      font-variant-numeric:tabular-nums;
-      font-weight:800;
-      color:var(--brand-blue);
-    }
-    h1{
-      margin:0;
-      font-size:clamp(26px, 3.6vw, 36px);
-      line-height:1.15;
-      letter-spacing:.2px;
-    }
-    p{margin:0; color:var(--muted); font-size:clamp(15px, 1.6vw, 17px)}
-    .grid{
-      display:grid;
-      gap:14px;
-      grid-template-columns: 1fr;
-    }
-    @media (min-width:820px){
-      .wrap{grid-template-columns: 1.1fr .9fr}
-      main{padding:40px}
-    }
-    .actions{
-      display:flex; flex-wrap:wrap; gap:10px; margin-top:4px;
-    }
-    .btn{
-      --bg: var(--brand-blue);
-      --fg: #fff;
-      display:inline-flex; align-items:center; gap:10px;
-      padding:12px 16px; border-radius:12px;
-      background:var(--bg); color:var(--fg);
-      text-decoration:none; font-weight:700;
-      border:1px solid transparent; box-shadow:0 4px 14px var(--ring);
-      transition:transform .05s ease, box-shadow .2s ease, background .2s ease;
-    }
-    .btn:hover{transform:translateY(-1px); box-shadow:0 10px 22px var(--ring)}
-    .btn.secondary{
-      --bg:#ffffff; --fg:var(--brand-blue);
-      border-color:#e2e8f0; box-shadow:0 4px 12px rgba(2,6,23,.04);
-    }
-    .list{
-      margin:14px 0 0; padding:0; list-style:none; display:grid; gap:10px;
-    }
-    .list a{color:var(--brand-blue); text-decoration:none; font-weight:600}
-    .list a:hover{ text-decoration:underline }
-    footer{
-      text-align:center; color:#64748b; font-size:14px;
-    }
-    .tag{
-      display:inline-block; padding:.25rem .55rem; border-radius:999px;
-      background:#eaf6ec; color:var(--brand-green); font-weight:700; font-size:12px;
-      border:1px solid #d1fadf;
-    }
-    .illu{
-      display:grid; place-items:center;
-      background:linear-gradient(145deg, rgba(20,85,217,.06), rgba(42,107,17,.05));
-      border-radius:var(--radius);
-      padding:28px; border:1px dashed #cfe1ff;
-      min-height:220px;
-    }
-    .bubble{
-      border-radius:14px; background:#fff; padding:10px 14px; border:1px solid #e2e8f0;
-      box-shadow:0 8px 20px rgba(2,6,23,.06); max-width:420px; color:#0f172a;
-    }
-    .bubble strong{color:var(--brand-blue)}
-  </style>
+    </script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #4285f4 0%, #34a853 100%);
+        }
+
+        .glass-effect {
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .hover-lift {
+            transition: all 0.3s ease;
+        }
+
+        .hover-lift:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        /* sharing buttons and links */
+        .share {
+            display: flex;
+            gap: 0.5rem;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .share-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.4rem;
+            padding: 0.5rem 0.6rem;
+            border: 1px solid #ddd;
+            border-radius: 999px;
+            background: #fff;
+            cursor: pointer;
+            text-decoration: none;
+            font: inherit;
+            transition: all 0.2s ease;
+            min-width: 44px;
+            min-height: 44px;
+            user-select: none;
+        }
+
+        .share-btn:hover {
+            background: #f7f7f7;
+            transform: translateY(-1px);
+        }
+
+        .share-btn svg {
+            display: block;
+            width: 20px !important;
+            height: 20px !important;
+            flex-shrink: 0;
+            fill: currentColor;
+        }
+
+        /* Copied state for share-copy button */
+        .share-btn.copied {
+            min-width: 90px;
+            background: #e6f4ea;
+            color: #34a853;
+            transition: all 0.2s;
+        }
+
+        .div-iframe {
+            position: relative;
+            width: 100%;
+            height: 80vh;
+            max-height: 100vh;
+            border-radius: 16px;
+        }
+
+        .div-iframe iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+            margin-bottom: -100px;
+        }
+    </style>
 </head>
-<body>
-  <div class="wrap">
-    <header>
-      <a href="/" aria-label="Startseite diabsurance">
-        <img src="https://diabsurance.de/img/diabsurance_logo_green.png" alt="diabsurance Logo">
-      </a>
-    </header>
 
-    <main>
-      <span class="badge"><span class="code">404</span> • Seite nicht gefunden</span>
-      <h1>Uups – diese Seite gibt es nicht (mehr).</h1>
-      <p>Vielleicht wurde sie verschoben oder der Link war fehlerhaft. Hier sind ein paar schnelle Wege zurück.</p>
+<body class="bg-white font-sans">
+    <!-- Navigation New -->
+    <div id="top"></div>
+    <nav class="bg-white/95 backdrop-blur-sm shadow-sm fixed w-full z-50 top-0 border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <a href="index.html"><img src="img/diabsurance_logo_green.png" alt="diabsurance Logo"
+                            class="h-12 w-auto"></a>
+                </div>
 
-      <div class="actions">
-        <a class="btn" href="/">Zur Startseite</a>
-        <a class="btn secondary" href="/bu.html">BU-Versicherung</a>
-        <a class="btn secondary" href="/community.html">Community</a>
-        <a class="btn secondary" href="/impressum.html">Impressum</a>
-      </div>
+                <!-- common nav.bar with page-specific anchor links -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="bu.html"
+                        class="hover:text-diab-blue transition-colors duration-300">Berufsunfähigkeitsversicherung</a>
+                    <a href="umfrage.html" class="hover:text-diab-blue transition-colors duration-300">Umfrage</a>
+                    <a href="community.html" class="hover:text-diab-blue transition-colors duration-300">Unternehmen aus
+                        der Community</a>
 
-      <ul class="list">
-        <li>Direktkontakt: <a href="mailto:info@diabsurance.de">info@diabsurance.de</a> · Tel. +49 (0) 711 9933 5605</li>
-        <li><span class="tag">Tipp</span> Du wolltest einen Beratungstermin? Schreib uns kurz per Mail.</li>
-      </ul>
-    </main>
+                    <!-- MS BOOKING LINK: Ersetze "#contact" durch deinen Microsoft Booking Link -->
+                    <a href="https://outlook.office.com/book/Diabsurance@eddimed.eu/" target="_blank"
+                        rel="noopener noreferrer"
+                        class="inline-block bg-diab-blue text-white px-6 py-2.5 rounded-full hover:bg-blue-600 transition-all duration-300 font-medium">
+                        Beratung&nbsp;anfragen
+                    </a>
+                </div>
 
-    <section class="illu" aria-hidden="true">
-      <div class="bubble">„Euer Vermittler Nr. 1 für <strong>Personen­versicherungen</strong> bei Diabetes.“</div>
+
+                <!-- Freischwebendes Menü auf kleinen Bildschirmen -->
+                <div id="dropdown-menu"
+                    class="absolute top-0 right-0 mt-5 w-50 bg-white border border-gray-200 rounded shadow-lg hidden z-100">
+                    <div class="flex flex-col space-y-2 p-4 text-center">
+                        <a href="bu.html"
+                            class="hover:text-diab-blue transition-colors duration-300">Berufsunfähigkeitsversicherung</a>
+                        <a href="umfrage.html" class="hover:text-diab-blue transition-colors duration-300">Umfrage</a>
+                        <a href="community.html" class="hover:text-diab-blue transition-colors duration-300">Unternehmen
+                            aus der Community</a>
+
+
+                        <a href="https://outlook.office.com/book/Diabsurance@eddimed.eu/" target="_blank"
+                            rel="noopener noreferrer"
+                            class="text-diab-green hover:text-diab-blue transition-colors duration-300 font-medium">
+                            Beratung anfragen
+                        </a>
+                    </div>
+                </div>
+                <!-- END Freischwebendes Menü auf kleinen Bildschirmen -->
+            </div>
+        </div>
+    </nav>
+    <!-- END common nav.bar with page-specific anchor links -->
+
+    <section class="py-4 gradient-bg">
+        <figure class="flex items-center justify-center">
+            <img src="img/404_en.png" alt="404 sign" class="h-full w-auto object-contain" loading="lazy">
+        </figure>
+        <p class="mt-2 text-sm sm:text-base text-gray-600 text-center"><div class="italic">Oops.</div> Die angeforderte Adresse wurde entweder verschoben, umbenannt oder existiert nicht mehr.</p>
+        
+
+
     </section>
 
-    <footer>
-      © <span id="y"></span> diabsurance – Alle Rechte vorbehalten
-    </footer>
-  </div>
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white justify-between py-12">
+        <div class="container mx-auto">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <a href="index.html"><img src="img/diabsurance_logo_green.png" alt="diabsurance Logo"
+                            class="w-auto mb-4"></a>
+                    <p class="text-gray-400">
+                        Euer Vermittler Nr. 1 für Personenversicherungen bei Diabetes.
+                    </p>
+                </div>
 
-  <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
-  </script>
+
+                <div class="text-center space-y-2 mb-4">
+                    <h4 class="text-lg font-semibold mb-2">Sitemap</h4>
+                    <ul class="space-y-2 text-gray-400 mb-6">
+                        <li><a href="bu.html"
+                                class="hover:text-white transition-colors duration-300">Berufsunfähigkeitsversicherung</a>
+                        </li>
+                        <li><a href="umfrage.html" class="hover:text-white transition-colors duration-300">Umfrage (Okt
+                                2025)</a></li>
+                        <li><a href="community.html" class="hover:text-white transition-colors duration-300">Unternehmen
+                                aus der Community</a></li>
+                    </ul>
+                    <ul class="space-y-2 text-diab-green">
+                        <li><a href="erstinformation.html"
+                                class="hover:text-white transition-colors duration-300">Erstinformation</a>,
+                            <a href="impressum.html"
+                                class="hover:text-white transition-colors duration-300">Impressum</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="text-center">
+                    <h4 class="text-lg font-semibold mb-4">Kontakt</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>
+                            <i class="fas fa-phone mr-2"></i>
+                            +49 (0) 711 9933 5605
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope mr-2"></i>
+                            info [at] diabsurance.de
+                        </li>
+                        <li>
+                            <i class="fas fa-map-marker-alt mr-2"></i>
+                            <a href="https://www.openstreetmap.org/relation/2793104" target="_blank"
+                            rel="noopener noreferrer">Stuttgart</a>, Deutschland
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; <a href="https://www.openstreetmap.org/relation/2793104" target="_blank"
+                        rel="noopener noreferrer">Stuttgart</a>, Okt 2025 - Diabsurance, eine Marke von <a href="https://eddimed.eu" target="_blank"
+                        rel="noopener noreferrer">Eddimed</a> - Alle Rechte vorbehalten - <a
+                        href="impressum.html" class="hover:text-white transition-colors duration-300">Impressum</a>, <a
+                        href="erstinformation.html"
+                        class="hover:text-white transition-colors duration-300">Erstinformation</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Smooth Scrolling & Interactions -->
+    <script>
+        // Adjust scroll position to account for fixed header
+        let nav_bar = document.querySelector('nav');
+        let navbarHeight = nav_bar.offsetHeight;
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                let target = document.querySelector(this.getAttribute('href'));
+                let targetPosition = target.getBoundingClientRect().top - navbarHeight;
+                window.scrollTo({
+                    top: targetPosition + window.pageYOffset,
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', function () {
+            const navbar = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                navbar.classList.add('shadow-lg');
+            } else {
+                navbar.classList.remove('shadow-lg');
+            }
+        });
+
+
+        // Navigation bar, Hamburger menu, drop-down list
+        document.addEventListener('DOMContentLoaded', function () {
+            initDropdown('dropdown-toggle', 'dropdown-menu');
+            initDropdown('dropdown-toggle-anchor', 'dropdown-menu-anchor');
+            initDropdown('dropdown-toggle-anchor2', 'dropdown-menu-anchor2');
+        });
+
+        function initDropdown(toggleID, menuID) {
+            const toggle = document.getElementById(toggleID);
+            const menu = document.getElementById(menuID);
+
+            toggle.addEventListener('click', () => {
+                menu.classList.toggle('hidden');
+            });
+
+            // Optional: Klick außerhalb schließt Menü
+            document.addEventListener('click', (event) => {
+                if (!toggle.contains(event.target) && !menu.contains(event.target)) {
+                    menu.classList.add('hidden');
+                }
+            });
+        }
+
+    </script>
+
+    <script>
+        (() => {
+            const canonical = document.querySelector('link[rel="canonical"]')?.href;
+            const urlRaw = canonical || location.href;
+            const titleRaw = document.querySelector('meta[property="og:title"]')?.content
+                || document.title;
+            const descRaw = document.querySelector('meta[name="description"]')?.content || "";
+
+            const url = encodeURIComponent(urlRaw);
+            const title = encodeURIComponent(titleRaw);
+            const text = encodeURIComponent(descRaw || titleRaw);
+
+            // Buttons present?
+            const setHref = (id, href) => { const el = document.getElementById(id); if (el) el.href = href; };
+
+            setHref("share-fb", `https://www.facebook.com/sharer/sharer.php?u=${url}`);
+            setHref("share-x", `https://twitter.com/intent/tweet?url=${url}&text=${title}`);
+            setHref("share-li", `https://www.linkedin.com/sharing/share-offsite/?url=${url}`);
+            setHref("share-wa", `https://web.whatsapp.com/send?text=${title}%20${url}`);
+            setHref("share-tg", `https://t.me/share/url?url=${url}&text=${title}`);
+            setHref("share-mail", `mailto:?subject=${title}&body=${text}%0A%0A${url}`);
+
+            //QR code button popup
+            const qrbutton = document.getElementById("share-qrcode");
+            if (qrbutton) {
+                qrbutton.href = "#";
+                qrbutton.addEventListener("click", (e) => {
+                    e.preventDefault();
+                    showQRPopUp();
+                })
+            }
+
+            function showQRPopUp() {
+                const overlay = document.createElement("div");
+                overlay.style.cssText = `
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.7);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                z-index: 10000;
+                backdrop-filter: blur(4px);
+            `;
+                const popup = document.createElement('div');
+                popup.style.cssText = `
+                background: white;
+                padding: 10px;
+                border-radius: 12px;
+                width: 100%;
+                max-width: 220px;
+                position: relative;
+                box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+                box-sizing: border-box;
+            `;
+
+                popup.innerHTML = `
+                <button id="qr-close" style="
+                    position: absolute;
+                    top: 8px;
+                    right: 8px;
+                    background: none;
+                    border: none;
+                    font-size: 24px;
+                    cursor: pointer;
+                    color: #666;
+                    width: 16px;
+                    height: 16px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 50%;
+                    transition: background 0.2s;
+                " onmouseover="this.style.background='#f0f0f0'" onmouseout="this.style.background='none'">&times;</button>
+                <h3 style="margin: 0 0 16px 0; font-size: 18px; color: #333; text-align:center;">Scan QR Code</h3>
+                <img src="img/qr-code/QRcode_diabsurance_umfrage.png" alt="QR Code" style="
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                    display: block;
+                ">
+                <p style="margin: 12px 0 0 0; font-size: 14px; color: #666; text-align: center;color:black; font-weight: bold ">Scan To Share This Page</p>
+            `;
+                overlay.appendChild(popup);
+                document.body.appendChild(overlay);
+
+                // close button handlers to close the popup
+                const closePopup = () => overlay.remove();
+                document.getElementById('qr-close').addEventListener('click', closePopup);
+                overlay.addEventListener('click', (e) => {
+                    if (e.target === overlay) closePopup();
+                });
+                document.addEventListener('keydown', function escHandler(e) {
+                    if (e.key === 'Escape') {
+                        closePopup();
+                        document.removeEventListener('keydown', escHandler);
+                    }
+                });
+
+            }
+
+            // Native share (mobile etc.)
+            const nativeBtn = document.getElementById("share-native");
+            if (navigator.share && nativeBtn) {
+                nativeBtn.hidden = false;
+                nativeBtn.addEventListener("click", () => {
+                    navigator.share({ title: titleRaw, text: descRaw || titleRaw, url: urlRaw });
+                });
+            }
+
+            // Copy-to-clipboard
+            const copyBtn = document.getElementById("share-copy");
+            if (copyBtn) {
+                // Store original icon HTML
+                const originalIcon = copyBtn.innerHTML;
+                const copiedIcon = document.createElement('div');
+                copiedIcon.innerHTML = `
+                    <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" style="margin-right:6px;">
+                        <path d="M9 16.2l-3.5-3.5 1.4-1.4L9 13.4l7.1-7.1 1.4 1.4z"/>
+                    </svg>
+                    Copied!
+                `;
+                copyBtn.addEventListener("click", async () => {
+                    try {
+                        await navigator.clipboard.writeText(urlRaw);
+                        // Show 'Copied!' with check icon and add class
+                        copyBtn.innerHTML = copiedIcon.innerHTML;
+                        copyBtn.classList.add('copied');
+                        setTimeout(() => {
+                            copyBtn.innerHTML = originalIcon;
+                            copyBtn.classList.remove('copied');
+                        }, 1200);
+                    } catch {
+                        // Fallback
+                        prompt("Copy this link:", urlRaw);
+                    }
+                });
+            }
+        })();
+    </script>
+
+
 </body>
+
 </html>
