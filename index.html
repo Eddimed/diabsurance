@@ -171,10 +171,6 @@
       display: none;
     }
 
-    #umfrageModal {
-      display: none !important;
-    }
-
     .survey-close-btn {
       border: 0;
       background: transparent;
@@ -358,17 +354,6 @@
         </div>
     </nav>
     <!-- END common nav.bar with page-specific anchor links -->
-
-    <!-- === MODAL === -->
-    <div id="umfrageModal" class="modal">
-        <div class="modal-content">
-        <span class="close-btn" onclick="closeModal()">&times;</span>
-        <h2 class="text-xl text-diab-blue font-bold">Deine Meinung zählt!</h2>
-        <p>Nimm jetzt an unserer 2-Minuten-Umfrage zu <br><span class="text-diab-green">BU-Versicherung und Diabetes</span> teil.</p>
-        <a href="umfrage.html" target="_blank" class="button">Zur Umfrage</a>
-        <!-- p class="mt-3"> (Bis zum So, 30.11. gibt es Gutscheine zu gewinnen.)</p> -->
-        </div>
-    </div>
 
     <div id="umfrageSlideIn" class="survey-promo-hidden survey-slidein">
         <div class="rounded-3xl border border-diab-green/20 bg-white p-6">
@@ -681,13 +666,19 @@
                     <div class="flex items-stretch space-x-8">
                         <div id="VEMA_partner" class="text-center">
                             <a href="https://vema-eg.de/" title="Wir sind Partner der VEMA Versicherungsmakler Genossenschaft eG (VEMA eG). Die VEMA eG ist eines der führenden Dienstleistungsunternehmen für Versicherungsmakler in Deutschland. Stand Nov 2025 sind rund 4.700 mittelständische Maklerbetriebe aus dem gesamten Bundesgebiet dort angebunden. Nur Versicherungsmakler, die strenge Qualitätskriterien erfüllen, werden in diesen Maklerverbund aufgenommen. Diese Voraussetzungen garantieren hohe Qualifikation und Beratungsqualität. Folgen Sie dem Link, um mehr über die VEMA zu erfahren.">
-                            <img src="img/vema_logo_RGB.png" alt="VEMA Partner"
-                                        class="w-full h-full object-contain" style="width: auto; height: 150px;">
-                                        </a>
+                                <div class="flex items-center justify-center" style="height: clamp(72px, 10vw, 131px);">
+                                    <img src="img/vema_logo_RGB.png" alt="VEMA Partner"
+                                        class="max-h-full w-auto object-contain">
+                                </div>
+                            </a>
                         </div>
                         <div class="text-center">
-                            <a href="https://eddimed.eu/"><img src="img/ed_logo.png" alt="Eddimed"
-                                    style="width: auto; height: 150px;" class="w-full h-full object-contain"></a>
+                            <a href="https://eddimed.eu/">
+                                <div class="flex items-center justify-center" style="height: clamp(72px, 10vw, 131px);">
+                                    <img src="img/ed_logo.png" alt="Eddimed"
+                                        class="max-h-full w-auto object-contain">
+                                </div>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -695,18 +686,28 @@
                     <h2 class="text-4xl font-bold text-center text-gray-900 mb-6">Acceleratoren</h2>
                     <div class="flex items-center space-x-8">
                         <div class="text-center">
-                            <a href="https://www.finance-accelerator.de/"><img
-                                    src="img/finance-accelerator_black_letters-300x57.png" alt="Finance Accelerator"
-                                    class="w-full h-full object-cover"></a>
+                            <a href="https://www.finance-accelerator.de/">
+                                <div class="flex items-center justify-center" style="height: clamp(72px, 10vw, 131px);">
+                                    <img src="img/finance-accelerator_black_letters-300x57.png" alt="Finance Accelerator"
+                                        class="max-h-full w-auto object-contain">
+                                </div>
+                            </a>
                         </div>
                         <div class="text-center">
-                            <a href="https://www.lifescience-bw.de/"><img src="img/Life-Science-Acceletator_150x131.png"
-                                    alt="Life Science Accelerator" class="w-full h-full object-cover"></a>
+                            <a href="https://www.lifescience-bw.de/">
+                                <div class="flex items-center justify-center" style="height: clamp(72px, 10vw, 131px);">
+                                    <img src="img/Life-Science-Acceletator_150x131.png"
+                                        alt="Life Science Accelerator" class="max-h-full w-auto object-contain">
+                                </div>
+                            </a>
                         </div>
                         <div class="text-center">
-                            <a href="https://www.cyber-valley.de/"><img
-                                    src="img/thumb_md_20210319_CYV_LogoLockup_vorab-300x85.jpg" alt="Cyber Valley"
-                                    class="w-full h-full object-cover"></a>
+                            <a href="https://www.cyber-valley.de/">
+                                <div class="flex items-center justify-center" style="height: clamp(72px, 10vw, 131px);">
+                                    <img src="img/thumb_md_20210319_CYV_LogoLockup_vorab-300x85.jpg" alt="Cyber Valley"
+                                        class="max-h-full w-auto object-contain">
+                                </div>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -773,30 +774,6 @@
             });
         });
     </script>
-
-    <!-- === Script === -->
-    <script>
-        // Pop-up nach kurzer Verzögerung anzeigen
-        window.onload = function() {
-            setTimeout(function() {
-            document.getElementById("umfrageModal").style.display = "block";
-            }, 1000); // 1 Sekunde Verzögerung
-        };
-
-        // Pop-up schließen
-        function closeModal() {
-            document.getElementById("umfrageModal").style.display = "none";
-        }
-
-        // Schließen bei Klick außerhalb des Modals
-        window.onclick = function(event) {
-            const modal = document.getElementById("umfrageModal");
-            if (event.target == modal) {
-            modal.style.display = "none";
-            }
-        };
-    </script>
-
 
     <!-- Footer -->
     <footer class="bg-gray-900 text-white justify-between py-12">
