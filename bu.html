@@ -44,6 +44,34 @@
             transform: translateY(-8px);
             box-shadow: 0 20px 40px rgba(0,0,0,0.1);
         }
+        .text-link {
+            color: inherit;
+            font-weight: 500;
+            text-decoration: underline;
+            text-decoration-color: rgba(255, 255, 255, 0.75);
+            text-decoration-thickness: 2px;
+            text-underline-offset: 3px;
+            transition: color 0.2s ease, text-decoration-color 0.2s ease, text-decoration-thickness 0.2s ease;
+        }
+        .text-link:hover {
+            color: #ffffff;
+            text-decoration-color: rgba(255, 255, 255, 1);
+            text-decoration-thickness: 3px;
+        }
+        .text-link-dark {
+            color: #2563eb;
+            font-weight: 500;
+            text-decoration: underline;
+            text-decoration-color: rgba(37, 99, 235, 0.65);
+            text-decoration-thickness: 2px;
+            text-underline-offset: 3px;
+            transition: color 0.2s ease, text-decoration-color 0.2s ease, text-decoration-thickness 0.2s ease;
+        }
+        .text-link-dark:hover {
+            color: #1d4ed8;
+            text-decoration-color: rgba(29, 78, 216, 0.95);
+            text-decoration-thickness: 3px;
+        }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800 font-sans">
@@ -158,7 +186,7 @@
     <div class="max-w-3xl mx-auto">
       <h1 class="text-4xl font-bold text-blue-900 mt-20 mb-4">Berufs&shy;un&shy;fähig&shy;keits&shy;ver&shy;sicher&shy;ung (BU)</h1>
             <div class="flex flex-col lg:flex-row items-center">
-        <p class="text-lg mb-6">Hier folgen nun etwas detailliertere Informationen zur BU-Versicherung.<br> Wenn Du mich kontaktieren möchtest, nutze entweder das <a href="#Formular">Formular</a> für die BU bei Diabetes oder Du erreichst mich <a href="index.html#Kontakt">per Email/Telefon</a>.</p>
+        <p class="text-lg mb-6">Hier folgen nun etwas detailliertere Informationen zur BU-Versicherung.<br> Wenn Du mich kontaktieren möchtest, nutze entweder das <a class="text-link-dark" href="#Formular">Formular</a> für die BU bei Diabetes oder Du erreichst mich <a class="text-link-dark" href="index.html#Kontakt">per Email/Telefon</a>.</p>
         </div>
     </div>
   </section>
@@ -168,12 +196,12 @@
     <div id="Ursachen" class="max-w-5xl mx-auto ">
         <h2 class="text-3xl font-bold text-gray-900 mb-6">Das unterschätzte Risiko: Ursachen einer BU</h2>
         <p>
-            Jeder 4. wird in seinem Arbeitsleben zumindest vorübergehend berufsunfähig. Dabei führen Unfälle in nur knapp 10 % der Fälle zu einer Berufsunfähigkeit &ndash; in 90 % aller Fälle sind Krankheiten die Ursache. Die Hauptursachen sind Erkrankungen der Psyche/ des Nervensystems, des Bewegungsapparats und Krebs (<a href="https://www.gdv.de/gdv/themen/leben/haeufigste-ursachen-fuer-berufs-und-erwerbsunfaehigkeit-151920">GDV 2022</a>).
+            Jeder 4. wird in seinem Arbeitsleben zumindest vorübergehend berufsunfähig. Dabei führen Unfälle in nur knapp 10 % der Fälle zu einer Berufsunfähigkeit &ndash; in 90 % aller Fälle sind Krankheiten die Ursache. Die Hauptursachen sind Erkrankungen der Psyche/ des Nervensystems, des Bewegungsapparats und Krebs (<a class="text-link-dark" href="https://www.gdv.de/gdv/themen/leben/haeufigste-ursachen-fuer-berufs-und-erwerbsunfaehigkeit-151920">GDV 2022</a>).
         </p>
         <div class="mt-2 mb-4"><img src="img/Ursachen_BU_2022.png" alt="Ursachen BU" style="width: 75%; height: auto"></div>
 
         <h2 class="text-3xl font-bold text-gray-900 mb-6">Eine private Absicherung schützt</h2>
-        <p>Ob in der Arztpraxis, auf der Baustelle oder im Büro: 25% der Deutschen geraten im Laufe ihres Berufslebens in eine Situation, in der sie nicht mehr in der Lage sind, ihren Beruf auszuüben (<a href="https://www.gdv.de/gdv/themen/leben/7-fakten-zur-berufsunfaehigkeitsversicherung-34338">GDV</a>). Dabei hat nur jede(r) vierte bis fünfte Berufstätige eine private Berufsunfähigkeitsversicherung abgeschlossen und damit ein relativ hohes Risiko, das zu häufig noch unterschätzt wird.</p>
+        <p>Ob in der Arztpraxis, auf der Baustelle oder im Büro: 25% der Deutschen geraten im Laufe ihres Berufslebens in eine Situation, in der sie nicht mehr in der Lage sind, ihren Beruf auszuüben (<a class="text-link-dark" href="https://www.gdv.de/gdv/themen/leben/7-fakten-zur-berufsunfaehigkeitsversicherung-34338">GDV</a>). Dabei hat nur jede(r) vierte bis fünfte Berufstätige eine private Berufsunfähigkeitsversicherung abgeschlossen und damit ein relativ hohes Risiko, das zu häufig noch unterschätzt wird.</p>
     </div>
   </section>
 
@@ -194,9 +222,9 @@
         Wer weniger als drei Stunden am Tag arbeitsfähig ist, hat Anspruch auf die <strong>volle</strong> Erwerbsminderungsrente. Wer bis zu sechs Stunden arbeiten kann, erhält eine <strong>halbe</strong> Erwerbsminderungsrente.
 		</li>
 		<li>
-        Die durchschnittliche Höhe einer Erwerbsminderungsrente lag im Jahr 2023 bei nur <b>1001 €</b> (<a href="https://jahresbericht.deutsche-rentenversicherung.de/artikel/in-zahlen/#heading2">DRV</a>). Daher empfiehlt sich eine zusätzliche private Absicherung, um im Fall des Falles den gewohnten Lebensstandard von sich (und seiner Familie) halten zu können.
+        Die durchschnittliche Höhe einer Erwerbsminderungsrente lag im Jahr 2023 bei nur <b>1001 €</b> (<a class="text-link-dark" href="https://jahresbericht.deutsche-rentenversicherung.de/artikel/in-zahlen/#heading2">DRV</a>). Daher empfiehlt sich eine zusätzliche private Absicherung, um im Fall des Falles den gewohnten Lebensstandard von sich (und seiner Familie) halten zu können.
 		</li>
-        <li>Weiterführende Informationen zur EM-Rente bei <a href="https://www.transparent-beraten.de/berufsunfaehigkeitsversicherung/erwerbsminderungsrente/">Transparent beraten</a> und bei der <a href="https://www.deutsche-rentenversicherung.de/DRV/DE/Rente/Allgemeine-Informationen/Rentenarten-und-Leistungen/Erwerbsminderungsrente/erwerbsminderungsrente_node.html">Deutschen Rentenversicherung</a></li>
+        <li>Weiterführende Informationen zur EM-Rente bei <a class="text-link-dark" href="https://www.transparent-beraten.de/berufsunfaehigkeitsversicherung/erwerbsminderungsrente/">Transparent beraten</a> und bei der <a class="text-link-dark" href="https://www.deutsche-rentenversicherung.de/DRV/DE/Rente/Allgemeine-Informationen/Rentenarten-und-Leistungen/Erwerbsminderungsrente/erwerbsminderungsrente_node.html">Deutschen Rentenversicherung</a>.</li>
     </ul>
   
     </div>
@@ -234,11 +262,11 @@
             <dt class="font-semibold text-gray-700">Was kostet mich das?</dt> 
             <dd class="col-span-3 text-gray-900">Beiträge variieren je nach Alter und Beruf. Aufgrund des Diabetes muss mit einem Risikozuschlag gerechnet werden, der dank des CRM Risiko Score (CRS) moderat bleibt.</dd>
             <dt class="font-semibold text-gray-700">Bekommt der Versicherer meine CGM-Daten?</dt> 
-            <dd class="col-span-3 text-gray-900">Nein, nur in stark zusammengefaßter Form als CRS (mögliche Werte: grün, gelb, rot). Die Berechnung des CRS und die Verarbeitung der CRM-Daten geschieht in DSGVO-konformer Weise durch <a href="https://eddimed.eu">Eddimed</a>.</dd>
+            <dd class="col-span-3 text-gray-900">Nein, nur in stark zusammengefaßter Form als CRS (mögliche Werte: grün, gelb, rot). Die Berechnung des CRS und die Verarbeitung der CRM-Daten geschieht in DSGVO-konformer Weise durch <a class="text-link-dark" href="https://eddimed.eu">Eddimed</a>.</dd>
             <dt class="font-semibold text-gray-700">Was passiert, wenn sich meine Glucose-Einstellung dauerhaft verschlechtert?</dt> 
             <dd class="col-span-3 text-gray-900">Bei einer dauerhaften Verschlechterung setzen wir uns (virtuell) zusammen und suchen nach möglichen Ursachen und Lösungen.</dd>
             <dt class="font-semibold text-gray-700">Statistiken zur BU</dt>
-            <dd class="col-span-3 text-gray-900"><a href="https://www.gdv.de/gdv/themen/leben/7-fakten-zur-berufsunfaehigkeitsversicherung-34338">7 Fakten zur Berufsunfähigkeitsversicherung (GDV)</a></dd>
+            <dd class="col-span-3 text-gray-900"><a class="text-link-dark" href="https://www.gdv.de/gdv/themen/leben/7-fakten-zur-berufsunfaehigkeitsversicherung-34338">7 Fakten zur Berufsunfähigkeitsversicherung (GDV)</a></dd>
         </dl>
 
 
@@ -251,7 +279,7 @@
     <div id="Ablehnung" class="max-w-5xl mx-auto">
       
         <h2 class="text-3xl font-semibold mb-3">Leistungsprüfung in der BU</h2>
-        80 Prozent aller Anträge auf eine Berufsunfähigkeitsrente werden bewilligt, das hat 2022 eine Umfrage des GDV unter seinen Mitgliedsunternehmen ergeben (Graphik 1). Lehnen Versicherer einen Leistungsantrag ab, hat das vielfältige Ursachen, siehe zweite Graphik. (<a href="https://www.gdv.de/gdv/themen/leben/7-fakten-zur-berufsunfaehigkeitsversicherung-34338">GDV 2022</a>)
+        80 Prozent aller Anträge auf eine Berufsunfähigkeitsrente werden bewilligt, das hat 2022 eine Umfrage des GDV unter seinen Mitgliedsunternehmen ergeben (Graphik 1). Lehnen Versicherer einen Leistungsantrag ab, hat das vielfältige Ursachen, siehe zweite Graphik. (<a class="text-link-dark" href="https://www.gdv.de/gdv/themen/leben/7-fakten-zur-berufsunfaehigkeitsversicherung-34338">GDV 2022</a>)
         <div class="mt-2 mb-4"><img src="img/Leistungspruefung_BU.png" alt="Leistungsprüfung BU" style="width: 75%; height: auto">
             <img src="img/Ablehnungsgruende_Leistungspruefung.png" alt="Ablehnungsgründe Leistungsprüfung" style="width: 65%; height: auto"></div>
 
@@ -272,7 +300,7 @@
                     </p>
                 <p class="text-x1 opacity-90 max-w-3xl mx-auto">
                     Bei Interesse an einer BU-Versicherung fülle bitte folgendes Formular aus. 
-                    <a href="index.html#About">Ich</a> komme dann zeitnah mit einem Terminvorschlag für ein Gespräch auf Dich zu.
+                    <a class="text-link" href="index.html#About">Ich</a> komme dann zeitnah mit einem Terminvorschlag für ein Gespräch auf Dich zu.
                 </p>
             </div>
 
@@ -336,7 +364,7 @@
             </div>
             
             <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-                <p>&copy; <a href="https://www.openstreetmap.org/relation/2793104" target="_blank">Stuttgart</a>, Nov 2025 - diabsurance - Alle Rechte vorbehalten - <a href="impressum.html" class="hover:text-white transition-colors duration-300">Impressum</a>, <a href="erstinformation.html" class="hover:text-white transition-colors duration-300">Erstinformation</a></p>
+                <p>&copy; <a class="text-link" href="https://www.openstreetmap.org/relation/2793104" target="_blank" rel="noopener noreferrer">Stuttgart</a>, Nov 2025 - diabsurance - Alle Rechte vorbehalten - <a href="impressum.html" class="text-link">Impressum</a>, <a href="erstinformation.html" class="text-link">Erstinformation</a></p>
             </div>
         </div>
     </footer>
