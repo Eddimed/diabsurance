@@ -159,6 +159,22 @@
             text-decoration-thickness: 2px;
         }
 
+        .text-link {
+            color: inherit;
+            font-weight: 500;
+            text-decoration: underline;
+            text-decoration-color: rgba(255, 255, 255, 0.75);
+            text-decoration-thickness: 2px;
+            text-underline-offset: 3px;
+            transition: color 0.2s ease, text-decoration-color 0.2s ease, text-decoration-thickness 0.2s ease;
+        }
+
+        .text-link:hover {
+            color: #ffffff;
+            text-decoration-color: rgba(255, 255, 255, 1);
+            text-decoration-thickness: 3px;
+        }
+
         a:focus-visible {
             outline: none;
             box-shadow: 0 0 0 2px rgba(59, 130, 246, .5);
@@ -167,53 +183,54 @@
     </style>
 
 <style>
-    /* === Modal-Stil === */
-    .modal {
-      display: none; /* Versteckt beim Start */
-      position: fixed;
-      z-index: 999;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      overflow: auto;
-      background-color: rgba(0,0,0,0.6);
+    .survey-promo-hidden {
+      display: none;
     }
 
-    .modal-content {
-      background-color: #fff;
-      margin: 10% auto;
-      padding: 20px;
-      border-radius: 8px;
-      max-width: 500px;
-      text-align: center;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-    }
-
-    .close-btn {
-      color: #aaa;
-      float: right;
-      font-size: 24px;
-      font-weight: bold;
+    .survey-close-btn {
+      border: 0;
+      background: transparent;
+      color: #6b7280;
       cursor: pointer;
+      font-size: 1.5rem;
+      line-height: 1;
+      padding: 0.25rem;
     }
 
-    .close-btn:hover {
-      color: #000;
+    .survey-close-btn:hover {
+      color: #111827;
     }
 
-    .modal a.button {
-      display: inline-block;
-      margin-top: 15px;
-      padding: 10px 20px;
-      background-color: #007bff;
-      color: white;
-      text-decoration: none;
-      border-radius: 4px;
+    .survey-slidein {
+      position: fixed;
+      right: 1rem;
+      bottom: 1rem;
+      z-index: 70;
+      width: min(380px, calc(100% - 2rem));
+      transform: translateY(24px);
+      opacity: 0;
+      pointer-events: none;
+      transition: transform 0.35s ease, opacity 0.35s ease;
+      box-shadow: 0 20px 50px rgba(17, 24, 39, 0.2);
     }
 
-    .modal a.button:hover {
-      background-color: #0056b3;
+    .survey-slidein.is-visible {
+      transform: translateY(0);
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    @media (max-width: 640px) {
+      .survey-slidein {
+        left: 1rem;
+        right: 1rem;
+        width: auto;
+        transform: none;
+      }
+
+      .survey-slidein {
+        bottom: 5.5rem;
+      }
     }
   </style>
 
@@ -224,42 +241,47 @@
     <div id="top"></div>
     <nav class="bg-white/95 backdrop-blur-sm shadow-sm fixed w-full z-50 top-0 border-b border-gray-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center py-4">
+            <div class="flex justify-between items-center gap-4 py-4">
                 <div class="flex items-center">
-                    <a href="index.html"><img src="img/diabsurance_logo_green.png" alt="diabsurance Logo"
-                            class="h-12 w-auto"></a>
+                    <a href="index.html" class="flex items-center shrink-0">
+                        <div class="h-10 sm:h-12 flex items-center">
+                            <img src="img/diabsurance_logo_green.png" alt="diabsurance Logo"
+                                class="max-h-full w-auto object-contain shrink-0">
+                        </div>
+                    </a>
                 </div>
 
                 <!-- common nav.bar with page-specific anchor links -->
-                <div class="hidden md:flex items-center space-x-8">
+                <div class="hidden lg:flex min-w-0 flex-1 items-center justify-end space-x-6 lg:space-x-8">
                     <a href="bu.html"
-                        class="hover:text-diab-blue transition-colors duration-300">Berufsunfähigkeitsversicherung</a>
-                    <a href="umfrage.html" class="hover:text-diab-blue transition-colors duration-300">Umfrage</a>
-                    <a href="community.html" class="hover:text-diab-blue transition-colors duration-300">Unternehmen aus
+                        class="font-medium text-gray-700 hover:text-diab-blue transition-colors duration-300 whitespace-nowrap"><span class="xl:hidden">BU-Versicherung</span><span class="hidden xl:inline">Berufsunfähigkeitsversicherung</span></a>
+                    <a href="umfrage.html" class="font-medium text-gray-700 hover:text-diab-blue transition-colors duration-300">Umfrage</a>
+                    <a href="community.html" class="font-medium text-gray-700 hover:text-diab-blue transition-colors duration-300">Unternehmen aus
                         der Community</a>
 
                     <div class="relative inline-block text-center">
                         <div id="dropdown-toggle-anchor">
-                            <button class="text-gray-700 hover:text-diab-blue">
-                                <i class="fas fa-chevron-down text-xl"></i>
+                            <button title="Abschnitte auf dieser Seite" aria-label="Abschnitte auf dieser Seite öffnen"
+                                class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-gray-200 text-gray-700 transition-colors duration-300 hover:border-diab-blue hover:text-diab-blue">
+                                <i class="fas fa-chevron-down text-sm"></i>
                             </button>
                         </div>
 
                         <!-- Freischwebendes Menü der Anchor-Links dieser Homepage -->
                         <div id="dropdown-menu-anchor"
-                            class="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 w-50 bg-white border border-gray-200 rounded shadow-lg hidden z-100">
+                            class="absolute top-full left-1/2 transform -translate-x-1/2 mt-3 w-56 bg-white border border-gray-200 rounded-2xl shadow-xl hidden z-100">
                             <div class="flex flex-col space-y-2 p-4">
-                                <a href="#Formular"
-                                    class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">Formular</a>
-                                <a href="#About"
-                                    class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">Über
-                                    mich</a>
-                                <a href="#Versicherungen"
-                                    class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">Versicherungen</a>
                                 <a href="#CRS"
-                                    class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">CGM Risiko Score (CRS)</a>
+                                    class="rounded-xl px-3 py-2 text-gray-700 hover:bg-diab-light-blue hover:text-diab-blue transition-colors duration-300 font-medium">CGM Risiko Score (CRS)</a>
+                                <a href="#About"
+                                    class="rounded-xl px-3 py-2 text-gray-700 hover:bg-diab-light-blue hover:text-diab-blue transition-colors duration-300 font-medium">Über
+                                    mich</a>
+                                <a href="#Formular"
+                                    class="rounded-xl px-3 py-2 text-gray-700 hover:bg-diab-light-blue hover:text-diab-blue transition-colors duration-300 font-medium">Formular</a>
+                                <a href="#Versicherungen"
+                                    class="rounded-xl px-3 py-2 text-gray-700 hover:bg-diab-light-blue hover:text-diab-blue transition-colors duration-300 font-medium">Versicherungen</a>
                                 <a href="#Partner"
-                                    class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">Partner</a>
+                                    class="rounded-xl px-3 py-2 text-gray-700 hover:bg-diab-light-blue hover:text-diab-blue transition-colors duration-300 font-medium">Partner</a>
                             </div>
                         </div>
                     </div>
@@ -279,51 +301,56 @@
                 </div>
                 -->
 
-                <div id="dropdown-toggle" class="md:hidden">
-                    <button class="text-gray-700 hover:text-diab-blue">
-                        <i class="fas fa-bars text-xl"></i>
+                <div id="dropdown-toggle" class="lg:hidden">
+                    <button class="inline-flex items-center gap-2 rounded-full border border-gray-200 px-4 py-2 text-sm font-medium text-gray-700 transition-colors duration-300 hover:border-diab-blue hover:text-diab-blue">
+                        Menü
+                        <i class="fas fa-bars text-base"></i>
                     </button>
                 </div>
 
                 <!-- Freischwebendes Menü auf kleinen Bildschirmen -->
                 <div id="dropdown-menu"
-                    class="absolute top-0 right-0 mt-5 w-50 bg-white border border-gray-200 rounded shadow-lg hidden z-100">
-                    <div class="flex flex-col space-y-2 p-4 text-center">
+                    class="absolute left-4 right-4 top-full mt-3 hidden rounded-3xl border border-gray-200 bg-white p-4 shadow-2xl z-100">
+                    <div class="flex flex-col space-y-3 text-left">
+                        <div class="border-b border-gray-100 pb-3">
+                            <div class="text-xs font-semibold uppercase tracking-[0.2em] text-diab-blue">Navigation</div>
+                        </div>
                         <a href="bu.html"
-                            class="hover:text-diab-blue transition-colors duration-300">Berufsunfähigkeitsversicherung</a>
-                        <a href="umfrage.html" class="hover:text-diab-blue transition-colors duration-300">Umfrage</a>
-                        <a href="community.html" class="hover:text-diab-blue transition-colors duration-300">Unternehmen
+                            class="rounded-2xl px-4 py-3 font-medium text-gray-700 hover:bg-diab-light-blue hover:text-diab-blue transition-colors duration-300"><span class="sm:hidden">BU-Versicherung</span><span class="hidden sm:inline">Berufsunfähigkeitsversicherung</span></a>
+                        <a href="umfrage.html" class="rounded-2xl px-4 py-3 font-medium text-gray-700 hover:bg-diab-light-blue hover:text-diab-blue transition-colors duration-300">Umfrage</a>
+                        <a href="community.html" class="rounded-2xl px-4 py-3 font-medium text-gray-700 hover:bg-diab-light-blue hover:text-diab-blue transition-colors duration-300">Unternehmen
                             aus der Community</a>
 
                         <div class="relative inline-block">
                             <div id="dropdown-toggle-anchor2">
-                                <button class="text-gray-700 hover:text-diab-blue">
-                                    <i class="fas fa-chevron-down text-xl"></i>
+                                <button title="Abschnitte auf dieser Seite" aria-label="Abschnitte auf dieser Seite öffnen"
+                                    class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-gray-200 text-gray-700 transition-colors duration-300 hover:border-diab-blue hover:text-diab-blue">
+                                    <i class="fas fa-chevron-down text-sm"></i>
                                 </button>
                             </div>
 
                             <!-- Freischwebendes Menü der Anchor-Links dieser Homepage -->
                             <div id="dropdown-menu-anchor2"
-                                class="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 w-50 bg-white border border-gray-200 rounded shadow-lg hidden z-100">
-                                <div class="flex flex-col space-y-2 p-4">
-                                    <a href="#Formular"
-                                        class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">Formular</a>
-                                    <a href="#About"
-                                        class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">Über
-                                        mich</a>
-                                    <a href="#Versicherungen"
-                                        class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">Versicherungen</a>
+                                class="mt-2 hidden rounded-2xl border border-gray-200 bg-gray-50 p-3 shadow-sm">
+                                <div class="flex flex-col space-y-2">
                                     <a href="#CRS"
-                                        class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">CGM Risiko Score (CRS)</a>
+                                        class="rounded-xl px-3 py-2 text-gray-700 hover:bg-white hover:text-diab-blue transition-colors duration-300 font-medium">CGM Risiko Score (CRS)</a>
+                                    <a href="#About"
+                                        class="rounded-xl px-3 py-2 text-gray-700 hover:bg-white hover:text-diab-blue transition-colors duration-300 font-medium">Über
+                                        mich</a>
+                                    <a href="#Formular"
+                                        class="rounded-xl px-3 py-2 text-gray-700 hover:bg-white hover:text-diab-blue transition-colors duration-300 font-medium">Formular</a>
+                                    <a href="#Versicherungen"
+                                        class="rounded-xl px-3 py-2 text-gray-700 hover:bg-white hover:text-diab-blue transition-colors duration-300 font-medium">Versicherungen</a>
                                     <a href="#Partner"
-                                        class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">Partner</a>
+                                        class="rounded-xl px-3 py-2 text-gray-700 hover:bg-white hover:text-diab-blue transition-colors duration-300 font-medium">Partner</a>
                                 </div>
                             </div>
                         </div>
 
                         <a href="https://outlook.office.com/book/Diabsurance@eddimed.eu/" target="_blank"
                             rel="noopener noreferrer"
-                            class="text-diab-green hover:text-diab-blue transition-colors duration-300 font-medium">
+                            class="mt-2 inline-flex items-center justify-center rounded-full bg-diab-blue px-5 py-3 text-white font-medium no-underline transition-all duration-300 hover:bg-blue-600">
                             Beratung anfragen
                         </a>
                     </div>
@@ -354,14 +381,23 @@
     </nav>
     <!-- END common nav.bar with page-specific anchor links -->
 
-    <!-- === MODAL === -->
-    <div id="umfrageModal" class="modal">
-        <div class="modal-content">
-        <span class="close-btn" onclick="closeModal()">&times;</span>
-        <h2 class="text-xl text-diab-blue font-bold">Deine Meinung zählt!</h2>
-        <p>Nimm jetzt an unserer 2-Minuten-Umfrage zu <br><span class="text-diab-green">BU-Versicherung und Diabetes</span> teil.</p>
-        <a href="umfrage.html" target="_blank" class="button">Zur Umfrage</a>
-        <!-- p class="mt-3"> (Bis zum So, 30.11. gibt es Gutscheine zu gewinnen.)</p> -->
+    <div id="umfrageSlideIn" class="survey-promo-hidden survey-slidein">
+        <div class="rounded-3xl border border-diab-green/20 bg-white p-6">
+            <div class="flex items-start justify-between gap-4">
+                <div>
+                    <h2 class="mt-2 text-xl font-bold text-diab-blue">Deine Meinung z&auml;hlt!</h2>
+                </div>
+                <button type="button" class="survey-close-btn" data-close-survey="umfrageSlideIn" aria-label="Slide-in Box schlie&szlig;en">&times;</button>
+            </div>
+            <p class="mt-3 text-sm leading-relaxed text-gray-600">
+                Nimm jetzt an unserer 2-Minuten-Umfrage zu <br><span class="text-diab-green">BU-Versicherung und Diabetes</span> teil.
+            </p>
+            <div class="mt-5 flex flex-wrap gap-3">
+                <a href="umfrage.html" target="_blank" rel="noopener noreferrer"
+                    class="inline-flex items-center justify-center rounded-full bg-diab-green px-5 py-2.5 text-white font-medium no-underline transition hover:bg-green-600">
+                    Zur Umfrage
+                </a>
+            </div>
         </div>
     </div>
 
@@ -371,8 +407,7 @@
             <!-- Heading -->
             <div class="mx-auto text-center">
                 <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight break-words">
-                    Ver&shy;sicherungs&shy;schutz für Menschen mit Diabetes + <br>
-                    <span class="text-blue-300">Cyberversicherung für KMU</span>
+                    Ver&shy;sicherungs&shy;schutz für Menschen mit Diabetes<br>
                 </h2>
                 <p class="mt-3 text-base sm:text-lg md:text-xl">
                     Faire Konditionen, persönliche Beratung, individuelle Lösungen.
@@ -380,7 +415,7 @@
             </div>
 
             <!-- Cards -->
-            <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4 sm:gap-6 lg:gap-8">
+            <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
                 <!-- BU -->
                 <a href="bu.html">
                     <div
@@ -417,7 +452,7 @@
 
                 <!-- Unfallversicherung -->
                 <!-- a href="uv.html" -->
-                <div class="block h-full rounded-2xl focus-within:ring-2 focus-within:ring-diab-blue">
+                <div class="block h-full rounded-2xl focus-within:ring-2 focus-within:ring-diab-blue sm:col-span-2 sm:mx-auto sm:w-full sm:max-w-md lg:col-span-1 lg:mx-0 lg:max-w-none">
                     <div
                         class="h-full bg-white p-6 sm:p-7 rounded-2xl shadow-lg border border-gray-100 transition transform motion-safe:hover:-translate-y-1 motion-safe:hover:shadow-xl">
                         <div class="text-center">
@@ -431,45 +466,18 @@
                         </p>
                     </div>
                 </div>
-
-                <!-- Cyberversicherung -->
-                <a href="https://landingpage.vema-eg.de/diabsurance/cyber" target="_blank" rel="noopener"
-                    class="group block h-full focus:outline-none focus-visible:ring-2 focus-visible:ring-diab-blue rounded-2xl">
-                    <div
-                        class="h-full bg-blue-300 p-6 sm:p-7 rounded-2xl shadow-lg border border-blue-300 transition transform motion-safe:hover:-translate-y-1 motion-safe:hover:shadow-xl">
-                        <div class="text-center">
-                            <i class="text-4xl text-diab-blue mb-4 fas fa-virus-slash" aria-hidden="true"></i>
-                        </div>
-                        <h3 class="text-xl sm:text-2xl font-bold text-gray-900 text-center">
-                            Cyber&shy;ver&shy;sicher&shy;ung für kleine und mittelständische Unternehmen (KMU).
-                        </h3>
-                    </div>
-                </a> 
             </div>
 
             <!-- CTA -->
             <div class="mt-10 text-center text-base sm:text-lg md:text-xl sm:text-lg">
                 <p>
-                    Neben den Personenversicherungen bei Diabetes vermittle ich auch Cyberversicherungen und berate Dich gerne:
-
-                    <a href="https://outlook.office.com/book/Diabsurance@eddimed.eu/" target="_blank"
-                        class="mt-4 inline-flex items-center justify-center rounded-full bg-diab-blue px-6 py-2.5 text-white font-medium transition hover:bg-blue-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-diab-blue">
-                        Beratung&nbsp;anfragen
-                    </a>
-                </p>
-                <p>
                     Für andere Versicherungsanfragen kann ich Dich gerne an kompetente ExpertInnen aus meinem Netzwerk
                     verweisen.
                 </p>
             </div>
-
-
         </div>
     </section>
 
-
-
-    <!-- BU Section -->
     <section id="BU" class="py-10 bg-gradient-to-r from-diab-light-blue to-diab-light-green">
 
         <div class="max-w-7xl mx-auto px-4">
@@ -478,9 +486,9 @@
             <div class="text-2xl">
                 <ul class="list-disc sm:pl-2 md:pl-20 space-y-2 text-gray-800 text-center">
                     <li> Eine Berufsunfähigkeitsversicherung gehört zu den Top-3-Versicherungen, die von den <a
-                            href="https://www.verbraucherzentrale.de/laura-zieht-aus/versicherungen">Verbraucherzentralen</a>
+                            class="text-link" href="https://www.verbraucherzentrale.de/laura-zieht-aus/versicherungen">Verbraucherzentralen</a>
                         empfohlen werden: <a href="bu.html"
-                                class="hover:text-diab-blue transition-colors duration-300">bu.html</a></li>
+                                class="text-link">bu.html</a></li>
                     <li> Für Menschen mit Diabetes ist der Abschluss einer BU-Versicherung nur mit sehr hohen
                         Risikozuschlägen (> 150-200 %) möglich,
                         wenn ihnen überhaupt ein Angebot gemacht wird.</li>
@@ -495,80 +503,48 @@
     </section>
 
 
-    <!-- BU Section -->
-    <section id="Formular" class="py-4 gradient-bg">
-        <div class="mx-auto pt-4 px-4 sm:px-6 lg:px-8">
-            <div class="text-center text-white mb-4">
-                <h2 class="text-3xl font-bold mb-2">kostenloses Erstgespräch buchen</h2>
-                <p class="text-x1 opacity-90 max-w-3xl mx-auto">
-                    Bei Interesse an einer BU-Versicherung fülle bitte folgendes Formular aus.
-                    <a href="#About">Ich</a> komme dann zeitnah mit einem Terminvorschlag für ein Gespräch auf Dich zu.
-                </p>
+    <!-- Risiko Score Section -->
+    <section id="Risiko_Score" class="scroll-mt-24 py-10 sm:py-12 gradient-bg">
+        <div id="CRS"></div>
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-white">
+            <h2 class="text-center text-4xl font-bold mb-6">CGM-basierter Risiko Score (CRS)</h2>
+            <div class="text-center">
+                <div class="inline-block bg-white p-4 sm:p-6 rounded-lg">
+                    <img src="img/CGM-basierter_Risiko_Score_Eddimed_202604.png" alt="Risiko Score" style="margin:auto">
+                </div>
             </div>
+            <p class="text-lg mb-6 leading-relaxed text-center">
+                Berechnung des CGM-basierten Risiko Score durch unseren Partner <a class="text-link" href="https://eddimed.eu">Eddimed</a>
+            </p>
 
-
-
-            <div
-                class="w-full md:w-3/4 lg:w-1/2 max-w-3xl mx-auto bg-white rounded-2xl p-6 sm:p-8 shadow-2xl scroll-mt-28">
-                <iframe
-                    data-tally-src="https://tally.so/embed/3x7kp5?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
-                    title="BU-Versicherung" loading="lazy" style="width: 100%; min-height: 600px; border: 0;"></iframe>
-            </div>
-            <!-- https://outlook.office.com/book/Diabsurance@eddimed.eu/ -->
-
-        </div>
-
-        <!-- sharing part -->
-        <div class="share pt-4 justify-center" aria-label="Share this page">
-            <div class="text-white">
-                <h2>Sharing is Caring:</h2>
-            </div>
-            <div>
-                <a id="share-qrcode" href="#" class="share-btn" target="_blank" rel="noopener"
-                    aria-label="Share via QR code">
-                    <svg viewBox="0 0 448 512" width="20" height="20" aria-hidden="true">
-                        <path
-                            d="M0 224h192V32H0v192zM64 96h64v64H64V96zm192-64v192h192V32H256zm128 128h-64V96h64v64zM0 480h192V288H0v192zm64-128h64v64H64V352zm352-64h32v128h-96v-32h-32v96h-64V288h96v32h64v-32zm0 160h32v32h-32v-32zm-64 0h32v32h-32v-32z" />
-                    </svg>
-                </a>
-
-                <a id="share-li" href="https://JS_overwrites_href.de" class="share-btn" target="_blank" rel="noopener"
-                    aria-label="Share on LinkedIn">
-                    <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
-                        <path
-                            d="M4.98 3.5C4.98 4.9 3.9 6 2.5 6S0 4.9 0 3.5 1.12 1 2.5 1s2.48 1.1 2.48 2.5zM0 8h5v15H0V8zm7.5 0h4.8v2h.1c.7-1.2 2.4-2.5 4.9-2.5 5.2 0 6.2 3.4 6.2 7.8V23h-5v-6.7c0-1.6 0-3.7-2.3-3.7s-2.7 1.8-2.7 3.6V23h-5V8z" />
-                    </svg>
-                </a>
-
-                <a id="share-tg" href="https://JS_overwrites_href.de" class="share-btn" target="_blank" rel="noopener"
-                    aria-label="Share on Telegram">
-                    <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
-                        <path d="M9.6 15.6l-.4 5.6 3.5-3 5.3 3.7 4-18.1-21.3 8.3 5.3 2 12.3-7.6-8.7 9.1z" />
-                    </svg>
-                </a>
-
-                <a id="share-mail" href="https://JS_overwrites_href.de" class="share-btn" aria-label="Share via email">
-                    <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
-                        <path d="M2 4h20v16H2z M4 6l8 6 8-6" />
-                    </svg>
-                </a>
-
-                <a id="share-fb" href="https://JS_overwrites_href.de" class="share-btn" target="_blank" rel="noopener"
-                    aria-label="Share on Facebook">
-                    <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
-                        <path
-                            d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.6V12h2.8V9.8c0-2.8 1.7-4.3 4.2-4.3 1.2 0 2.5.2 2.5.2v2.7h-1.4c-1.4 0-1.8.9-1.8 1.8V12h3.1l-.5 2.9h-2.6v7A10 10 0 0 0 22 12z" />
-                    </svg>
-                </a>
-
-             
-
-                <button id="share-copy" class="share-btn" aria-label="Copy link">
-                    <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
-                        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
-                        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
-                    </svg>
-                </button>
+            <h3 class="mt-10 mb-3 text-2xl font-bold text-center">Häufige Fragen zu Daten und CRS</h3>
+            <div class="grid grid-cols-1 gap-2 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-start">
+                <div>
+                    <dl class="py-2 grid grid-cols-1 gap-4 sm:grid-cols-4">
+                        <dt class="font-semibold sm:col-span-1">Bekommt der Versicherer meine CGM-Daten?</dt>
+                        <dd class="sm:col-span-3">Nein, nur in stark zusammengefaßter Form als CRS (mögliche Werte:
+                            grün, gelb, rot). Die Berechnung des CRS und die Verarbeitung der CRM-Daten geschieht in
+                            DSGVO-konformer Weise durch <a class="text-link" href="https://eddimed.eu">Eddimed</a>.</dd>
+                        <dt class="font-semibold sm:col-span-1">Was passiert, wenn sich meine Glucose-Einstellung dauerhaft
+                            verschlechtert?</dt>
+                        <dd class="sm:col-span-3">Bei einer dauerhaften Verschlechterung setzen wir uns (virtuell)
+                            zusammen und suchen nach möglichen Ursachen und Lösungen.</dd>
+                        <dt class="font-semibold sm:col-span-1">IGP-Förderung</dt>
+                        <dd class="sm:col-span-3">Unser Projekt "Berufsunfähigkeitsversicherung (BU) für gut eingestellte DiabetikerInnen" wird bis Ende August 2026 im <a class="text-link" href="https://www.bundeswirtschaftsministerium.de/Redaktion/DE/Artikel/Innovation/igp.html">Innovationsprogramm für Geschäftsmodelle und Pionierlösungen</a> (IGP) des Bundesministeriums für Wirtschaft und Energie als Machbarkeitsprojekt mit 80k Euro gefördert. Vielen Dank an die <a class="text-link" href="https://www.bundeswirtschaftsministerium.de/Redaktion/DE/Artikel/Innovation/IGP/igp-jury-vierter-call-25.html">Jury des vierten Calls</a>.
+                            <a href="https://www.linkedin.com/posts/bernd-reinhold_die-mitglieder-der-igp-jury-zum-vierten-activity-7437853152852484096-asCH"
+                                target="_blank" rel="noopener noreferrer" aria-label="Open LinkedIn post about the IGP jury announcement"
+                                class="text-link inline-block align-baseline">
+                                <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" class="inline-block align-[-0.05em] fill-current">
+                                    <path
+                                        d="M4.98 3.5C4.98 4.9 3.9 6 2.5 6S0 4.9 0 3.5 1.12 1 2.5 1s2.48 1.1 2.48 2.5zM0 8h5v15H0V8zm7.5 0h4.8v2h.1c.7-1.2 2.4-2.5 4.9-2.5 5.2 0 6.2 3.4 6.2 7.8V23h-5v-6.7c0-1.6 0-3.7-2.3-3.7s-2.7 1.8-2.7 3.6V23h-5V8z" />
+                                </svg>
+                            </a> (Stand: Feb 2026)</dd>
+                    </dl>
+                </div>
+                <div class="flex items-start justify-center lg:justify-end pt-2">
+                    <img src="img/BMWE_Fz_2025_Office_Farbe_de.png" alt="IGP-Förderung"
+                        class="w-full max-w-[170px] sm:max-w-[190px] lg:max-w-[260px] max-h-[220px] h-auto object-contain">
+                </div>
             </div>
         </div>
     </section>
@@ -648,29 +624,77 @@
     </section>
 
 
-    <!-- Risiko Score Section -->
-    <section id="Risiko_Score" class="scroll-mt-24 py-10 sm:py-12 gradient-bg">
-        <div id="CRS"></div>
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-white">
-            <h2 class="text-center text-4xl font-bold mb-6">CGM-basierter Risiko Score (CRS)</h2>
-            <div class="text-center">
-                <img src="img/CGM-basierter_Risiko_Score_Eddimed_202509.png" alt="Risiko Score" style="margin:auto">
+    <!-- BU Section -->
+    <section id="Formular" class="py-4 gradient-bg">
+        <div class="mx-auto pt-4 px-4 sm:px-6 lg:px-8">
+            <div class="text-center text-white mb-4">
+                <h2 class="text-center text-4xl font-bold mb-2">kostenloses Erstgespräch buchen</h2>
+                <p class="text-x1 opacity-90 max-w-3xl mx-auto">
+                    Bei Interesse an einer BU-Versicherung fülle bitte folgendes Formular aus.
+                    <a class="text-link" href="#About">Ich</a> komme dann zeitnah mit einem Terminvorschlag für ein Gespräch auf Dich zu.
+                </p>
             </div>
-            <p class="text-lg mb-6 leading-relaxed text-center">
-                Berechnung des CGM-basierten Risiko Score durch unseren Partner <a href="https://eddimed.eu">Eddimed</a>
-            </p>
 
-            <h3 class="text-2xl font-bold mb-3 text-center">Häufige Fragen zu Daten und CRS</h3>
-            <dl class="py-2 grid grid-cols-4 gap-4">
-                <dt class="font-semibold">Bekommt der Versicherer meine CGM-Daten?</dt>
-                <dd class="col-span-3">Nein, nur in stark zusammengefaßter Form als CRS (mögliche Werte:
-                    grün, gelb, rot). Die Berechnung des CRS und die Verarbeitung der CRM-Daten geschieht in
-                    DSGVO-konformer Weise durch <a href="https://eddimed.eu">Eddimed</a>.</dd>
-                <dt class="font-semibold">Was passiert, wenn sich meine Glucose-Einstellung dauerhaft
-                    verschlechtert?</dt>
-                <dd class="col-span-3">Bei einer dauerhaften Verschlechterung setzen wir uns (virtuell)
-                    zusammen und suchen nach möglichen Ursachen und Lösungen.</dd>
-            </dl>
+            <div
+                class="w-full md:w-3/4 lg:w-1/2 max-w-3xl mx-auto bg-white rounded-2xl p-6 sm:p-8 shadow-2xl scroll-mt-28">
+                <iframe
+                    data-tally-src="https://tally.so/embed/3x7kp5?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+                    title="BU-Versicherung" loading="lazy" style="width: 100%; min-height: 600px; border: 0;"></iframe>
+            </div>
+            <!-- https://outlook.office.com/book/Diabsurance@eddimed.eu/ -->
+
+        </div>
+
+        <!-- sharing part -->
+        <div class="share pt-4 justify-center" aria-label="Share this page">
+            <div class="text-white">
+                <h2>Sharing is Caring:</h2>
+            </div>
+            <div>
+                <a id="share-qrcode" href="#" class="share-btn" target="_blank" rel="noopener"
+                    aria-label="Share via QR code">
+                    <svg viewBox="0 0 448 512" width="20" height="20" aria-hidden="true">
+                        <path
+                            d="M0 224h192V32H0v192zM64 96h64v64H64V96zm192-64v192h192V32H256zm128 128h-64V96h64v64zM0 480h192V288H0v192zm64-128h64v64H64V352zm352-64h32v128h-96v-32h-32v96h-64V288h96v32h64v-32zm0 160h32v32h-32v-32zm-64 0h32v32h-32v-32z" />
+                    </svg>
+                </a>
+
+                <a id="share-li" href="https://JS_overwrites_href.de" class="share-btn" target="_blank" rel="noopener"
+                    aria-label="Share on LinkedIn">
+                    <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+                        <path
+                            d="M4.98 3.5C4.98 4.9 3.9 6 2.5 6S0 4.9 0 3.5 1.12 1 2.5 1s2.48 1.1 2.48 2.5zM0 8h5v15H0V8zm7.5 0h4.8v2h.1c.7-1.2 2.4-2.5 4.9-2.5 5.2 0 6.2 3.4 6.2 7.8V23h-5v-6.7c0-1.6 0-3.7-2.3-3.7s-2.7 1.8-2.7 3.6V23h-5V8z" />
+                    </svg>
+                </a>
+
+                <a id="share-tg" href="https://JS_overwrites_href.de" class="share-btn" target="_blank" rel="noopener"
+                    aria-label="Share on Telegram">
+                    <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+                        <path d="M9.6 15.6l-.4 5.6 3.5-3 5.3 3.7 4-18.1-21.3 8.3 5.3 2 12.3-7.6-8.7 9.1z" />
+                    </svg>
+                </a>
+
+                <a id="share-mail" href="https://JS_overwrites_href.de" class="share-btn" aria-label="Share via email">
+                    <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+                        <path d="M2 4h20v16H2z M4 6l8 6 8-6" />
+                    </svg>
+                </a>
+
+                <a id="share-fb" href="https://JS_overwrites_href.de" class="share-btn" target="_blank" rel="noopener"
+                    aria-label="Share on Facebook">
+                    <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+                        <path
+                            d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.6V12h2.8V9.8c0-2.8 1.7-4.3 4.2-4.3 1.2 0 2.5.2 2.5.2v2.7h-1.4c-1.4 0-1.8.9-1.8 1.8V12h3.1l-.5 2.9h-2.6v7A10 10 0 0 0 22 12z" />
+                    </svg>
+                </a>
+
+                <button id="share-copy" class="share-btn" aria-label="Copy link">
+                    <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+                        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
+                        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
+                    </svg>
+                </button>
+            </div>
         </div>
     </section>
 
@@ -684,18 +708,19 @@
                     <div class="flex items-stretch space-x-8">
                         <div id="VEMA_partner" class="text-center">
                             <a href="https://vema-eg.de/" title="Wir sind Partner der VEMA Versicherungsmakler Genossenschaft eG (VEMA eG). Die VEMA eG ist eines der führenden Dienstleistungsunternehmen für Versicherungsmakler in Deutschland. Stand Nov 2025 sind rund 4.700 mittelständische Maklerbetriebe aus dem gesamten Bundesgebiet dort angebunden. Nur Versicherungsmakler, die strenge Qualitätskriterien erfüllen, werden in diesen Maklerverbund aufgenommen. Diese Voraussetzungen garantieren hohe Qualifikation und Beratungsqualität. Folgen Sie dem Link, um mehr über die VEMA zu erfahren.">
-                            <img src="img/vema_logo_RGB.png" alt="VEMA Partner"
-                                        class="w-full h-full object-contain" style="width: auto; height: 150px;">
-                                        </a>
+                                <div class="flex items-center justify-center" style="height: clamp(72px, 10vw, 131px);">
+                                    <img src="img/vema_logo_RGB.png" alt="VEMA Partner"
+                                        class="max-h-full w-auto object-contain">
+                                </div>
+                            </a>
                         </div>
                         <div class="text-center">
-                            <a href="https://casassecuranz.de/"><img
-                                    src="img/CASAssecuranz_logo-trademark-1024x194.webp" alt="CASAssecuranz"
-                                    style="width: auto; height: 150px;" class="w-full h-full object-contain"></a>
-                        </div>
-                        <div class="text-center">
-                            <a href="https://eddimed.eu/"><img src="img/ed_logo.png" alt="Eddimed"
-                                    style="width: auto; height: 150px;" class="w-full h-full object-contain"></a>
+                            <a href="https://eddimed.eu/">
+                                <div class="flex items-center justify-center" style="height: clamp(72px, 10vw, 131px);">
+                                    <img src="img/ed_logo.png" alt="Eddimed"
+                                        class="max-h-full w-auto object-contain">
+                                </div>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -703,57 +728,105 @@
                     <h2 class="text-4xl font-bold text-center text-gray-900 mb-6">Acceleratoren</h2>
                     <div class="flex items-center space-x-8">
                         <div class="text-center">
-                            <a href="https://www.lifescience-bw.de/"><img src="img/Life-Science-Acceletator_150x131.png"
-                                    alt="Life Science Accelerator" class="w-full h-full object-cover"></a>
+                            <a href="https://www.finance-accelerator.de/">
+                                <div class="flex items-center justify-center" style="height: clamp(72px, 10vw, 131px);">
+                                    <img src="img/finance-accelerator_black_letters-300x57.png" alt="Finance Accelerator"
+                                        class="max-h-full w-auto object-contain">
+                                </div>
+                            </a>
                         </div>
                         <div class="text-center">
-                            <a href="https://www.finance-accelerator.de/"><img
-                                    src="img/finance-accelerator_black_letters-300x57.png" alt="Finance Accelerator"
-                                    class="w-full h-full object-cover"></a>
+                            <a href="https://www.lifescience-bw.de/">
+                                <div class="flex items-center justify-center" style="height: clamp(72px, 10vw, 131px);">
+                                    <img src="img/Life-Science-Acceletator_150x131.png"
+                                        alt="Life Science Accelerator" class="max-h-full w-auto object-contain">
+                                </div>
+                            </a>
                         </div>
                         <div class="text-center">
-                            <a href="https://www.cyber-valley.de/"><img
-                                    src="img/thumb_md_20210319_CYV_LogoLockup_vorab-300x85.jpg" alt="Cyber Valley"
-                                    class="w-full h-full object-cover"></a>
+                            <a href="https://www.cyber-valley.de/">
+                                <div class="flex items-center justify-center" style="height: clamp(72px, 10vw, 131px);">
+                                    <img src="img/thumb_md_20210319_CYV_LogoLockup_vorab-300x85.jpg" alt="Cyber Valley"
+                                        class="max-h-full w-auto object-contain">
+                                </div>
+                            </a>
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
 
-    <!-- === Script === -->
     <script>
-        // Pop-up nach kurzer Verzögerung anzeigen
-        window.onload = function() {
-            setTimeout(function() {
-            document.getElementById("umfrageModal").style.display = "block";
-            }, 1000); // 1 Sekunde Verzögerung
-        };
+        document.addEventListener('DOMContentLoaded', function () {
+            const slideIn = document.getElementById('umfrageSlideIn');
+            let slideInWasShown = false;
 
-        // Pop-up schließen
-        function closeModal() {
-            document.getElementById("umfrageModal").style.display = "none";
-        }
+            function getScrollProgress() {
+                const scrollTop = window.scrollY || window.pageYOffset;
+                const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
 
-        // Schließen bei Klick außerhalb des Modals
-        window.onclick = function(event) {
-            const modal = document.getElementById("umfrageModal");
-            if (event.target == modal) {
-            modal.style.display = "none";
+                if (maxScroll <= 0) {
+                    return 0;
+                }
+
+                return scrollTop / maxScroll;
             }
-        };
-    </script>
 
+            function showSlideInIfNeeded() {
+                if (!slideIn || slideInWasShown) {
+                    return;
+                }
+
+                if (getScrollProgress() < 0.25) {
+                    return;
+                }
+
+                slideInWasShown = true;
+                slideIn.classList.remove('survey-promo-hidden');
+                requestAnimationFrame(function () {
+                    slideIn.classList.add('is-visible');
+                });
+                window.removeEventListener('scroll', showSlideInIfNeeded);
+            }
+
+            window.addEventListener('scroll', showSlideInIfNeeded, { passive: true });
+            showSlideInIfNeeded();
+
+            document.querySelectorAll('[data-close-survey]').forEach(function (button) {
+                button.addEventListener('click', function () {
+                    const targetId = button.getAttribute('data-close-survey');
+                    const target = document.getElementById(targetId);
+
+                    if (!target) {
+                        return;
+                    }
+
+                    if (targetId === 'umfrageSlideIn') {
+                        target.classList.remove('is-visible');
+                        window.setTimeout(function () {
+                            target.classList.add('survey-promo-hidden');
+                        }, 350);
+                        return;
+                    }
+
+                    target.classList.add('survey-promo-hidden');
+                });
+            });
+        });
+    </script>
 
     <!-- Footer -->
     <footer class="bg-gray-900 text-white justify-between py-12">
         <div class="container mx-auto">
             <div class="grid md:grid-cols-3 gap-8">
                 <div class="text-center">
-                    <a href="index.html"><img src="img/diabsurance_logo_green.png" alt="diabsurance Logo"
-                            class="w-auto mb-4"></a>
+                    <a href="index.html" class="inline-flex items-center justify-center mb-4">
+                        <div class="h-12 sm:h-14 flex items-center justify-center">
+                            <img src="img/diabsurance_logo_green.png" alt="diabsurance Logo"
+                                class="max-h-full w-auto object-contain shrink-0">
+                        </div>
+                    </a>
                     <p class="text-gray-400">
                         Euer Vermittler Nr. 1 für Personenversicherungen bei Diabetes.
                     </p>
@@ -764,7 +837,7 @@
                     <h4 class="text-lg font-semibold mb-2">Sitemap</h4>
                     <ul class="space-y-2 text-gray-400 mb-6">
                         <li><a href="bu.html"
-                                class="hover:text-white transition-colors duration-300">Berufsunfähigkeitsversicherung</a>
+                                class="hover:text-white transition-colors duration-300"><span class="sm:hidden">BU-Versicherung</span><span class="hidden sm:inline">Berufsunfähigkeitsversicherung</span></a>
                         </li>
                         <li><a href="umfrage.html" class="hover:text-white transition-colors duration-300">Umfrage</a></li>
                         <li><a href="community.html" class="hover:text-white transition-colors duration-300">Unternehmen
@@ -792,7 +865,7 @@
                         </li>
                         <li>
                             <i class="fas fa-map-marker-alt mr-2"></i>
-                            <a href="https://www.openstreetmap.org/relation/2793104" target="_blank"
+                            <a class="text-link" href="https://www.openstreetmap.org/relation/2793104" target="_blank"
                             rel="noopener noreferrer">Stuttgart</a>, Deutschland
                         </li>
                     </ul>
@@ -800,11 +873,11 @@
             </div>
 
             <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-                <p>&copy; <a href="https://www.openstreetmap.org/relation/2793104" target="_blank"
-                        rel="noopener noreferrer">Stuttgart</a>, Nov 2025 - diabsurance - Alle Rechte vorbehalten - <a
-                        href="impressum.html" class="hover:text-white transition-colors duration-300">Impressum</a>, <a
+                <p>&copy; <a class="text-link" href="https://www.openstreetmap.org/relation/2793104" target="_blank"
+                        rel="noopener noreferrer">Stuttgart</a>, April 2026 - diabsurance - Alle Rechte vorbehalten - <a
+                        href="impressum.html" class="text-link">Impressum</a>, <a
                         href="erstinformation.html"
-                        class="hover:text-white transition-colors duration-300">Erstinformation</a></p>
+                        class="text-link">Erstinformation</a></p>
             </div>
         </div>
     </footer>
@@ -818,8 +891,24 @@
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
+                const mobileMenu = document.getElementById('dropdown-menu');
+                const mobileAnchorMenu = document.getElementById('dropdown-menu-anchor2');
+                const desktopAnchorMenu = document.getElementById('dropdown-menu-anchor');
                 let target = document.querySelector(this.getAttribute('href'));
                 let targetPosition = target.getBoundingClientRect().top - navbarHeight;
+
+                if (mobileMenu && mobileMenu.contains(this)) {
+                    mobileMenu.classList.add('hidden');
+                }
+
+                if (mobileAnchorMenu && mobileAnchorMenu.contains(this)) {
+                    mobileAnchorMenu.classList.add('hidden');
+                }
+
+                if (desktopAnchorMenu && desktopAnchorMenu.contains(this)) {
+                    desktopAnchorMenu.classList.add('hidden');
+                }
+
                 window.scrollTo({
                     top: targetPosition + window.pageYOffset,
                     behavior: 'smooth'
@@ -852,6 +941,10 @@
             const toggle = document.getElementById(toggleID);
             const menu = document.getElementById(menuID);
 
+            if (!toggle || !menu) {
+                return;
+            }
+
             toggle.addEventListener('click', () => {
                 menu.classList.toggle('hidden');
             });
@@ -868,6 +961,10 @@
         document.addEventListener('DOMContentLoaded', function () {
             const toggle = document.getElementById('dropdown-toggle-sitemap');
             const menu = document.getElementById('dropdown-menu-sitemap');
+
+            if (!toggle || !menu) {
+                return;
+            }
 
             toggle.addEventListener('click', () => {
                 menu.classList.toggle('hidden');
