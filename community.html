@@ -44,6 +44,20 @@
             transform: translateY(-8px);
             box-shadow: 0 20px 40px rgba(0,0,0,0.1);
         }
+        .text-link {
+            color: inherit;
+            font-weight: 500;
+            text-decoration: underline;
+            text-decoration-color: rgba(255, 255, 255, 0.75);
+            text-decoration-thickness: 2px;
+            text-underline-offset: 3px;
+            transition: color 0.2s ease, text-decoration-color 0.2s ease, text-decoration-thickness 0.2s ease;
+        }
+        .text-link:hover {
+            color: #ffffff;
+            text-decoration-color: rgba(255, 255, 255, 1);
+            text-decoration-thickness: 3px;
+        }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800 font-sans">
@@ -300,7 +314,7 @@
                         </li>
                         <li>
                             <i class="fas fa-map-marker-alt mr-2"></i>
-                            <a href="https://www.openstreetmap.org/relation/2793104" target="_blank"
+                            <a class="text-link" href="https://www.openstreetmap.org/relation/2793104" target="_blank"
                             rel="noopener noreferrer">Stuttgart</a>, Deutschland
                         </li>
                     </ul>
@@ -308,7 +322,7 @@
             </div>
             
             <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-                <p>&copy; <a href="https://www.openstreetmap.org/relation/2793104" target="_blank">Stuttgart</a>, Nov 2025 - diabsurance - Alle Rechte vorbehalten - <a href="impressum.html" class="hover:text-white transition-colors duration-300">Impressum</a>, <a href="erstinformation.html" class="hover:text-white transition-colors duration-300">Erstinformation</a></p>
+                <p>&copy; <a class="text-link" href="https://www.openstreetmap.org/relation/2793104" target="_blank" rel="noopener noreferrer">Stuttgart</a>, Apr 2026 - diabsurance - Alle Rechte vorbehalten - <a href="impressum.html" class="text-link">Impressum</a>, <a href="erstinformation.html" class="text-link">Erstinformation</a></p>
             </div>
         </div>
     </footer>
