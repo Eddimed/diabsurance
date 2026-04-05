@@ -225,7 +225,7 @@
     <div id="top"></div>
     <nav class="bg-white/95 backdrop-blur-sm shadow-sm fixed w-full z-50 top-0 border-b border-gray-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center py-4">
+            <div class="flex justify-between items-center gap-4 py-4">
                 <div class="flex items-center">
                     <a href="index.html" class="flex items-center shrink-0">
                         <div class="h-10 sm:h-12 flex items-center">
@@ -236,35 +236,36 @@
                 </div>
 
                 <!-- common nav.bar with page-specific anchor links -->
-                <div class="hidden md:flex items-center space-x-8">
+                <div class="hidden lg:flex min-w-0 flex-1 items-center justify-end space-x-6 lg:space-x-8">
                     <a href="bu.html"
-                        class="hover:text-diab-blue transition-colors duration-300 whitespace-nowrap"><span class="lg:hidden">BU-Versicherung</span><span class="hidden lg:inline">Berufsunfähigkeitsversicherung</span></a>
-                    <a href="umfrage.html" class="hover:text-diab-blue transition-colors duration-300">Umfrage</a>
-                    <a href="community.html" class="hover:text-diab-blue transition-colors duration-300">Unternehmen aus
+                        class="font-medium text-gray-700 hover:text-diab-blue transition-colors duration-300 whitespace-nowrap"><span class="xl:hidden">BU-Versicherung</span><span class="hidden xl:inline">Berufsunfähigkeitsversicherung</span></a>
+                    <a href="umfrage.html" class="font-medium text-gray-700 hover:text-diab-blue transition-colors duration-300">Umfrage</a>
+                    <a href="community.html" class="font-medium text-gray-700 hover:text-diab-blue transition-colors duration-300">Unternehmen aus
                         der Community</a>
 
                     <div class="relative inline-block text-center">
                         <div id="dropdown-toggle-anchor">
-                            <button class="text-gray-700 hover:text-diab-blue">
-                                <i class="fas fa-chevron-down text-xl"></i>
+                            <button title="Abschnitte auf dieser Seite" aria-label="Abschnitte auf dieser Seite öffnen"
+                                class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-gray-200 text-gray-700 transition-colors duration-300 hover:border-diab-blue hover:text-diab-blue">
+                                <i class="fas fa-chevron-down text-sm"></i>
                             </button>
                         </div>
 
                         <!-- Freischwebendes Menü der Anchor-Links dieser Homepage -->
                         <div id="dropdown-menu-anchor"
-                            class="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 w-50 bg-white border border-gray-200 rounded shadow-lg hidden z-100">
+                            class="absolute top-full left-1/2 transform -translate-x-1/2 mt-3 w-56 bg-white border border-gray-200 rounded-2xl shadow-xl hidden z-100">
                             <div class="flex flex-col space-y-2 p-4">
                                 <a href="#Formular"
-                                    class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">Formular</a>
+                                    class="rounded-xl px-3 py-2 text-gray-700 hover:bg-diab-light-blue hover:text-diab-blue transition-colors duration-300 font-medium">Formular</a>
                                 <a href="#About"
-                                    class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">Über
+                                    class="rounded-xl px-3 py-2 text-gray-700 hover:bg-diab-light-blue hover:text-diab-blue transition-colors duration-300 font-medium">Über
                                     mich</a>
                                 <a href="#Versicherungen"
-                                    class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">Versicherungen</a>
+                                    class="rounded-xl px-3 py-2 text-gray-700 hover:bg-diab-light-blue hover:text-diab-blue transition-colors duration-300 font-medium">Versicherungen</a>
                                 <a href="#CRS"
-                                    class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">CGM Risiko Score (CRS)</a>
+                                    class="rounded-xl px-3 py-2 text-gray-700 hover:bg-diab-light-blue hover:text-diab-blue transition-colors duration-300 font-medium">CGM Risiko Score (CRS)</a>
                                 <a href="#Partner"
-                                    class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">Partner</a>
+                                    class="rounded-xl px-3 py-2 text-gray-700 hover:bg-diab-light-blue hover:text-diab-blue transition-colors duration-300 font-medium">Partner</a>
                             </div>
                         </div>
                     </div>
@@ -284,51 +285,56 @@
                 </div>
                 -->
 
-                <div id="dropdown-toggle" class="md:hidden">
-                    <button class="text-gray-700 hover:text-diab-blue">
-                        <i class="fas fa-bars text-xl"></i>
+                <div id="dropdown-toggle" class="lg:hidden">
+                    <button class="inline-flex items-center gap-2 rounded-full border border-gray-200 px-4 py-2 text-sm font-medium text-gray-700 transition-colors duration-300 hover:border-diab-blue hover:text-diab-blue">
+                        Menü
+                        <i class="fas fa-bars text-base"></i>
                     </button>
                 </div>
 
                 <!-- Freischwebendes Menü auf kleinen Bildschirmen -->
                 <div id="dropdown-menu"
-                    class="absolute top-0 right-0 mt-5 w-50 bg-white border border-gray-200 rounded shadow-lg hidden z-100">
-                    <div class="flex flex-col space-y-2 p-4 text-center">
+                    class="absolute left-4 right-4 top-full mt-3 hidden rounded-3xl border border-gray-200 bg-white p-4 shadow-2xl z-100">
+                    <div class="flex flex-col space-y-3 text-left">
+                        <div class="border-b border-gray-100 pb-3">
+                            <div class="text-xs font-semibold uppercase tracking-[0.2em] text-diab-blue">Navigation</div>
+                        </div>
                         <a href="bu.html"
-                            class="hover:text-diab-blue transition-colors duration-300"><span class="sm:hidden">BU-Versicherung</span><span class="hidden sm:inline">Berufsunfähigkeitsversicherung</span></a>
-                        <a href="umfrage.html" class="hover:text-diab-blue transition-colors duration-300">Umfrage</a>
-                        <a href="community.html" class="hover:text-diab-blue transition-colors duration-300">Unternehmen
+                            class="rounded-2xl px-4 py-3 font-medium text-gray-700 hover:bg-diab-light-blue hover:text-diab-blue transition-colors duration-300"><span class="sm:hidden">BU-Versicherung</span><span class="hidden sm:inline">Berufsunfähigkeitsversicherung</span></a>
+                        <a href="umfrage.html" class="rounded-2xl px-4 py-3 font-medium text-gray-700 hover:bg-diab-light-blue hover:text-diab-blue transition-colors duration-300">Umfrage</a>
+                        <a href="community.html" class="rounded-2xl px-4 py-3 font-medium text-gray-700 hover:bg-diab-light-blue hover:text-diab-blue transition-colors duration-300">Unternehmen
                             aus der Community</a>
 
                         <div class="relative inline-block">
                             <div id="dropdown-toggle-anchor2">
-                                <button class="text-gray-700 hover:text-diab-blue">
-                                    <i class="fas fa-chevron-down text-xl"></i>
+                                <button title="Abschnitte auf dieser Seite" aria-label="Abschnitte auf dieser Seite öffnen"
+                                    class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-gray-200 text-gray-700 transition-colors duration-300 hover:border-diab-blue hover:text-diab-blue">
+                                    <i class="fas fa-chevron-down text-sm"></i>
                                 </button>
                             </div>
 
                             <!-- Freischwebendes Menü der Anchor-Links dieser Homepage -->
                             <div id="dropdown-menu-anchor2"
-                                class="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 w-50 bg-white border border-gray-200 rounded shadow-lg hidden z-100">
-                                <div class="flex flex-col space-y-2 p-4">
+                                class="mt-2 hidden rounded-2xl border border-gray-200 bg-gray-50 p-3 shadow-sm">
+                                <div class="flex flex-col space-y-2">
                                     <a href="#Formular"
-                                        class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">Formular</a>
+                                        class="rounded-xl px-3 py-2 text-gray-700 hover:bg-white hover:text-diab-blue transition-colors duration-300 font-medium">Formular</a>
                                     <a href="#About"
-                                        class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">Über
+                                        class="rounded-xl px-3 py-2 text-gray-700 hover:bg-white hover:text-diab-blue transition-colors duration-300 font-medium">Über
                                         mich</a>
                                     <a href="#Versicherungen"
-                                        class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">Versicherungen</a>
+                                        class="rounded-xl px-3 py-2 text-gray-700 hover:bg-white hover:text-diab-blue transition-colors duration-300 font-medium">Versicherungen</a>
                                     <a href="#CRS"
-                                        class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">CGM Risiko Score (CRS)</a>
+                                        class="rounded-xl px-3 py-2 text-gray-700 hover:bg-white hover:text-diab-blue transition-colors duration-300 font-medium">CGM Risiko Score (CRS)</a>
                                     <a href="#Partner"
-                                        class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">Partner</a>
+                                        class="rounded-xl px-3 py-2 text-gray-700 hover:bg-white hover:text-diab-blue transition-colors duration-300 font-medium">Partner</a>
                                 </div>
                             </div>
                         </div>
 
                         <a href="https://outlook.office.com/book/Diabsurance@eddimed.eu/" target="_blank"
                             rel="noopener noreferrer"
-                            class="text-diab-green hover:text-diab-blue transition-colors duration-300 font-medium">
+                            class="mt-2 inline-flex items-center justify-center rounded-full bg-diab-blue px-5 py-3 text-white font-medium no-underline transition-all duration-300 hover:bg-blue-600">
                             Beratung anfragen
                         </a>
                     </div>
@@ -485,7 +491,7 @@
     <section id="Formular" class="py-4 gradient-bg">
         <div class="mx-auto pt-4 px-4 sm:px-6 lg:px-8">
             <div class="text-center text-white mb-4">
-                <h2 class="text-3xl font-bold mb-2">kostenloses Erstgespräch buchen</h2>
+                <h2 class="text-center text-4xl font-bold mb-2">kostenloses Erstgespräch buchen</h2>
                 <p class="text-x1 opacity-90 max-w-3xl mx-auto">
                     Bei Interesse an einer BU-Versicherung fülle bitte folgendes Formular aus.
                     <a href="#About">Ich</a> komme dann zeitnah mit einem Terminvorschlag für ein Gespräch auf Dich zu.
@@ -640,23 +646,35 @@
         <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-white">
             <h2 class="text-center text-4xl font-bold mb-6">CGM-basierter Risiko Score (CRS)</h2>
             <div class="text-center">
-                <img src="img/CGM-basierter_Risiko_Score_Eddimed_202604.png" alt="Risiko Score" style="margin:auto">
+                <div class="inline-block bg-white p-4 sm:p-6 rounded-lg">
+                    <img src="img/CGM-basierter_Risiko_Score_Eddimed_202604.png" alt="Risiko Score" style="margin:auto">
+                </div>
             </div>
             <p class="text-lg mb-6 leading-relaxed text-center">
                 Berechnung des CGM-basierten Risiko Score durch unseren Partner <a href="https://eddimed.eu">Eddimed</a>
             </p>
 
-            <h3 class="text-2xl font-bold mb-3 text-center">Häufige Fragen zu Daten und CRS</h3>
-            <dl class="py-2 grid grid-cols-4 gap-4">
-                <dt class="font-semibold">Bekommt der Versicherer meine CGM-Daten?</dt>
-                <dd class="col-span-3">Nein, nur in stark zusammengefaßter Form als CRS (mögliche Werte:
-                    grün, gelb, rot). Die Berechnung des CRS und die Verarbeitung der CRM-Daten geschieht in
-                    DSGVO-konformer Weise durch <a href="https://eddimed.eu">Eddimed</a>.</dd>
-                <dt class="font-semibold">Was passiert, wenn sich meine Glucose-Einstellung dauerhaft
-                    verschlechtert?</dt>
-                <dd class="col-span-3">Bei einer dauerhaften Verschlechterung setzen wir uns (virtuell)
-                    zusammen und suchen nach möglichen Ursachen und Lösungen.</dd>
-            </dl>
+            <h3 class="mt-10 mb-3 text-2xl font-bold text-center">Häufige Fragen zu Daten und CRS</h3>
+            <div class="grid grid-cols-1 gap-2 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-start">
+                <div>
+                    <dl class="py-2 grid grid-cols-1 gap-4 sm:grid-cols-4">
+                        <dt class="font-semibold sm:col-span-1">Bekommt der Versicherer meine CGM-Daten?</dt>
+                        <dd class="sm:col-span-3">Nein, nur in stark zusammengefaßter Form als CRS (mögliche Werte:
+                            grün, gelb, rot). Die Berechnung des CRS und die Verarbeitung der CRM-Daten geschieht in
+                            DSGVO-konformer Weise durch <a href="https://eddimed.eu">Eddimed</a>.</dd>
+                        <dt class="font-semibold sm:col-span-1">Was passiert, wenn sich meine Glucose-Einstellung dauerhaft
+                            verschlechtert?</dt>
+                        <dd class="sm:col-span-3">Bei einer dauerhaften Verschlechterung setzen wir uns (virtuell)
+                            zusammen und suchen nach möglichen Ursachen und Lösungen.</dd>
+                        <dt class="font-semibold sm:col-span-1">IGP-Förderung</dt>
+                        <dd class="sm:col-span-3">Unser Projekt "Berufsunfähigkeitsversicherung (BU) für gut eingestellte DiabetikerInnen" wird bis Ende August 2026 im <a href="https://www.bundeswirtschaftsministerium.de/Redaktion/DE/Artikel/Innovation/igp.html">Innovationsprogramm für Geschäftsmodelle und Pionierlösungen</a> (IGP) des Bundesministeriums für Wirtschaft und Energie als Machbarkeitsprojekt mit 80k Euro gefördert. Vielen Dank an die <a href="https://www.bundeswirtschaftsministerium.de/Redaktion/DE/Artikel/Innovation/IGP/igp-jury-vierter-call-25.html">Jury des vierten Calls</a>.</dd>
+                    </dl>
+                </div>
+                <div class="flex items-start justify-center lg:justify-end pt-2">
+                    <img src="img/BMWE_Fz_2025_Office_Farbe_de.png" alt="IGP-Förderung"
+                        class="w-full max-w-[170px] sm:max-w-[190px] lg:max-w-[260px] max-h-[220px] h-auto object-contain">
+                </div>
+            </div>
         </div>
     </section>
 
@@ -715,7 +733,6 @@
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
@@ -854,8 +871,24 @@
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
+                const mobileMenu = document.getElementById('dropdown-menu');
+                const mobileAnchorMenu = document.getElementById('dropdown-menu-anchor2');
+                const desktopAnchorMenu = document.getElementById('dropdown-menu-anchor');
                 let target = document.querySelector(this.getAttribute('href'));
                 let targetPosition = target.getBoundingClientRect().top - navbarHeight;
+
+                if (mobileMenu && mobileMenu.contains(this)) {
+                    mobileMenu.classList.add('hidden');
+                }
+
+                if (mobileAnchorMenu && mobileAnchorMenu.contains(this)) {
+                    mobileAnchorMenu.classList.add('hidden');
+                }
+
+                if (desktopAnchorMenu && desktopAnchorMenu.contains(this)) {
+                    desktopAnchorMenu.classList.add('hidden');
+                }
+
                 window.scrollTo({
                     top: targetPosition + window.pageYOffset,
                     behavior: 'smooth'
@@ -888,6 +921,10 @@
             const toggle = document.getElementById(toggleID);
             const menu = document.getElementById(menuID);
 
+            if (!toggle || !menu) {
+                return;
+            }
+
             toggle.addEventListener('click', () => {
                 menu.classList.toggle('hidden');
             });
@@ -904,6 +941,10 @@
         document.addEventListener('DOMContentLoaded', function () {
             const toggle = document.getElementById('dropdown-toggle-sitemap');
             const menu = document.getElementById('dropdown-menu-sitemap');
+
+            if (!toggle || !menu) {
+                return;
+            }
 
             toggle.addEventListener('click', () => {
                 menu.classList.toggle('hidden');
